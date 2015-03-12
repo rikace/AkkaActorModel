@@ -1,0 +1,41 @@
+﻿<Window x:Class="PhotoViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Topmost="True"
+        Title="Image Downloader" Height="350" Width="400" Loaded="Window_Loaded">
+    <Window.Resources>
+        <Style TargetType="{x:Type ListBox}">
+            <Setter Property="ItemTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <Border BorderBrush="Black" BorderThickness="2" CornerRadius="3" Margin="4">
+                            <Image Source="{Binding Path=UriSource}"
+                                   Stretch="Fill"
+                                   Width="75" 
+                                   Height="75"/>
+                        </Border>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <WrapPanel />
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Setter  Property="ScrollViewer.HorizontalScrollBarVisibility"
+                     Value="Disabled"  />
+        </Style>
+    </Window.Resources>
+
+
+    <DockPanel>
+        <Grid DockPanel.Dock="Top" Height="30">
+            <Button Width="100" Margin="0,0,60,0" Content="Clear All" Click="Button_Click_Clear"></Button>
+           </Grid>
+        <ScrollViewer  DockPanel.Dock="Bottom" x:Name="myScrollViewer">
+            <ListBox x:Name="imageList" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
+        </ScrollViewer>
+    </DockPanel>
+</Window>
