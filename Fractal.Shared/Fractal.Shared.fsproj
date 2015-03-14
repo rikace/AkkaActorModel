@@ -5,14 +5,13 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>2fbced00-a808-4dc9-b6a1-69ca09be48cf</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>RemoteAkka.Console</RootNamespace>
-    <AssemblyName>RemoteAkka.Console</AssemblyName>
+    <ProjectGuid>8fde121e-0654-4e10-9ece-c3087c2cca16</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Fractal.Shared</RootNamespace>
+    <AssemblyName>Fractal.Shared</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFSharpCoreVersion>4.3.1.0</TargetFSharpCoreVersion>
-    <Name>RemoteAkka.Console</Name>
+    <Name>Fractal.Shared</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,9 +21,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DocumentationFile>bin\Debug\RemoteAkka.Console.XML</DocumentationFile>
-    <Prefer32Bit>true</Prefer32Bit>
+    <DocumentationFile>bin\Debug\Fractal.Shared.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,52 +30,58 @@
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DocumentationFile>bin\Release\RemoteAkka.Console.XML</DocumentationFile>
-    <Prefer32Bit>true</Prefer32Bit>
+    <DocumentationFile>bin\Release\Fractal.Shared.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Akka">
-      <HintPath>..\bin\Akka.dll</HintPath>
+      <HintPath>..\..\..\Demo\ActorModel\ActorModelAkka\bin\Akka.dll</HintPath>
     </Reference>
     <Reference Include="Akka.FSharp">
-      <HintPath>..\bin\Akka.FSharp.dll</HintPath>
+      <HintPath>..\..\..\Demo\ActorModel\ActorModelAkka\bin\Akka.FSharp.dll</HintPath>
     </Reference>
     <Reference Include="Akka.Remote">
-      <HintPath>..\bin\Akka.Remote.dll</HintPath>
+      <HintPath>..\..\..\Demo\ActorModel\ActorModelAkka\bin\Akka.Remote.dll</HintPath>
     </Reference>
     <Reference Include="FSharp.PowerPack">
-      <HintPath>..\bin\FSharp.PowerPack.dll</HintPath>
+      <HintPath>..\..\..\Demo\ActorModel\ActorModelAkka\bin\FSharp.PowerPack.dll</HintPath>
     </Reference>
     <Reference Include="FSharp.PowerPack.Linq">
-      <HintPath>..\bin\FSharp.PowerPack.Linq.dll</HintPath>
+      <HintPath>..\..\..\Demo\ActorModel\ActorModelAkka\bin\FSharp.PowerPack.Linq.dll</HintPath>
     </Reference>
     <Reference Include="FsPickler">
-      <HintPath>..\bin\FsPickler.dll</HintPath>
+      <HintPath>..\..\..\Demo\ActorModel\ActorModelAkka\bin\FsPickler.dll</HintPath>
     </Reference>
     <Reference Include="Google.ProtocolBuffers">
-      <HintPath>..\bin\Google.ProtocolBuffers.dll</HintPath>
+      <HintPath>..\..\..\Demo\ActorModel\ActorModelAkka\bin\Google.ProtocolBuffers.dll</HintPath>
     </Reference>
     <Reference Include="Google.ProtocolBuffers.Serialization">
-      <HintPath>..\bin\Google.ProtocolBuffers.Serialization.dll</HintPath>
+      <HintPath>..\..\..\Demo\ActorModel\ActorModelAkka\bin\Google.ProtocolBuffers.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Helios">
-      <HintPath>..\bin\Helios.dll</HintPath>
+      <HintPath>..\..\..\Demo\ActorModel\ActorModelAkka\bin\Helios.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\bin\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\..\Demo\ActorModel\ActorModelAkka\bin\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.fs" />
-    <None Include="App.config" />
+    <Compile Include="Library.fs" />
+    <None Include="Script.fsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fractal\MandelbrotSet\MandelbrotSet.csproj">
+      <Name>MandelbrotSet</Name>
+      <Project>{0b93fbc3-81e2-437d-8d70-61de99e78c00}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

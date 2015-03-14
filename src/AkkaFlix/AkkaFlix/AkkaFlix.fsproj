@@ -39,24 +39,31 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Akka">
-      <HintPath>..\packages\Akka.0.8.0\lib\net45\Akka.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\Akka.dll</HintPath>
     </Reference>
     <Reference Include="Akka.FSharp">
-      <HintPath>..\packages\Akka.FSharp.0.8.0\lib\net45\Akka.FSharp.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\Akka.FSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Akka.Remote">
+      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\Akka.Remote.dll</HintPath>
     </Reference>
     <Reference Include="FSharp.PowerPack">
-      <HintPath>..\packages\FSPowerPack.Core.Community.3.0.0.0\Lib\Net40\FSharp.PowerPack.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\FSharp.PowerPack.dll</HintPath>
     </Reference>
     <Reference Include="FSharp.PowerPack.Linq">
-      <HintPath>..\packages\FSPowerPack.Linq.Community.3.0.0.0\Lib\Net40\FSharp.PowerPack.Linq.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\FSharp.PowerPack.Linq.dll</HintPath>
     </Reference>
     <Reference Include="FsPickler">
-      <HintPath>..\packages\FsPickler.0.9.11\lib\net45\FsPickler.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\FsPickler.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.ProtocolBuffers">
+      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\Google.ProtocolBuffers.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.ProtocolBuffers.Serialization">
+      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\Google.ProtocolBuffers.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Helios">
+      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\Helios.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

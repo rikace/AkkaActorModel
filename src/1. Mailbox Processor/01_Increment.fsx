@@ -13,15 +13,28 @@ type Message =
     | Increment
     | Print
 
+type OtherMessage =
+    | Decrement
+    | Display
+
 type SimpleActor () as this =
     inherit ReceiveActor ()
 
     let state = ref 0 // mutable is safe!!
 
     do
-        this.Receive<Message>(fun m -> match m with
-                                       | Print -> printfn "%i" !state
-                                       | Increment -> state := !state + 1)
+        this.Receive<Message>(fun m -> 
+                                match m with
+                                | Print -> printfn "%i" !state
+                                | Increment -> state := !state + 1)
+
+        this.Receive<OtherMessage>(fun m -> 
+                                match m with
+                                | Display -> printfn "%i" !state
+                                | Decrement -> state := !state + 1)
+
+
+
 
 
 let system = ActorSystem.Create("example2")  
@@ -33,4 +46,11 @@ actor.Tell Increment
 actor.Tell Increment
 actor.Tell Increment
 actor.Tell Print
+
+actor <! Decrement
+actor <! Decrement
+actor <! Display
+
+
+
 
