@@ -1,6 +1,6 @@
-﻿#load "..\CommonModule.fsx"
+﻿#load "CommonModule.fsx"
 //#load "Utilities\show-wpf40.fsx"
-#load "..\3.async\8.BarrierAsync.fsx"
+#load "Barrier.fsx"
 
 open System
 open System.IO

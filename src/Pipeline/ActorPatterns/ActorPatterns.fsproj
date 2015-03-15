@@ -52,13 +52,9 @@
     <None Include="Barrier.fsx" />
     <None Include="DAG.fsx" />
     <None Include="MapReduce.fsx" />
-    <None Include="MapReduceAgents.fsx" />
-    <None Include="PatternTests.fsx" />
-    <None Include="PipeLineAgent.fsx" />
     <None Include="PipeLineImages.fsx" />
     <None Include="TestPipelinesImages.fsx" />
     <Compile Include="AgentSystem.fs" />
-    <Compile Include="Program.fs" />
     <None Include="App.config" />
   </ItemGroup>
   <PropertyGroup>

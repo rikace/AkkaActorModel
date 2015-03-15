@@ -47,6 +47,7 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="PrintWithColor.fsx" />
     <None Include="AgentObjectPool.fsx" />
     <None Include="AgentTests.fsx" />
     <None Include="BasicAgent.fsx" />
@@ -62,6 +63,9 @@
     <Compile Include="ActorWithControl.fs" />
     <Compile Include="PingPong.fs" />
     <Compile Include="Supervisor.fs" />
+    <None Include="StateMachine.fsx" />
+    <None Include="RequestGate.fsx" />
+    <None Include="Subject.fsx" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
   </ItemGroup>

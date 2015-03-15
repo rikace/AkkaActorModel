@@ -8,6 +8,34 @@ open Microsoft.FSharp.Control
 open System.Collections.Generic
 
 
+let print fmt = 
+    Printf.ksprintf (fun s -> printfn "%s: %s" (System.DateTime.Now.ToString("hh::mm:ss")) s) fmt 
+
+type SomeMessage = 
+    | Async of int 
+    | Sync of int * AsyncReplyChannel<int>
+
+let run () = MailboxProcessor.Start(fun (inbox : MailboxProcessor<SomeMessage>) ->
+    async {
+        while true do
+            let! msg = inbox.Receive()
+            match msg with
+            | Async(v) -> 
+                print "async::%d" v
+            | Sync(v, reply) -> 
+                print "sync::%d" v
+                do! Async.Sleep(v)
+                reply.Reply (v + 1)
+        }
+    )
+
+let agent = run()
+
+agent.Post(Async(8))
+agent.PostAndReply(fun ch -> Sync(7, ch))
+
+
+
 /// The internal type of messages for the agent
 type Message = Word of string | Fetch of AsyncReplyChannel<Map<string,int>> | Stop
  

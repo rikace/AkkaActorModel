@@ -85,6 +85,12 @@ let main argv =
                     let response = ConnectResponse(cr.UserName + " Hello and welcome to Akka .NET chat example")
                     let sender = mailbox.Sender()
                     sender.Tell(response, mailbox.Self)
+
+                    let color = Console.ForegroundColor
+                    Console.ForegroundColor <- ConsoleColor.Green                        
+                    Console.WriteLine("{0} has joined the chat", cr.UserName)
+                    Console.ForegroundColor <- color
+
                     return! loop (sender :: clients)             
                 | :? NickRequest as nr -> 
                         let response = NickResponse(nr.OldUsername, nr.NewUSername)

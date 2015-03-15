@@ -151,8 +151,12 @@ type public AkkaFractalForm() as form =
 
 
         let deployment = Deploy (RemoteScope (Address.Parse "akka.tcp://worker@127.0.0.1:8091/user/render"))
+   
         let router = RoundRobinPool 16
-        let actor = spawne system "render" <@ actorOf2 tileRenderer @> [ SpawnOption.Deploy deployment; SpawnOption.Router router; SpawnOption.SupervisorStrategy(Strategy.OneForOne(fun _ -> Directive.Restart)) ]
+   
+        let actor = spawne system "render" <@ actorOf2 tileRenderer @> 
+                        [ SpawnOption.Deploy deployment; SpawnOption.Router router; 
+                          SpawnOption.SupervisorStrategy(Strategy.OneForOne(fun _ -> Directive.Restart)) ]
                    
 
         for y = 0 to split do

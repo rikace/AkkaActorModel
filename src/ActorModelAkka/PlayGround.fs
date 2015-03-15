@@ -55,6 +55,7 @@ module FSharpAkkaApi =
     // the function takes a message and an Actor instance as the parameters. 
     // Mailbox parameter is injected by spawning functions.
     // actorOf2 (fn : Actor<'Message> -> 'Message -> unit) (mailbox : Actor<'Message>) : Cont<'Message, 'Returned> 
+
     let handleMessage (mailbox: Actor<'a>) msg =
         match msg with
         | Some x -> printf "%A" x
@@ -135,6 +136,8 @@ module FSharpAkkaApi =
     // Piping functions used on tasks will move async result directly to the mailbox of a target actor.
 
     open System.IO
+
+
     let handler (mailbox: Actor<obj>) msg = 
         match box msg with
         | :? FileInfo as fi -> 

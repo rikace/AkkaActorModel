@@ -20,15 +20,22 @@ open Akka.FSharp
 let system = ActorSystem.Create("FSharp")
 
 type EchoServer =
-    inherit Actor
+    inherit Actor // UntypedActor
 
     override x.OnReceive message =
         match message with
         | :? string as msg -> printfn "Hello %s" msg
-        | _ ->  failwith "unknown message"
+        | _ ->  printfn "What shoudl I do with this thing %A" (message.GetType())
+                //failwith "unknown message"
 
 let echoServer = system.ActorOf(Props(typedefof<EchoServer>, Array.empty))
 
 echoServer <! "F#!"
+echoServer <! 42
 
 system.Shutdown()
+
+
+
+
+

@@ -35,7 +35,7 @@ type ColorFilters =
 type ImageInfo = { Name:string; Path:string; mutable Image:Bitmap}
 
 
-type PipeLineImages(capacityBoundedQueue:int, ?cancellationToken:CancellationTokenSource) =
+type PipeLineImages(source:string, destination:string, capacityBoundedQueue:int, ?cancellationToken:CancellationTokenSource) =
     let cts = defaultArg cancellationToken (new CancellationTokenSource())
 
     let disposeOnException f (obj:#IDisposable) =
@@ -53,7 +53,8 @@ type PipeLineImages(capacityBoundedQueue:int, ?cancellationToken:CancellationTok
                 let info = { Name=imageName; Path= imagePath; Image=bitmap }
                 info )
         info
-        // ImageInfo -> ImageInfo  
+    
+     // ImageInfo -> ImageInfo  
     let scaleImage (info:ImageInfo) =
         let scale = 200    
         let image' = info.Image   
@@ -69,6 +70,23 @@ type PipeLineImages(capacityBoundedQueue:int, ?cancellationToken:CancellationTok
         finally
             bitmap.Dispose()
             image'.Dispose()    
+   
+    // ImageInfo -> ImageInfo  
+    let apply3DEffect (info:ImageInfo) =        
+        //info.Image <- null
+        let apply3dEffect' (bitmap:Bitmap) =
+            let w,h = bitmap.Width, bitmap.Height
+            for x in 20 .. (w-1) do
+                for y in 0 .. (h-1) do
+                    let c1 = bitmap.GetPixel(x,y)
+                    let c2 = bitmap.GetPixel(x - 20,y)
+                    let color3D = Color.FromArgb(int 0,int c1.R, int c2.G, int c2.B)
+                    bitmap.SetPixel(x - 20 ,y,color3D)
+            bitmap
+        let image = info.Image     
+        let bitmap = new System.Drawing.Bitmap(image) 
+        let bitmap3d = apply3dEffect' bitmap
+        { info with Image = bitmap3d}
 
     // ImageInfo -> ColorFilter -> ImageInfo
     let filterImage (info:ImageInfo) (filter:ColorFilters) =
@@ -85,6 +103,7 @@ type PipeLineImages(capacityBoundedQueue:int, ?cancellationToken:CancellationTok
     // ImageInfo -> string -> unit
     let displayImage (info:ImageInfo) destinationPath =
         use image = info.Image
+        printfn "Saving file %s" (Path.Combine(destinationPath, info.Name))
         image.Save(Path.Combine(destinationPath, info.Name))
     
     let loadedImages = new AsyncBoundedQueue<ImageInfo>(capacityBoundedQueue, cts)
@@ -93,12 +112,11 @@ type PipeLineImages(capacityBoundedQueue:int, ?cancellationToken:CancellationTok
 
     // STEP 1 Load images from disk and put them a queue
     let loadImages = async {
-        let dirPath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(__SOURCE_DIRECTORY__ ),"..\\Data\\Images")
         //while true do 
-        let images =  Directory.GetFiles(dirPath, "*.jpg") 
+        let images =  Directory.GetFiles(source, "*.jpg") 
         for img in images do
             if not cts.IsCancellationRequested then 
-                let info = loadImage img dirPath 
+                let info = loadImage img source 
                 do! loadedImages.AsyncEnqueue(info) }
 
     // STEP 2 Scale picture frame
@@ -117,20 +135,26 @@ type PipeLineImages(capacityBoundedQueue:int, ?cancellationToken:CancellationTok
                 let info = filterImage info filter
                 do! filteredImages.AsyncEnqueue(info) }
           
+    // STEP 3.2 Apply 3D Effect
+    let effect3DPipelinedImages = async {
+        while not cts.IsCancellationRequested do         
+            let! info = scaledImages.AsyncDequeue()
+            let image3D = apply3DEffect info
+            do! filteredImages.AsyncEnqueue(info) }
+
     // STEP 4 Display the result in a UI
     let displayPipelinedImages =
-        let destinationPath = @"C:\Demo\ActorModel\ActorModelAkka\src\ImagesProcessed"
         async {
             while not cts.IsCancellationRequested do
                 try 
                     let! info = filteredImages.AsyncDequeue()      
                     printfn "display %s"  info.Name 
-                    displayImage info destinationPath  
+                    displayImage info destination
                 with 
                 | ex-> printfn "Error %s" ex.Message; ()}
 
     member x.Step1_loadImages = loadImages // STEP 1
     member x.Step2_scalePipelinedImages = scalePipelinedImages // STEP 2
-    member x.Step3_filterPipelinedImages = filterPipelinedImages // STEP 3
+    member x.Step3_filterPipelinedImages = filterPipelinedImages // STEP 3 // effect3DPipelinedImages
     member x.Step4_displayPipelinedImages = displayPipelinedImages  // STEP 4
 

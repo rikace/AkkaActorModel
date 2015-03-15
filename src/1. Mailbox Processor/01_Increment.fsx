@@ -18,7 +18,7 @@ type OtherMessage =
     | Display
 
 type SimpleActor () as this =
-    inherit ReceiveActor ()
+    inherit ReceiveActor () // Untyped
 
     let state = ref 0 // mutable is safe!!
 
@@ -33,7 +33,8 @@ type SimpleActor () as this =
                                 | Display -> printfn "%i" !state
                                 | Decrement -> state := !state + 1)
 
-
+    override this.Unhandled(msg) =
+            printfn "What shoudl I do with this thing %A" (msg.GetType())
 
 
 
@@ -50,6 +51,8 @@ actor.Tell Print
 actor <! Decrement
 actor <! Decrement
 actor <! Display
+
+actor <! "ciao"
 
 
 

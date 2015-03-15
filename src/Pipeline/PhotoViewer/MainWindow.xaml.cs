@@ -19,7 +19,7 @@ namespace PhotoViewer
 {
     public partial class MainWindow : Window
     {
-        public static readonly string ImageFolderDestination = @"C:\Demo\ActorModel\ActorModelAkka\src\ImagesProcessed";
+        public static readonly string ImageFolderDestination = PhotoViewer.Properties.Settings.Default.WatcherPath;
 
         private FileSystemWatcher fileSystemWatcher;
 
@@ -31,7 +31,10 @@ namespace PhotoViewer
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             CleanUp();
+
+
             fileSystemWatcher = new FileSystemWatcher(ImageFolderDestination);
+
             fileSystemWatcher.Created += new FileSystemEventHandler(FileChanged);
             //    fileSystemWatcher.Changed += new FileSystemEventHandler(FileChanged);
             fileSystemWatcher.EnableRaisingEvents = true;

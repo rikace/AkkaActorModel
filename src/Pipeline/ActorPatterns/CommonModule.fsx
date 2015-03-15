@@ -179,6 +179,6 @@ module ArrayUtils =
 
 
 module StartPhotoViewer = 
-    let start() = System.Diagnostics.Process.Start(@"C:\Demo\ActorModel\ActorModelAkka\src\Pipeline\PhotoViewer\bin\Release\PhotoViewer.exe")
+    let start() = System.Diagnostics.Process.Start(@"C:\Git\AkkaActorModel\src\Pipeline\PhotoViewer\bin\Release\PhotoViewer.exe")
 
     
