@@ -22,7 +22,7 @@ let config = ConfigurationFactory.ParseString(@"
                             deployment {
                                 /localactor {
                                     router = round-robin-pool
-                                    nr-of-instances = 2
+                                    nr-of-instances = 1
                                 }
                             }
                         }

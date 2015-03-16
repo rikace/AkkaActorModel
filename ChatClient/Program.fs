@@ -21,7 +21,7 @@ let main argv =
                                 .Build()
 
     
-    let system = ActorSystem.Create("MyClient", fluentConfig)
+    let system = System.create "MyClient" fluentConfig
 
     let chatClientActor =
         spawn system "ChatClient" <| fun mailbox ->

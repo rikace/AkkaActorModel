@@ -31,7 +31,9 @@ let RES = 2
 
 [<EntryPoint>]
 let main _ = 
+    
     System.Console.Title <- "Local: " + System.Diagnostics.Process.GetCurrentProcess().Id.ToString()
+    
     // remote system address according to settings provided 
     // in FSharp.Deploy.Remote configuration
     let remoteSystemAddress = "akka.tcp://remote-system@localhost:7000"
@@ -55,13 +57,13 @@ let main _ =
                         return! loop()
                     }
                 loop() 
-             @> [ SpawnOption.Deploy(remoteDeploy remoteSystemAddress) ]
+             @> [ SpawnOption.Deploy(remoteDeploy remoteSystemAddress) ] // Remote options
 
     while true do 
         System.Console.Write("Type the message to send :" )
         let message = System.Console.ReadLine()
         async { 
-            let! msg = remoter <? (REQ, "hello")
+            let! msg = remoter <? (REQ, message)
             match msg :?> int * string with
             | (RES, m) -> printfn "Remote actor responded: %s" m
             | _ -> printfn "Unexpected response from remote actor"

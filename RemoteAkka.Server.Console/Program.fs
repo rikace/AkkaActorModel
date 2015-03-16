@@ -8,21 +8,21 @@ open System
 [<EntryPoint>]
 let main argv = 
     
-    let config = ConfigurationFactory.ParseString(@"
+    let config = Configuration.parse """
                     akka {
                         actor {
-                            provider = ""Akka.Remote.RemoteActorRefProvider, Akka.Remote""
+                            provider = "Akka.Remote.RemoteActorRefProvider, Akka.Remote"
                         }
-
                         remote {
                             helios.tcp {
-                                port = 8080
-                                hostname = localhost
+                               transport-protocol = tcp
+                               port = 9233
+                               hostname = localhost
                             }
                         }
-                    }")
+                    }"""
 
-    let system = ActorSystem.Create("MyServer", config)
+    let system = System.create "MyServer" config
 
     let _ = system.ActorOf<GreetingActor>("greeter")
     

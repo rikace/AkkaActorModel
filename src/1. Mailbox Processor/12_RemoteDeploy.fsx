@@ -16,7 +16,7 @@ open System
 open System.IO
 
 
-System.Diagnostics.Process.Start(@"C:\Demo\ActorModel\ActorModelAkka\RemoteAkka.Console\bin\Debug\RemoteAkka.Console.exe") |> ignore
+System.Diagnostics.Process.Start(@"C:\Git\AkkaActorModel\RemoteAkka.Console\bin\DebugRemoteAkka.Console.exe") |> ignore
 
 
 let config =

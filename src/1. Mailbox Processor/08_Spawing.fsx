@@ -20,7 +20,7 @@ let spawn_printer system name =
             let rec loop () =
                 actor {
                     let! msg = mailbox.Receive ()
-                    printfn "%s" msg
+                    printfn "From Child : %s" msg
                     return! loop ()
                 }
             loop ()
@@ -28,12 +28,13 @@ let spawn_printer system name =
 let actor = spawn system "parent" <| fun mailbox ->
 
         // Spawning a Child
-        spawn_printer mailbox "child" |> ignore
+        let child = spawn_printer mailbox "child" 
 
         let rec loop () =
             actor {
                 let! msg = mailbox.Receive ()
-                printfn "%s" msg
+                printfn "From Parent : %s" msg
+                child <! msg
                 return! loop ()
             }
         loop ()
@@ -46,5 +47,7 @@ child <! "Hello from the child"
 let parent = system.ActorSelection("akka://example3/user/parent")
 
 parent <! "Hello from the parent"
+
+
 
     

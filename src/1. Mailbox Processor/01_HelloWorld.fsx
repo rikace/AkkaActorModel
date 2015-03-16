@@ -30,18 +30,27 @@ type HelloServer =
         | :? string as msg -> printfn "Hello %s" msg
         | _ ->  failwith "unknown message"
 
+
+
 let system = ActorSystem.Create "MySystem"
     
 let greeter = system.ActorOf<GreetingActor> "greeter"
 Greet("World") |> greeter.Tell
     
 
+let echoServer = system.ActorOf(Props(typedefof<HelloServer>, Array.empty))
+echoServer <! "F#!"
 
+
+let system' = System.create "MySystem" <| Configuration.load()
+
+    
 // functional 
 let greeter' = // the function spawn instantiate an ActorRef
     // spawn attaches the behavior to our system and returns an ActorRef
     // We can use ActorRef to pass messages
-    spawn system "Greeter-Functional"
+    // ActorFactory -> Name -> f(Actor<Message> -> Cont<'Message, 'return>) -> ActorRef
+    spawn system' "Greeter-Functional"
     <| fun mailbox ->
         let rec loop() = actor { // tail recursive function, which uses an actor { ... } computation expression 
             let! msg = mailbox.Receive()
@@ -52,25 +61,12 @@ let greeter' = // the function spawn instantiate an ActorRef
 
 greeter' <! GreetMsg.Greet("AKKA.Net!!")
 
-
-let echoServer = system.ActorOf(Props(typedefof<HelloServer>, Array.empty))
-echoServer <! "F#!"
-
-let echoServer' = 
-    spawn system "EchoServer"
-    <| fun mailbox ->
-            actor {
-                let! message = mailbox.Receive()
-                match box message with
-                | :? string as msg -> printfn "Hello %s" msg
-                | _ ->  failwith "unknown message"
-            } 
-
-echoServer' <! "F#!"
-
+let actor = select "akka://MySystem/user/Greeter-Functional" system'
+actor <! GreetMsg.Greet("AKKA.Net!!")
 
 
 system.Shutdown()
+system'.Shutdown()
 
 // #Using Actor
 // Actors are one of Akka's concurrent models.

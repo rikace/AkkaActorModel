@@ -33,7 +33,7 @@ type EchoServer(name) =
         | :? string as msg -> printfn "Hello %s from %s at #%d thread" msg name tid
         | _ ->  failwith "unknown message"
 
-let count = 10000
+let count = 20000
 let echoServers = 
     [1 .. count]
     |> List.map(fun id ->   let properties = [| string(id) :> obj |]

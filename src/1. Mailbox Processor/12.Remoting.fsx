@@ -16,26 +16,27 @@ open System
 open System.IO
 
 
-System.Diagnostics.Process.Start(@"C:\Demo\ActorModel\ActorModelAkka\RemoteAkka.Server.Console\bin\Debug\RemoteAkka.Server.Console.exe") |> ignore
+System.Diagnostics.Process.Start(@"C:\Git\AkkaActorModel\RemoteAkka.Server.Console\bin\Debug\RemoteAkka.Server.Console.exe") |> ignore
 
-
-let config = ConfigurationFactory.ParseString(@"
+let config = Configuration.parse """
                     akka {
                         actor {
-                            provider = ""Akka.Remote.RemoteActorRefProvider, Akka.Remote""
+                            provider = "Akka.Remote.RemoteActorRefProvider, Akka.Remote"
                         }
                         remote {
                             helios.tcp {
-                                port = 8090
+                                transport-protocol = tcp
+                                port = 9233
                                 hostname = localhost
                             }
                         }
-                    }")
+                    }
+                    """
 
-let system = ActorSystem.Create("MyClient", config)
+let system = System.create "MyClient" config
 
 //get a reference to the remote actor
-let greeter = select "akka.tcp://MyServer@localhost:8080/user/greeter" system
+let greeter = select "akka.tcp://MyServer@localhost:9233/user/greeter" system
 
 //let greeter = system
 //        .ActorSelection("akka.tcp://MyServer@localhost:8080/user/greeter")

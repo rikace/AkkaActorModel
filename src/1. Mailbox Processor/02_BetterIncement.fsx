@@ -12,9 +12,8 @@ type Message =
     | Increment
     | Print
 
-
     
-let system = ActorSystem.Create "example3"
+let system = System.create "example3" <| Configuration.load()
 
 let actor = spawn system "actor" <| fun mailbox ->
                 let rec loop state =
@@ -27,7 +26,7 @@ let actor = spawn system "actor" <| fun mailbox ->
                     }
                 loop 0
 
-let actorSelection = select "/user/actor" system
+let actorSelection = select "/user/actor" system // system is "example3"
 
 actorSelection <! Increment
 

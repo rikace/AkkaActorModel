@@ -26,17 +26,14 @@ type SayResponse(username:string, text:string) =
     member x.Text = text
 
 
-type ChatMessage = 
-    | ConnectRequest of username:string
-    | ConnectResponse of message:string
-    | NickRequest of oldUsername:string * newUsername:string
-    | NickResponse of oldUsername:string * newUsername:string    
-    | SayRequest of username:string * text:string
-    | SayResponse of username:string * text:string
-    | Disconnect
-
-
-
+//type ChatMessage = 
+//    | ConnectRequest of username:string
+//    | ConnectResponse of message:string
+//    | NickRequest of oldUsername:string * newUsername:string
+//    | NickResponse of oldUsername:string * newUsername:string    
+//    | SayRequest of username:string * text:string
+//    | SayResponse of username:string * text:string
+//    | Disconnect
 
 //type ConnectRequest = 
 //    | ConnectRequest of username:string

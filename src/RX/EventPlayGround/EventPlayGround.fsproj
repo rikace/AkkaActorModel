@@ -57,9 +57,9 @@
     <None Include="ObservableExamples.fsx" />
     <None Include="ObservableJukeBox.fsx" />
     <None Include="StockEvent.fsx" />
+    <None Include="AddRemoveEvent.fsx" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
-    <None Include="AddRemoveEvent.fsx" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

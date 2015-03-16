@@ -33,7 +33,7 @@ type SimpleActor () as this =
                                 | Display -> printfn "%i" !state
                                 | Decrement -> state := !state + 1)
 
-    override this.Unhandled(msg) =
+    override this.Unhandled(msg) = // can be used for dead letter
             printfn "What shoudl I do with this thing %A" (msg.GetType())
 
 

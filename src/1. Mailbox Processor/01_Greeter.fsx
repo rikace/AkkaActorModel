@@ -28,6 +28,7 @@ type SomeActor() =
 printf "Greeter example:\n"
 
 let system = ConfigurationFactory.Default() |> System.create "FSharpActors"
+
 let actor = 
     spawn system "MyActor"
     <| fun mailbox ->
@@ -43,7 +44,7 @@ let actor =
                     return! again n
                 | Hi -> 
                     printfn "Hello from F#!"
-                    return! again name }
+                    return! loop() }
         and loop() =
             actor {
                 let! message = mailbox.Receive()
@@ -56,10 +57,10 @@ let actor =
                     return! loop() } 
         loop()
 
-actor <! Greet "roger"
+actor <! Greet "Ricky"
 actor <! Hi
-actor <! Greet "roger"
+actor <! Greet "Ricky"
 actor <! Hi
-actor <! Greet "jeremie"
+actor <! Greet "Ryan"
 actor <! Hi
-actor <! Greet "jeremie"
+actor <! Greet "Ryan"

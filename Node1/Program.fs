@@ -10,34 +10,9 @@ open SharedNodes
 
 [<EntryPoint>]
 let main argv = 
-   
-    let config = ConfigurationFactory.ParseString(@"
-                    akka {  
-                        log-config-on-start = on
-                        stdout-loglevel = DEBUG
-                        loglevel = ERROR
-                        actor {
-                            provider = ""Akka.Remote.RemoteActorRefProvider, Akka.Remote""
-        
-                            deployment {
-                                /localactor {
-                                }
-                                /remoteactor {
-                                    remote = ""akka.tcp://system2@localhost:8080""
-                                }
-                            }
-                        }
-                        remote {
-                            helios.tcp {
-                                transport-class = ""Akka.Remote.Transport.Helios.HeliosTcpTransport, Akka.Remote""
-		                        applied-adapters = []
-		                        transport-protocol = tcp
-		                        port = 8090
-		                        hostname = localhost
-                            }
-                        }
-                    }")
 
+    Console.Title <- "NODE 1"
+   
     let configRouting = ConfigurationFactory.ParseString(@"
                 akka {  
                     log-config-on-start = on
@@ -70,11 +45,7 @@ let main argv =
                 }")
 
 
-    //let system = ActorSystem.Create("system1", config)
     // create a local group router (see config)
-    //let local = system.ActorOf<SomeActor>("localactor")
-        
-
     // routing 
     let system = ActorSystem.Create("system1", configRouting)    
     let local = system.ActorOf<SomeActor>("localactor")
@@ -107,7 +78,6 @@ let main argv =
     remote.Tell("Remote message 3")
     remote.Tell("Remote message 4")
     remote.Tell("Remote message 5")
-
 
     remote <! ("Remote message 6")
     remote <! ("Remote message 7")

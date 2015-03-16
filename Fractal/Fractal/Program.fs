@@ -60,35 +60,35 @@ type public AkkaFractalForm() as form =
         form.OnLoad(EventArgs.Empty)
     
     member form.eventForm_Loading (sender : obj, e : EventArgs) = 
-
-        let config' = 
-            Configuration.parse """
-                akka {  
-                    log-config-on-start = on
-                    stdout-loglevel = DEBUG
-                    loglevel = ERROR
-                    actor {
-                        provider = ""Akka.Remote.RemoteActorRefProvider, Akka.Remote""
-        
-                        deployment {
-                            /render {
-                                router = round-robin-pool
-                                nr-of-instances = 16
-                                remote = ""akka.tcp://worker@127.0.0.1:8090""
-                            }
-                        }
-                    }
-                    remote {
-                        helios.tcp {
-                            transport-class = ""Akka.Remote.Transport.Helios.HeliosTcpTransport, Akka.Remote""
-		                    applied-adapters = []
-		                    transport-protocol = tcp
-		                    port = 0
-		                    hostname = localhost
-                        }
-                    }
-                }
-                """
+//
+//        let config' = 
+//            Configuration.parse """
+//                akka {  
+//                    log-config-on-start = on
+//                    stdout-loglevel = DEBUG
+//                    loglevel = ERROR
+//                    actor {
+//                        provider = ""Akka.Remote.RemoteActorRefProvider, Akka.Remote""
+//        
+//                        deployment {
+//                            /render {
+//                                router = round-robin-pool
+//                                nr-of-instances = 16
+//                                remote = ""akka.tcp://worker@127.0.0.1:8090""
+//                            }
+//                        }
+//                    }
+//                    remote {
+//                        helios.tcp {
+//                            transport-class = ""Akka.Remote.Transport.Helios.HeliosTcpTransport, Akka.Remote""
+//		                    applied-adapters = []
+//		                    transport-protocol = tcp
+//		                    port = 0
+//		                    hostname = localhost
+//                        }
+//                    }
+//                }
+//                """
                   
         let config = 
             Configuration.parse """
@@ -138,15 +138,12 @@ type public AkkaFractalForm() as form =
                     }
                 loop()) [ SpawnOption.Dispatcher "akka.actor.synchronized-dispatcher" ]
         
-//        let actor = system.ActorOf<TileRenderActor>("render")      
-//
+//        let actor = system.ActorOf<TileRenderActor>("render")  
 //        let actor1 = system.ActorOf<TileRenderActor>("render1")
 //        let actor2 = system.ActorOf<TileRenderActor>("render2")
 //        let actor3 = system.ActorOf<TileRenderActor>("render3")
 //        let actor4 = system.ActorOf<TileRenderActor>("render4")
-//      
 //        let actor = system.ActorOf(Props.Empty.WithRouter(new RoundRobinGroup([|actor1; actor2; actor3; actor4|])))
-//
 //        let actor = system.ActorOf(Props.Empty.WithRouter(new RoundRobinPool(([|actor1; actor2; actor3; actor4|])))
 
 

@@ -7,7 +7,9 @@ open SharedNodes
 
 [<EntryPoint>]
 let main argv = 
-    // return an integer exit code
+    
+    Console.Title <- "NODE 2"
+    
     let config = ConfigurationFactory.ParseString(@"
             akka {  
                 log-config-on-start = on

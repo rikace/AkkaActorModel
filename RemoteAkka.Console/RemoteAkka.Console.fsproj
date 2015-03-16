@@ -80,6 +80,13 @@
     <Compile Include="Program.fs" />
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RemoteAkka.Shared\RemoteAkka.Shared.fsproj">
+      <Name>RemoteAkka.Shared</Name>
+      <Project>{2d14bee6-e3de-4d32-86c5-03ee876c88f7}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
   </PropertyGroup>

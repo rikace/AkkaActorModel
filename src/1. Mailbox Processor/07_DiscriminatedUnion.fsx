@@ -17,7 +17,7 @@ type Message =
     | Number of int
     | Unknown
 
-let system = ActorSystem.Create("ds-system")
+let system = System.create "ds-system" <| Configuration.load()
 
 let dsServer = 
     spawn system "dsServer"

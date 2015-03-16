@@ -6,6 +6,7 @@
 #endif
 
 open System
+open System.Threading.Tasks
 open Akka.Actor
 open Akka.Configuration
 open Akka.FSharp
@@ -23,9 +24,9 @@ open Akka.FSharp
 // It can also set a in milliseconds to wait for the result of the computation 
 // before raising a `TimeoutException`.
 
-let versionUrl = @"https://raw.githubusercontent.com/akkadotnet/akka.net/dev/src/SharedAssemblyInfo.cs"
+let versionUrl = @"https://github.com/rikace/AkkaActorModel/blob/master/LICENSE.txt"
 
-let system = ActorSystem.Create("FSharp")
+let system = System.create "FSharp" <| Configuration.load()
 
 let fromUrl (url:string) =
     use client = new System.Net.WebClient()
@@ -48,6 +49,9 @@ let echoServer =
                 | _ ->  failwith "unknown message"
             } 
         loop()
+
+
+
 
 for timeout in [10; 100; 250; 2500] do
     try

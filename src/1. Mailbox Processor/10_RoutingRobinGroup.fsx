@@ -34,7 +34,6 @@ let router = system.ActorOf(Props.Empty.WithRouter(logic))
 for i in 0..200 do
     router <! "Hi"
 
-system.Shutdown()
 
 
 
