@@ -16,6 +16,7 @@ open Akka.Remote
 open Akka.Routing
 open Akka.Configuration
 
+// Change Config nr-of-instances
 let config = ConfigurationFactory.ParseString(@"
                     akka {  
                         actor {
@@ -41,14 +42,8 @@ let local = spawnOpt system "localactor" (fun mailbox ->
 
 
 //these messages should reach the workers via the routed local ref
-local.Tell("Local message 1")
-local.Tell("Local message 2")
-local.Tell("Local message 3")
-local.Tell("Local message 4")
-local.Tell("Local message 5")
-local.Tell("Local message 6")
-local.Tell("Local message 7")
-local.Tell("Local message 8")
+for i in [0..99] do
+    local <! (sprintf "Local message %d" i)
 
 system.Shutdown()
 

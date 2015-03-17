@@ -14,19 +14,6 @@ type SomeActorMessages =
     | Greet of string
     | Hi
 
-type SomeActor() =    
-    inherit Actor()
-
-    override __.OnReceive message =
-        match message with
-        | :? SomeActorMessages as m ->  
-            match m with
-            | Greet(name) -> Console.WriteLine("Hello {0}", name)
-            | Hi -> Console.WriteLine("Hello from F#!")
-        | _ -> failwith "unknown message"
-
-printf "Greeter example:\n"
-
 let system = ConfigurationFactory.Default() |> System.create "FSharpActors"
 
 let actor = 

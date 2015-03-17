@@ -16,7 +16,7 @@ open System
 open System.IO
 
 
-System.Diagnostics.Process.Start(@"C:\Git\AkkaActorModel\RemoteAkka.Console\bin\DebugRemoteAkka.Console.exe") |> ignore
+System.Diagnostics.Process.Start(@"C:\Git\AkkaActorModel\RemoteAkka.Console\bin\Debug\RemoteAkka.Console.exe") |> ignore
 
 
 let config =
@@ -36,8 +36,7 @@ let deployRemotely address = Deploy(RemoteScope (Address.Parse address))
 // Remote deployment in Akka F# is done through spawne function and it requires deployed code to be wrapped into F# quotation.
 let spawnRemote systemOrContext remoteSystemAddress actorName expr =
  spawne systemOrContext actorName expr [SpawnOption.Deploy (deployRemotely remoteSystemAddress)]
-
-
+ 
 let localSystem = System.create "local-system" config
 
 let aref =
@@ -46,7 +45,7 @@ let aref =
       <@ actorOf (fun msg -> printfn "received '%s'" msg) @>
 
 // send example message to remotely deployed actor
-aref <! "Hello world"
+aref <! "Hello world F# and AKKA"
 
 // thanks to location transparency, we can select 
 // remote actors as if they where existing on local node

@@ -15,7 +15,7 @@ akka {
 }
 """
 
-// create remote deployment configuration for actor system available under `actorPath`
+// create remote deployment configuration for actor system available under `systemPath`
 let remoteDeploy systemPath = 
     let address = 
         match ActorPath.TryParseAddress systemPath with

@@ -22,35 +22,15 @@ let config =
             }
         }"
 
-//let configGreeing = Configuration.parse  
-//                     @"akka {
-//            actor.provider = ""Akka.Remote.RemoteActorRefProvider, Akka.Remote""
-//            remote.helios.tcp {
-//                hostname = localhost
-//                port = 8088
-//            }
-//        }"
-//
-//type Greet(who:string) =
-//    member x.Who = who
-// 
-//type GreetingActor() as g =
-//    inherit ReceiveActor()
-//    do g.Receive<Greet>(fun (greet:Greet) -> 
-//            printfn "Hello %s" greet.Who)
-//
-
-
 
 [<EntryPoint>]
 let main argv = 
+    
+    // NO REFERENCE
+
     use remoteSystem = System.create "remote-system" config
 
     printfn "Remote Actor %s listening..." remoteSystem.Name
-
-//    use greetingServer =  System.create "greeting-system" configGreeing
-//    let greetingActor = remoteSystem.ActorOf<GreetingActor>("greeter")
-     
 
     System.Console.ReadLine() |> ignore
 

@@ -11,8 +11,7 @@ type Message =
     | Increment
     | Print
 
-
-let system = ActorSystem.Create "example3"
+let system = System.create "example3" <| Configuration.load()
 
 let spawn_printer system name =
     spawn system name <|
@@ -39,7 +38,9 @@ let actor = spawn system "parent" <| fun mailbox ->
             }
         loop ()
             
+// Note -> The path of the child has the parent
 
+// Note relation between child and parent in the Path
 let child = system.ActorSelection("akka://example3/user/parent/child")
 
 child <! "Hello from the child"

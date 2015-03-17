@@ -13,6 +13,8 @@ open ChatMessages
 [<EntryPoint>]
 let main argv = 
     
+    Console.Title <- (sprintf "Chat Client : %d" (System.Diagnostics.Process.GetCurrentProcess().Id))
+
     Console.Write("Insert your user name: ")
     let username = Console.ReadLine()
 
@@ -61,6 +63,29 @@ let main argv =
             loop ""
 
 
+//  let chatClient = system.ActorOf(Props.Create<chatClientActor>())
+//  let server = system.ActorSelection("akka.tcp://MyServer@localhost:8081/user/ChatServer")
+    
+    chatClientActor.Tell(ConnectRequest(username))
+
+    while true do
+        let input = Console.ReadLine()
+        if input.StartsWith("/") then 
+            let parts = input.Split(' ')
+            let cmd = parts.[0].ToLowerInvariant()
+            let rest = String.Join(" ", parts.Skip(1))
+            if cmd = "/nick" then
+                chatClientActor.Tell(NickRequest(username, rest))
+        else           
+            chatClientActor.Tell(SayRequest(username, input))
+
+
+    0  
+
+
+
+
+
 //    let chatClientActor =
 //        spawn system "ChatClient" <| fun mailbox ->
 //            let server = mailbox.Context.ActorSelection("akka.tcp://MyServer@localhost:8081/user/ChatServer")            
@@ -87,24 +112,3 @@ let main argv =
 //                | Disconnect -> ()
 //                }
 //            loop ""
-
-
-//    let chatClient = system.ActorOf(Props.Create<chatClientActor>())
-    let server = system.ActorSelection("akka.tcp://MyServer@localhost:8081/user/ChatServer")
-    
-    chatClientActor.Tell(ConnectRequest(username))
-
-    while true do
-        let input = Console.ReadLine()
-        if input.StartsWith("/") then 
-            let parts = input.Split(' ')
-            let cmd = parts.[0].ToLowerInvariant()
-            let rest = String.Join(" ", parts.Skip(1))
-            if cmd = "/nick" then
-                chatClientActor.Tell(NickRequest(username, rest))
-        else           
-            chatClientActor.Tell(SayRequest(username, input))
-
-    
-
-    0 // return an integer exit code

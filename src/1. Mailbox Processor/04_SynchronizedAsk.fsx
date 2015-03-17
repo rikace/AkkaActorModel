@@ -39,12 +39,16 @@ let echoServer =
         let rec loop() =
             actor {
                 let! message = mailbox.Receive()
+               
                 let sender = mailbox.Sender()
+               
                 match box message with
                 | :? string as url -> 
                     let response = fromUrl url
                     printfn "actor: done!"
+                   
                     sender <! response
+                   
                     return! loop()
                 | _ ->  failwith "unknown message"
             } 
@@ -55,7 +59,7 @@ let echoServer =
 
 for timeout in [10; 100; 250; 2500] do
     try
-        let task = (echoServer <? versionUrl)
+        let task = (echoServer <? versionUrl) // <? infix operator 
 
         let response = Async.RunSynchronously (task, timeout)
         let responseLength = string(response) |> String.length

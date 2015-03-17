@@ -17,8 +17,6 @@ open Akka.Configuration
 type SomeActor() =
      inherit Actor()
 
-     //let mutable index = 0
-
      override x.OnReceive(message) =
         let senderAddress = ``base``.Self.Path.ToStringWithAddress()
         let originalColor = Console.ForegroundColor

@@ -16,6 +16,7 @@ type Msg =
 
 /// worker function
 let workerFun (mailbox : Actor<_>) = 
+    
     let state = ref 0 // we store value in a reference cell
     
     let rec loop() = 
@@ -39,11 +40,12 @@ let system = System.create "SypervisorSystem" <| ConfigurationFactory.Default()
 let strategy = 
     Strategy.OneForOne (fun e -> 
         match e with
-        | :? ArithmeticException -> Directive.Resume // Restart
+        | :? ArithmeticException -> Directive.Restart
         | :? ArgumentException -> Directive.Stop
         | _ -> Directive.Escalate)
     
 // create a supervisor actor
+// Supervisor Actor is resposible to appy the strategy to workerFun ACtor
 let supervisor = 
     spawnOpt system "master" (fun mailbox -> 
         // by using spawn we may create a child actors without exiting a F# functional API

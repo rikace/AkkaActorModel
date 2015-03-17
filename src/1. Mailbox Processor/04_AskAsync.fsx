@@ -28,35 +28,13 @@ let versionUrl = @"https://github.com/rikace/AkkaActorModel/blob/master/LICENSE.
 
 let system = System.create "FSharp" <| Configuration.load()
 
-//let fromUrl (url:string) =
-//    use client = new System.Net.WebClient()
-//    let response = client.DownloadString(url)
-//    response
-//
-//let echoServer = 
-//    spawn system "EchoServer"
-//    <| fun mailbox ->
-//        let rec loop() =
-//            actor {
-//                let! message = mailbox.Receive()
-//                let sender = mailbox.Sender()
-//                match box message with
-//                | :? string as url -> 
-//                    let response = fromUrl url
-//                    printfn "actor: done!"
-//                    sender <! response
-//                    return! loop()
-//                | _ ->  failwith "unknown message"
-//            } 
-//        loop()
-//
-
-
 let pipeTo receipient computation =
     Async.StartAsTask(computation).PipeTo(receipient)
 
 let pipeFromTo sender receipient computation = 
     Async.StartAsTask(computation).PipeTo(receipient, sender)
+
+
 
 let fromUrl (url:string) = async{
     use client = new System.Net.WebClient()

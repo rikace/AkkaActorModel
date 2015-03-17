@@ -17,7 +17,7 @@ let system = System.create "example3" <| Configuration.load()
 
 let actor = spawn system "actor" <| fun mailbox ->
                 let rec loop state =
-                    actor {
+                    actor { // Actor compuatation expression 
                         let! msg = mailbox.Receive ()
                         match msg with
                         | Increment -> return! loop (state + 1)

@@ -17,6 +17,8 @@ open Akka.FSharp
 // It can be created with system.ActorOf: use receive to get a message, and <! to send a message.
 // This example is an EchoServer which can receive messages then print them.
 
+// An ActorSystem is a reference to the underlying system and Akka.NET framework. 
+// All actors live within the context of this actor system
 let system = ActorSystem.Create("FSharp")
 
 type EchoServer =
@@ -30,8 +32,8 @@ type EchoServer =
 
 let echoServer = system.ActorOf(Props(typedefof<EchoServer>, Array.empty))
 
-echoServer <! "F#!"
 echoServer <! 42
+echoServer <! "F#!"
 
 system.Shutdown()
 

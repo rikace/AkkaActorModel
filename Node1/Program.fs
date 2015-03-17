@@ -29,7 +29,7 @@ let main argv =
                             /remoteactor {
                                 router = round-robin-pool
                                 nr-of-instances = 5
-                                remote = ""akka.tcp://system2@localhost:8080""
+                                remote = ""akka.tcp://system2@localhost:8080""  # NODE 2
                             }
                         }
                     }
@@ -48,7 +48,8 @@ let main argv =
     // create a local group router (see config)
     // routing 
     let system = ActorSystem.Create("system1", configRouting)    
-    let local = system.ActorOf<SomeActor>("localactor")
+
+    let local = system.ActorOf<SomeActor>("localactor") // NAme convention used in the config deplyment section
     
 
     // these messages should reach the workers via the routed local ref
@@ -64,7 +65,7 @@ let main argv =
     local <! ("Local message 9")
     local <! ("Local message 10")
 
-
+   
     Console.WriteLine("Press Enter to swith to the Remote Actor")
     Console.ReadLine() |> ignore 
 

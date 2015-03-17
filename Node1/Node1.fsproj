@@ -38,9 +38,6 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ActorModelAkka">
-      <HintPath>..\bin\ActorModelAkka.dll</HintPath>
-    </Reference>
     <Reference Include="Akka">
       <HintPath>..\bin\Akka.dll</HintPath>
     </Reference>

@@ -60,36 +60,7 @@ type public AkkaFractalForm() as form =
         form.OnLoad(EventArgs.Empty)
     
     member form.eventForm_Loading (sender : obj, e : EventArgs) = 
-//
-//        let config' = 
-//            Configuration.parse """
-//                akka {  
-//                    log-config-on-start = on
-//                    stdout-loglevel = DEBUG
-//                    loglevel = ERROR
-//                    actor {
-//                        provider = ""Akka.Remote.RemoteActorRefProvider, Akka.Remote""
-//        
-//                        deployment {
-//                            /render {
-//                                router = round-robin-pool
-//                                nr-of-instances = 16
-//                                remote = ""akka.tcp://worker@127.0.0.1:8090""
-//                            }
-//                        }
-//                    }
-//                    remote {
-//                        helios.tcp {
-//                            transport-class = ""Akka.Remote.Transport.Helios.HeliosTcpTransport, Akka.Remote""
-//		                    applied-adapters = []
-//		                    transport-protocol = tcp
-//		                    port = 0
-//		                    hostname = localhost
-//                        }
-//                    }
-//                }
-//                """
-                  
+
         let config = 
             Configuration.parse """
                 akka {  
@@ -136,7 +107,7 @@ type public AkkaFractalForm() as form =
                         renderer (msg)
                         return! loop()
                     }
-                loop()) [ SpawnOption.Dispatcher "akka.actor.synchronized-dispatcher" ]
+                loop()) [ SpawnOption.Dispatcher "akka.actor.synchronized-dispatcher" ] // Using local Sync-Context
         
 //        let actor = system.ActorOf<TileRenderActor>("render")  
 //        let actor1 = system.ActorOf<TileRenderActor>("render1")
@@ -149,8 +120,12 @@ type public AkkaFractalForm() as form =
 
 
         let deployment = Deploy (RemoteScope (Address.Parse "akka.tcp://worker@127.0.0.1:8091/user/render"))
+        
         let router = RoundRobinPool 16
-        let actor = spawne system "render" <@ actorOf2 tileRenderer @> [ SpawnOption.Deploy deployment; SpawnOption.Router router; SpawnOption.SupervisorStrategy(Strategy.OneForOne(fun _ -> Directive.Restart)) ]
+        
+        let actor = spawne system "render" <@ actorOf2 tileRenderer @> [ SpawnOption.Deploy deployment; 
+                                                                         SpawnOption.Router router; 
+                                                                         SpawnOption.SupervisorStrategy(Strategy.OneForOne(fun _ -> Directive.Resume)) ]
                    
 
         for y = 0 to split do

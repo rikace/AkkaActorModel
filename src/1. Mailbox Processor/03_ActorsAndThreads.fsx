@@ -33,6 +33,8 @@ type EchoServer(name) =
         | :? string as msg -> printfn "Hello %s from %s at #%d thread" msg name tid
         | _ ->  failwith "unknown message"
 
+
+        // START TASK MANAGER
 let count = 20000
 let echoServers = 
     [1 .. count]

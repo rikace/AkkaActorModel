@@ -12,6 +12,8 @@ open ChatMessages
 
 [<EntryPoint>]
 let main argv = 
+
+    Console.Title <- (sprintf "Chat Server : %d" (System.Diagnostics.Process.GetCurrentProcess().Id))
             
             //let config = ConfigurationFactory.ParseString(@"
             //akka {  
@@ -98,7 +100,6 @@ let main argv =
                            client.Tell(response, mailbox.Self)
                         
                         return! loop clients
-
 
                 | :? SayResponse as sr -> 
                                 Console.WriteLine("{0}: {1}", sr.Username, sr.Text)
