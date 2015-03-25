@@ -49,7 +49,7 @@ let main argv =
     // routing 
     let system = ActorSystem.Create("system1", configRouting)    
 
-    let local = system.ActorOf<SomeActor>("localactor") // NAme convention used in the config deplyment section
+    let local = system.ActorOf<SomeActor>("localactor") // Name convention used in the config deplyment section
     
 
     // these messages should reach the workers via the routed local ref

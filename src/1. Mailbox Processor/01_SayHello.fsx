@@ -32,8 +32,8 @@ type EchoServer =
 
 let echoServer = system.ActorOf(Props(typedefof<EchoServer>, Array.empty))
 
-echoServer <! 42
-echoServer <! "F#!"
+echoServer.Tell 42
+echoServer.Tell "F#!"
 
 system.Shutdown()
 

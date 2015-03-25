@@ -29,8 +29,10 @@ let actor = spawn system "actor" <| fun mailbox ->
 let actorSelection = select "/user/actor" system // system is "example3"
 
 actorSelection <! Increment
+actorSelection <! Print
 
 actor <! Print
+
 for i in 1..10 do
     actor <! Increment
 actor <! Print

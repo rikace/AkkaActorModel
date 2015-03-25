@@ -15,7 +15,7 @@ type Message =
 
 let system = ActorSystem.Create "example3"
 
-let options = [SpawnOption.SupervisorStrategy(Strategy.OneForOne (fun e -> Directive.Restart))]
+let options = [SpawnOption.SupervisorStrategy(Strategy.OneForOne(fun e -> Directive.Restart))]
 
 let strategy =
     Strategy.OneForOne (fun e ->

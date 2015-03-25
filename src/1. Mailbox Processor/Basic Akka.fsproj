@@ -62,8 +62,8 @@
     <None Include="02_BetterIncement.fsx" />
     <None Include="03_ActorsAndThreads.fsx" />
     <None Include="04_SynchronizedAsk.fsx" />
-    <None Include="04_AskAsync.fsx" />
     <None Include="04_Ask.fsx" />
+    <None Include="04_AskAsync.fsx" />
     <None Include="05_RemoteActor.fsx" />
     <None Include="06_EventStream.fsx" />
     <None Include="07_TypedMessages.fsx" />

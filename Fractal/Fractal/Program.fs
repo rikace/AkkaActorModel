@@ -40,7 +40,6 @@ type public AkkaFractalForm() as form =
         picBox.Dock <- System.Windows.Forms.DockStyle.Fill
         panel.AutoScroll <- true
         panel.Anchor <- AnchorStyles.Top ||| AnchorStyles.Left
-        //  panel.Dock <- System.Windows.Forms.DockStyle.Fill
         panel.Location <- new System.Drawing.Point(0, 0)
         panel.Margin <- new System.Windows.Forms.Padding(2, 2, 2, 2)
         panel.ClientSize <- new System.Drawing.Size(8000, 8000)

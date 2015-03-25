@@ -40,7 +40,7 @@ let system = System.create "SypervisorSystem" <| ConfigurationFactory.Default()
 let strategy = 
     Strategy.OneForOne (fun e -> 
         match e with
-        | :? ArithmeticException -> Directive.Restart
+        | :? ArithmeticException -> Directive.Resume //.Restart
         | :? ArgumentException -> Directive.Stop
         | _ -> Directive.Escalate)
     

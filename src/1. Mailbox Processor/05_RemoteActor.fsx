@@ -17,7 +17,7 @@ open Akka.FSharp
 // The usage is the same as with a normal Actor.
 
 let configuration = 
-    ConfigurationFactory.ParseString(
+    Configuration.parse 
         @"akka {
             log-config-on-start : on
             stdout-loglevel : DEBUG
@@ -39,9 +39,9 @@ let configuration =
                     hostname = localhost
                 }
             }
-        }")
+        }"
 
-let system = ActorSystem.Create("RemoteFSharp", configuration)
+let system = System.create "RemoteFSharp" <| configuration
 
 let _ = 
     spawn system "EchoServer"

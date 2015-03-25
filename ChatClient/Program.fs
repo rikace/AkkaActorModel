@@ -35,17 +35,21 @@ let main argv =
                             Console.WriteLine("Connecting....")
                             server.Tell(ConnectRequest(cr.UserName))
                             return! loop cr.UserName
+                      
                 |  :? ConnectResponse as cr -> 
                         Console.WriteLine("Connected!")
                         Console.WriteLine(cr.Message)
                         return! loop nick
+           
                 | :? NickRequest as nr ->
                         Console.WriteLine("Changing nick to {0}", nr.NewUSername)                    
                         server.Tell(NickRequest(nick, nr.NewUSername))
                         return! loop nr.NewUSername
+           
                 | :? NickResponse as nr ->
                         Console.WriteLine("{0} is now known as {1}", nr.OldUsername, nr.NewUSername)
                         return! loop nick
+           
                 | :? SayResponse as sr ->                                 
                                 if sr.Username <> nick then 
                                     let orginalColor = Console.ForegroundColor
@@ -53,6 +57,7 @@ let main argv =
                                     Console.WriteLine("{0}: {1}", sr.Username, sr.Text)
                                     Console.ForegroundColor <- orginalColor
                                 return! loop nick
+              
                 | :? SayRequest as sr -> 
                                 let request = SayRequest(nick, sr.Text)
                                 server.Tell(request)

@@ -18,7 +18,7 @@ type OtherMessage =
     | Display
 
 type SimpleActor () as this =
-    inherit ReceiveActor () // Untyped
+    inherit ReceiveActor ()  
 
     let state = ref 0 // mutable is safe!!
 
