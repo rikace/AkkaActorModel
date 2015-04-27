@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Akka">
-      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\Akka.dll</HintPath>
+      <HintPath>..\..\..\bin\Akka.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
