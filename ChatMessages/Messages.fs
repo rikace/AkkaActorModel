@@ -1,4 +1,4 @@
-﻿namespace ChatMessages
+﻿module ChatMessages
 
 open System
 
@@ -26,6 +26,8 @@ type SayResponse(username:string, text:string) =
     member x.Text = text
 
 
+
+//
 //type ChatMessage = 
 //    | ConnectRequest of username:string
 //    | ConnectResponse of message:string
@@ -35,24 +37,3 @@ type SayResponse(username:string, text:string) =
 //    | SayResponse of username:string * text:string
 //    | Disconnect
 
-//type ConnectRequest = 
-//    | ConnectRequest of username:string
-//
-//type ConnectResponse =
-//    | ConnectResponse of message:string
-//
-//type NickRequest =
-//    | NickRequest of oldUsername:string * newUsername:string
-//
-//
-//type NickResponse =
-//    | NickResponse of oldUsername:string * newUsername:string
-//
-//type SayRequest =
-//    | SayRequest of text:string
-//    //| SayRequest of username:string * text:string
-//
-//type SayResponse =
-//    | SayResponse of username:string * text:string
-//   
-//type Disconnect = Disconnect

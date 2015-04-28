@@ -24,12 +24,16 @@ let workerFun (mailbox : Actor<_>) =
             let! msg = mailbox.Receive()
             // worker should save state only for positive integers, and respond on demand, all other options causes exceptions
             match msg with
+          
             | Value num when num > 0 -> 
                 state := num
+          
             | Value num ->
                 logErrorf mailbox "Received an error-prone value %d" num
                 raise (ArithmeticException "values equal or less than 0")
+           
             | Respond -> mailbox.Sender() <! !state
+           
             return! loop()
         }
     loop()
@@ -40,7 +44,9 @@ let system = System.create "SypervisorSystem" <| ConfigurationFactory.Default()
 let strategy = 
     Strategy.OneForOne (fun e -> 
         match e with
-        | :? ArithmeticException -> Directive.Resume //.Restart
+        | :? ArithmeticException -> 
+                    // log 
+                    Directive.Resume
         | :? ArgumentException -> Directive.Stop
         | _ -> Directive.Escalate)
     
@@ -49,6 +55,7 @@ let strategy =
 let supervisor = 
     spawnOpt system "master" (fun mailbox -> 
         // by using spawn we may create a child actors without exiting a F# functional API
+      
         let worker = spawn mailbox "worker" workerFun
             
         let rec loop() = 
@@ -56,6 +63,7 @@ let supervisor =
                 let! msg = mailbox.Receive()
                 match msg with
                 | Respond -> worker.Tell(msg, mailbox.Sender())
+             
                 | _ -> worker <! msg
                 return! loop()
             }

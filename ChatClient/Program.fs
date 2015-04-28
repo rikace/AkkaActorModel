@@ -24,9 +24,10 @@ let main argv =
 
     
     let system = System.create "MyClient" fluentConfig
-
+   
     let chatClientActor =
         spawn system "ChatClient" <| fun mailbox ->
+           
             let server = mailbox.Context.ActorSelection("akka.tcp://MyServer@localhost:8081/user/ChatServer")            
             let rec loop nick = actor {
                 let! (msg:obj) = mailbox.Receive()
@@ -67,11 +68,7 @@ let main argv =
                 }
             loop ""
 
-
-//  let chatClient = system.ActorOf(Props.Create<chatClientActor>())
-//  let server = system.ActorSelection("akka.tcp://MyServer@localhost:8081/user/ChatServer")
-    
-    chatClientActor.Tell(ConnectRequest(username))
+    chatClientActor <! (ConnectRequest(username))
 
     while true do
         let input = Console.ReadLine()

@@ -24,16 +24,16 @@ let system = ActorSystem.Create("FSharp")
 type EchoServer =
     inherit Actor // UntypedActor
 
-    override x.OnReceive message =
+    override x.OnReceive (message:obj) =
         match message with
         | :? string as msg -> printfn "Hello %s" msg
         | _ ->  printfn "What shoudl I do with this thing %A" (message.GetType())
                 //failwith "unknown message"
 
-let echoServer = system.ActorOf(Props(typedefof<EchoServer>, Array.empty))
+let echoServer = system.ActorOf(Props(typedefof<EchoServer>), "Fsharp")
 
 echoServer.Tell 42
-echoServer.Tell "F#!"
+echoServer.Tell "CoStar!"
 
 system.Shutdown()
 

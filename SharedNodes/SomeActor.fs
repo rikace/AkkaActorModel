@@ -29,19 +29,3 @@ type SomeActor() =
 
         Console.ForegroundColor <- originalColor
 
-//
-//let remoteServer = 
-//    spawn system "RemoteServer"
-//    <| fun mailbox ->
-//        let rec loop() =
-//            actor {
-//                let! message = mailbox.Receive()
-//                let sender = mailbox.Sender()
-//                match box message with
-//                | :? string -> 
-//                        printfn "Message receice -> %s" message
-//                        sender <! sprintf "Echo from remote - %s" message
-//                        return! loop()
-//                | _ ->  failwith "unknown message"
-//            } 
-//        loop()

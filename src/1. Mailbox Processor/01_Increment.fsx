@@ -1,6 +1,4 @@
-﻿open Akka.Actor
-
-#if INTERACTIVE
+﻿#if INTERACTIVE
 #r @"..\..\bin\Akka.dll"
 #r @"..\..\bin\Akka.FSharp.dll"
 #endif
@@ -17,8 +15,8 @@ type OtherMessage =
     | Decrement
     | Display
 
-type SimpleActor () as this =
-    inherit ReceiveActor ()  
+type SimpleActor() as this =
+    inherit ReceiveActor()  
 
     let state = ref 0 // mutable is safe!!
 
@@ -35,14 +33,14 @@ type SimpleActor () as this =
                                 | Decrement -> state := !state - 1)
 
 
-    override this.Unhandled(msg) = // can be used for dead letter
+    override this.Unhandled(msg:obj) = // can be used for dead letter
             printfn "What shoudl I do with this thing %A" (msg.GetType())
 
 
 
 let system = ActorSystem.Create("example2")  
 
-let actor = system.ActorOf<SimpleActor>()
+let actor = system.ActorOf<SimpleActor>("SimpleActor")
 
 actor.Tell Print // Message
 actor.Tell Increment

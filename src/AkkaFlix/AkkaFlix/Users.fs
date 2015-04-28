@@ -1,5 +1,6 @@
 ﻿namespace AkkaFlix
 
+    open Akka
     open Akka.Actor
     open Akka.FSharp
     open System.Collections.Generic
@@ -10,7 +11,7 @@
         inherit Actor()
     
         let context = Users.Context
-        let users = new Dictionary<string, ActorRef>();
+        let users = new Dictionary<string, IActorRef>();
     
         // Return the User-actor identified by username
         // If none is found, create a new User-actor

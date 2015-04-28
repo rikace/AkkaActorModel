@@ -38,6 +38,9 @@ type ImageInfo = { Name:string; Path:string; mutable Image:Bitmap}
 type PipeLineImages(source:string, destination:string, capacityBoundedQueue:int, ?cancellationToken:CancellationTokenSource) =
     let cts = defaultArg cancellationToken (new CancellationTokenSource())
 
+
+
+
     let disposeOnException f (obj:#IDisposable) =
         try f obj
         with _ -> 

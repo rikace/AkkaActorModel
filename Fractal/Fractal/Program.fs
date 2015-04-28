@@ -108,23 +108,13 @@ type public AkkaFractalForm() as form =
                     }
                 loop()) [ SpawnOption.Dispatcher "akka.actor.synchronized-dispatcher" ] // Using local Sync-Context
         
-//        let actor = system.ActorOf<TileRenderActor>("render")  
-//        let actor1 = system.ActorOf<TileRenderActor>("render1")
-//        let actor2 = system.ActorOf<TileRenderActor>("render2")
-//        let actor3 = system.ActorOf<TileRenderActor>("render3")
-//        let actor4 = system.ActorOf<TileRenderActor>("render4")
-//        let actor = system.ActorOf(Props.Empty.WithRouter(new RoundRobinGroup([|actor1; actor2; actor3; actor4|])))
-//        let actor = system.ActorOf(Props.Empty.WithRouter(new RoundRobinPool(([|actor1; actor2; actor3; actor4|])))
-
-
-
         let deployment = Deploy (RemoteScope (Address.Parse "akka.tcp://worker@127.0.0.1:8091/user/render"))
         
-        let router = RoundRobinPool 16
+        let router = RoundRobinPool 1
         
         let actor = spawne system "render" <@ actorOf2 tileRenderer @> [ SpawnOption.Deploy deployment; 
                                                                          SpawnOption.Router router; 
-                                                                         SpawnOption.SupervisorStrategy(Strategy.OneForOne(fun _ -> Directive.Resume)) ]
+                                                                         SpawnOption.SupervisorStrategy(Strategy.OneForOne(fun _ -> Directive.Resume))]
                    
 
         for y = 0 to split do
@@ -132,7 +122,7 @@ type public AkkaFractalForm() as form =
             for x = 0 to split do
                 let xx = xs * x
                 g.DrawRectangle(Pens.Red, xx, yy, xs - 1, ys - 1)
-                actor.Tell({ X = yy; Y = xx; Height = xs; Width = ys; }, displayTile)
+                actor <! ({ X = yy; Y = xx; Height = xs; Width = ys; }, displayTile)
 
 module Main = 
     [<STAThread>]

@@ -1,8 +1,6 @@
-﻿#load "..\CommonModule.fsx"
-
+﻿
 open System
 open System.Collections.Generic
-open Common
 open System.Threading
 
 
@@ -20,6 +18,7 @@ open System.Threading
 //  member Enqueue      : 'T -> unit
 //  member BulkProduced : Event<'T[]>
 
+type Agent<'T> = MailboxProcessor<'T>
 
 /// Agent that implements bulking of incomming messages
 /// A bulk is produced (using an event) either after enough incomming

@@ -33,7 +33,11 @@ let echoServer =
         let rec loop() =
             actor {
                 let! message = mailbox.Receive()
+               
+               
                 let sender = mailbox.Sender()
+              
+              
                 match box message with
                 | :? string as filePath -> 
                         // DO NOT RUN THIS CODE AT HOME!
@@ -41,13 +45,15 @@ let echoServer =
                             let! response = readFile filePath
                             printfn "actor: done!"
                             sender <! response } |> Async.Start 
+
+
                         return! loop() 
                 | _ ->  failwith "unknown message"
             } 
         loop()
 
 
-let task = (echoServer <? filePath)
+let task = (echoServer.Ask filePath)
 
 let response = Async.RunSynchronously (task)
 let fileSize = string(response) |> String.length

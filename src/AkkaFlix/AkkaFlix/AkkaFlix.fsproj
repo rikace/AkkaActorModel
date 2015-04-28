@@ -37,56 +37,6 @@
     <DocumentationFile>bin\Release\AkkaFlix.XML</DocumentationFile>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="Akka">
-      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\Akka.dll</HintPath>
-    </Reference>
-    <Reference Include="Akka.FSharp">
-      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\Akka.FSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Akka.Remote">
-      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\Akka.Remote.dll</HintPath>
-    </Reference>
-    <Reference Include="FSharp.PowerPack">
-      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\FSharp.PowerPack.dll</HintPath>
-    </Reference>
-    <Reference Include="FSharp.PowerPack.Linq">
-      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\FSharp.PowerPack.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="FsPickler">
-      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\FsPickler.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.ProtocolBuffers">
-      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\Google.ProtocolBuffers.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.ProtocolBuffers.Serialization">
-      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\Google.ProtocolBuffers.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="Helios">
-      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\Helios.dll</HintPath>
-    </Reference>
-    <Reference Include="mscorlib" />
-    <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Numerics" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="PlayEvent.fs" />
-    <Compile Include="User.fs" />
-    <Compile Include="Users.fs" />
-    <Compile Include="Reporting.fs" />
-    <Compile Include="Player.fs" />
-    <Compile Include="AkkaFlix.fs" />
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
   </PropertyGroup>
@@ -103,6 +53,68 @@
     </Otherwise>
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
+  <ItemGroup>
+    <Compile Include="PlayEvent.fs" />
+    <Compile Include="User.fs" />
+    <Compile Include="Users.fs" />
+    <Compile Include="Reporting.fs" />
+    <Compile Include="Player.fs" />
+    <Compile Include="AkkaFlix.fs" />
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="protos\tutorial\addressbook.proto" />
+    <None Include="protos\google\protobuf\descriptor.proto" />
+    <None Include="protos\google\protobuf\csharp_options.proto" />
+    <Content Include="licenses\protoc-license.txt" />
+    <Content Include="licenses\license.txt" />
+    <Content Include="CHANGES.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Akka">
+      <HintPath>..\..\..\packages\Akka.1.0.0\lib\net45\Akka.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Akka.FSharp">
+      <HintPath>..\..\..\packages\Akka.FSharp.1.0.0\lib\net45\Akka.FSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Akka.Remote">
+      <HintPath>..\..\..\packages\Akka.Remote.1.0.0\lib\net45\Akka.Remote.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FSharp.PowerPack">
+      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\FSharp.PowerPack.dll</HintPath>
+    </Reference>
+    <Reference Include="FSharp.PowerPack.Linq">
+      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\FSharp.PowerPack.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="FsPickler">
+      <HintPath>..\..\..\..\..\Demo\ActorModel\ActorModelAkka\bin\FsPickler.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.ProtocolBuffers">
+      <HintPath>..\..\..\packages\Google.ProtocolBuffers.2.4.1.521\lib\net40\Google.ProtocolBuffers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.ProtocolBuffers.Serialization">
+      <HintPath>..\..\..\packages\Google.ProtocolBuffers.2.4.1.521\lib\net40\Google.ProtocolBuffers.Serialization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Helios">
+      <HintPath>..\..\..\packages\Helios.1.4.0\lib\net45\Helios.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+  </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

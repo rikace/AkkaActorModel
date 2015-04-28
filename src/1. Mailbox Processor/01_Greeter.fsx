@@ -14,14 +14,16 @@ type SomeActorMessages =
     | Greet of string
     | Hi
 
-let system = ConfigurationFactory.Default() |> System.create "FSharpActors"
+
+let system = System.create "FSharpActors" <| ConfigurationFactory.Default() 
 
 let actor = 
     spawn system "MyActor"
     <| fun mailbox ->
         let rec again name =
-            actor {
+            actor {   // Actor compuatation expression 
                 let! message = mailbox.Receive()
+             
                 match message with
                 | Greet(n) when n = name ->
                     printfn "Hello again, %s" name
@@ -30,7 +32,7 @@ let actor =
                     printfn "Hello %s" n
                     return! again n
                 | Hi -> 
-                    printfn "Hello from F#!"
+                    printfn "Hello from Again %s State" name
                     return! loop() }
         and loop() =
             actor {
@@ -40,10 +42,11 @@ let actor =
                     printfn "Hello %s" name
                     return! again name
                 | Hi ->
-                    printfn "Hello from F#!"
+                    printfn "Hello from Loop() State"
                     return! loop() } 
         loop()
 
+// .Tell in F# API is <! <?
 actor <! Greet "Ricky"
 actor <! Hi
 actor <! Greet "Ricky"

@@ -12,7 +12,7 @@ open System.Net
 type internal ThrottlingAgentMessage<'T> = 
   | Completed
   | Work of Async<unit>
-  | WorkWithResult of Async<'T> * AsyncReplyChannel<'T>
+
     
 /// Represents an agent that runs operations in concurrently. When the number
 /// of concurrent operations exceeds 'limit', they are queued and processed later
@@ -22,22 +22,22 @@ type ThrottlingAgent<'T>(limit) =
       agent.Scan(function
         | Completed -> Some(working (limit - 1))
         | _ -> None)
+  
     and working count = async { 
       let! msg = agent.Receive()
+
+      
+
+
       match msg with 
       | Completed -> return! working (count - 1)
+     
+     
       | Work work ->  async { try do! work 
                               finally agent.Post(Completed) }
                       |> Async.Start
                       if count < limit then return! working (count + 1)
-                      else return! waiting ()
-      | WorkWithResult(work, reply) -> async {    try   
-                                                        let! result = work 
-                                                        reply.Reply(result)
-                                                  finally agent.Post(Completed) }
-                                       |> Async.Start
-                                       if count < limit then return! working (count + 1)
-                                       else return! waiting () }
+                      else return! waiting () }
     working 0)      
 
   member x.DoWork(work) = agent.Post (Work work)

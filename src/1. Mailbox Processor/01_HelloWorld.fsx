@@ -18,14 +18,16 @@ let system = System.create "MySystem" <| Configuration.load()
 
     
 // functional 
-let greeter = // the function spawn instantiate an ActorRef
+let greeter = 
+    // the function spawn instantiate an ActorRef
     // spawn attaches the behavior to our system and returns an ActorRef
     // We can use ActorRef to pass messages
 
     // ActorFactory -> Name -> f(Actor<Message> -> Cont<'Message, 'return>) -> ActorRef
     spawn system "Greeter-Functional"
     <| fun mailbox ->
-        let rec loop() = actor { // tail recursive function, which uses an actor { ... } computation expression 
+        let rec loop() = actor { // tail recursive function,
+                                 // which uses an actor { ... } computation expression 
             let! msg = mailbox.Receive()
             match msg with
             | Greet(w) ->printfn "Hello %s" w                

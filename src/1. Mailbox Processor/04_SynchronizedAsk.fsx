@@ -60,7 +60,7 @@ let echoServer =
 for timeout in [10; 100; 250; 2500] do
     try
                     // echoServer.Ask
-        let task = (echoServer <? versionUrl) // <? infix operator 
+        let (task:Async<obj>) = (echoServer <? versionUrl) // <? infix operator 
 
         let response = Async.RunSynchronously (task, timeout)
         let responseLength = string(response) |> String.length
