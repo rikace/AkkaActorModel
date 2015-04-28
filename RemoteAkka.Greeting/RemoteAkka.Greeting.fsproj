@@ -13,6 +13,8 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFSharpCoreVersion>4.3.1.0</TargetFSharpCoreVersion>
     <Name>RemoteAkka.Greeting</Name>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -66,15 +68,15 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Akka">
-      <HintPath>..\packages\Akka.0.8.0\lib\net45\Akka.dll</HintPath>
+      <HintPath>..\packages\Akka.1.0.0\lib\net45\Akka.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Akka.FSharp">
-      <HintPath>..\packages\Akka.FSharp.0.8.0\lib\net45\Akka.FSharp.dll</HintPath>
+      <HintPath>..\packages\Akka.FSharp.1.0.0\lib\net45\Akka.FSharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Akka.Remote">
-      <HintPath>..\packages\Akka.Remote.0.8.0\lib\net45\Akka.Remote.dll</HintPath>
+      <HintPath>..\packages\Akka.Remote.1.0.0\lib\net45\Akka.Remote.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FSharp.PowerPack">
@@ -98,7 +100,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Helios">
-      <HintPath>..\packages\Helios.1.3.6.0\lib\net45\Helios.dll</HintPath>
+      <HintPath>..\packages\Helios.1.4.0\lib\net45\Helios.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
@@ -106,13 +108,20 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
   </ItemGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

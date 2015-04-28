@@ -21,7 +21,7 @@ let main argv =
                 helios.tcp {
                     transport-class = "Akka.Remote.Transport.Helios.HeliosTcpTransport, Akka.Remote"
 		            transport-protocol = tcp
-		            port = 8091
+		            port = 8191
 		            hostname = "127.0.0.1"
                 }
             }

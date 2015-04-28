@@ -1,5 +1,4 @@
-﻿open Akka
-open Akka.FSharp
+﻿open Akka.FSharp
 open Akka.Actor
 open Akka.Remote
 open Akka.Configuration
@@ -18,10 +17,15 @@ type GreetingActor() as g =
 [<EntryPoint>]
 let main argv = 
 
-      let config = 
-        FluentConfig.Begin()                
-                .StartRemotingOn("127.0.0.1", 8088)
-                .Build()
+      let config =
+        Configuration.parse
+            @"akka {
+                actor.provider = ""Akka.Remote.RemoteActorRefProvider, Akka.Remote""
+                remote.helios.tcp {
+                    hostname = localhost
+                    port = 8088
+                }
+            }"
 
       let system = ActorSystem.Create("greeter", config)
             

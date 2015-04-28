@@ -10,27 +10,27 @@ let main argv =
     
     Console.Title <- "NODE 2"
     
-    let config = ConfigurationFactory.ParseString(@"
+    let config = Configuration.parse """
             akka {  
                 log-config-on-start = on
                 stdout-loglevel = DEBUG
                 loglevel = ERROR
                 actor {
-                    provider = ""Akka.Remote.RemoteActorRefProvider, Akka.Remote""
+                    provider = "Akka.Remote.RemoteActorRefProvider, Akka.Remote"
         
                 }
                 remote {
                     helios.tcp {
-                        transport-class = ""Akka.Remote.Transport.Helios.HeliosTcpTransport, Akka.Remote""
+                        transport-class = "Akka.Remote.Transport.Helios.HeliosTcpTransport, Akka.Remote"
 		                applied-adapters = []
 		                transport-protocol = tcp
 		                port = 8080
 		                hostname = localhost
                     }
                 }
-            }")
+            }"""
 
-    let system = ActorSystem.Create("system2", config)
+    let system = System.create "system2" config
 
 
     Console.ReadLine() |> ignore

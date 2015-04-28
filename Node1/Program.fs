@@ -13,13 +13,13 @@ let main argv =
 
     Console.Title <- "NODE 1"
    
-    let configRouting = ConfigurationFactory.ParseString(@"
+    let configRouting = Configuration.parse """
                 akka {  
                     log-config-on-start = on
                     stdout-loglevel = DEBUG
                     loglevel = ERROR
                     actor {
-                        provider = ""Akka.Remote.RemoteActorRefProvider, Akka.Remote""
+                        provider = "Akka.Remote.RemoteActorRefProvider, Akka.Remote"
 
                         deployment {
                             /localactor {
@@ -29,25 +29,25 @@ let main argv =
                             /remoteactor {
                                 router = round-robin-pool
                                 nr-of-instances = 5
-                                remote = ""akka.tcp://system2@localhost:8080""  # NODE 2
+                                remote = "akka.tcp://system2@localhost:8080"  # NODE 2
                             }
                         }
                     }
                     remote {
                         helios.tcp {
-                            transport-class = ""Akka.Remote.Transport.Helios.HeliosTcpTransport, Akka.Remote""
+                            transport-class = "Akka.Remote.Transport.Helios.HeliosTcpTransport, Akka.Remote"
 		                    applied-adapters = []
 		                    transport-protocol = tcp
 		                    port = 8090
 		                    hostname = localhost
                         }
                     }
-                }")
+                }"""
 
 
     // create a local group router (see config)
     // routing 
-    let system = ActorSystem.Create("system1", configRouting)    
+    let system = System.create "system1" <| configRouting
 
     let local = system.ActorOf<SomeActor>("localactor") // Name convention used in the config deplyment section
     

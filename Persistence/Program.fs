@@ -1,4 +1,5 @@
 ﻿open System
+open Akka
 open Akka.FSharp
 open Akka.Persistence
 open Akka.Persistence.FSharp
@@ -86,4 +87,3 @@ module Scenario1 =
     
 Scenario0.run()
 
-Console.ReadLine()
