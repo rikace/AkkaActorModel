@@ -39,7 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Akka">
-      <HintPath>..\bin\Akka.dll</HintPath>
+      <HintPath>..\..\..\bin\Akka.dll</HintPath>
     </Reference>
     <Reference Include="Akka.FSharp">
       <HintPath>..\bin\Akka.FSharp.dll</HintPath>
