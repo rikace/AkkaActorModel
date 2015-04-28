@@ -104,7 +104,7 @@ module Domain =
         let cont (mailbox : Actor<Command>) =
             let emptyDict = ImmutableDictionary.Empty
 
-            let rec cellsLoop (cells:IImmutableDictionary<Coordinates, ActorRef>) =
+            let rec cellsLoop (cells:IImmutableDictionary<Coordinates, IActorRef>) =
                 actor { 
                     let! command = mailbox.Receive()
                     let sender = mailbox.Sender()
@@ -139,7 +139,7 @@ module Domain =
         let cont (mailbox : Actor<Message>) =
             let emptyDict = ImmutableDictionary.Empty
 
-            let rec collectLoop n (neighborhoods:IImmutableDictionary<Coordinates, ActorRef>) replyTo =
+            let rec collectLoop n (neighborhoods:IImmutableDictionary<Coordinates, IActorRef>) replyTo =
                 actor { 
                     let! message = mailbox.Receive()
                     let sender = mailbox.Sender()

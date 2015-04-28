@@ -11,7 +11,6 @@ open Akka.Configuration
 open Akka.FSharp
 open Akka.Actor
 open Akka.Routing
-open MandelbrotSet
 open Fractal.Shared
 
 
@@ -40,6 +39,7 @@ type public AkkaFractalForm() as form =
         picBox.Dock <- System.Windows.Forms.DockStyle.Fill
         panel.AutoScroll <- true
         panel.Anchor <- AnchorStyles.Top ||| AnchorStyles.Left
+        //  panel.Dock <- System.Windows.Forms.DockStyle.Fill
         panel.Location <- new System.Drawing.Point(0, 0)
         panel.Margin <- new System.Windows.Forms.Padding(2, 2, 2, 2)
         panel.ClientSize <- new System.Drawing.Size(8000, 8000)
@@ -59,7 +59,7 @@ type public AkkaFractalForm() as form =
         form.OnLoad(EventArgs.Empty)
     
     member form.eventForm_Loading (sender : obj, e : EventArgs) = 
-
+  
         let config = 
             Configuration.parse """
                 akka {  
@@ -72,10 +72,9 @@ type public AkkaFractalForm() as form =
                     remote {
                         helios.tcp {
                             transport-class = "Akka.Remote.Transport.Helios.HeliosTcpTransport, Akka.Remote"
-		                    applied-adapters = []
-                            transport-protocol = tcp
+		                    transport-protocol = tcp
 		                    port = 0
-		                    hostname = "127.0.0.1"
+		                    hostname = localhost
                         }
                     }
                 }
@@ -93,7 +92,7 @@ type public AkkaFractalForm() as form =
         let xs = w / split
         let g = Graphics.FromImage(img)
         
-        let renderer (tile:RenderedTile) =
+        let renderer tile =
             let image = BitmapConverter.toBitmap (tile.Bytes)
             g.DrawImageUnscaled(image, tile.X, tile.Y)
             picBox.Invalidate()
@@ -106,23 +105,21 @@ type public AkkaFractalForm() as form =
                         renderer (msg)
                         return! loop()
                     }
-                loop()) [ SpawnOption.Dispatcher "akka.actor.synchronized-dispatcher" ] // Using local Sync-Context
+                loop()) [ SpawnOption.Dispatcher "akka.actor.synchronized-dispatcher" ]
         
-        let deployment = Deploy (RemoteScope (Address.Parse "akka.tcp://worker@127.0.0.1:8091/user/render"))
-        
-        let router = RoundRobinPool 1
-        
-        let actor = spawne system "render" <@ actorOf2 tileRenderer @> [ SpawnOption.Deploy deployment; 
-                                                                         SpawnOption.Router router; 
-                                                                         SpawnOption.SupervisorStrategy(Strategy.OneForOne(fun _ -> Directive.Resume))]
-                   
 
+        let deployment = Deploy (RemoteScope (Address.Parse "akka.tcp://worker@localhost:8090/user/render"))
+        
+        let router = RoundRobinPool 16
+        
+        let actor = spawne system "render" <@ actorOf2 tileRenderer @> [ SpawnOption.Deploy deployment; SpawnOption.Router router ]
+                   
         for y = 0 to split do
             let yy = ys * y
             for x = 0 to split do
                 let xx = xs * x
                 g.DrawRectangle(Pens.Red, xx, yy, xs - 1, ys - 1)
-                actor <! ({ X = yy; Y = xx; Height = xs; Width = ys; }, displayTile)
+                actor.Tell({ X = yy; Y = xx; Height = xs; Width = ys; }, displayTile)
 
 module Main = 
     [<STAThread>]

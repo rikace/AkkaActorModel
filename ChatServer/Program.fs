@@ -15,21 +15,27 @@ let main argv =
 
     Console.Title <- (sprintf "Chat Server : %d" (System.Diagnostics.Process.GetCurrentProcess().Id))
  
-    let fluentConfig = 
-        FluentConfig.Begin()
-                .StdOutLogLevel(LogLevel.DebugLevel)
-                .LogConfigOnStart(true)
-                .LogLevel(LogLevel.ErrorLevel)
-                .LogLocal(true, true,true,true, true)                
-                .LogRemote(LogLevel.DebugLevel, true, true)
-                .StartRemotingOn("localhost", 8081)                
-                .Build()
+    let fluentConfig =  Configuration.parse """
+            akka {  
+                actor {
+                    provider = "Akka.Remote.RemoteActorRefProvider, Akka.Remote"
+                }
+                remote {
+                    helios.tcp {
+                        transport-class = "Akka.Remote.Transport.Helios.HeliosTcpTransport, Akka.Remote"
+                        applied-adapters = []
+                        transport-protocol = tcp
+                        port = 8081
+                        hostname = localhost
+                    }
+                }
+            }"""
                 
     let system = System.create "MyServer" fluentConfig
 
     let chatServerActor =
         spawn system "ChatServer" <| fun mailbox ->
-            let rec loop (clients:ActorRef list) = actor {
+            let rec loop (clients:IActorRef list) = actor {
               
                 let! (msg:obj) = mailbox.Receive()
               

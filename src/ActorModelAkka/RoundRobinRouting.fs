@@ -37,7 +37,7 @@ let local = spawnOpt system "localactor" (fun mailbox ->
             Console.WriteLine("{0} got {1} - Thread #id {2}", address, msg, System.Threading.Thread.CurrentThread.ManagedThreadId)
             return! loop()
             }
-        loop()) [ (SpawnOption.Router(new FromConfig())) ]
+        loop()) [ (SpawnOption.Router(RoundRobinPool 2)) ]
 
 
 //these messages should reach the workers via the routed local ref

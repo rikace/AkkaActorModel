@@ -53,7 +53,7 @@ let echoServer =
         loop()
 
 
-let task = (echoServer.Ask filePath)
+let task = (echoServer <? filePath)
 
 let response = Async.RunSynchronously (task)
 let fileSize = string(response) |> String.length

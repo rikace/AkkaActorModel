@@ -77,10 +77,10 @@ type BacnkAccount() =
 
 
 let system = ActorSystem.Create("bank-system")
-let bankAccount = system.ActorOf<BankAccountActorTest>()
+let bankAccount = system.ActorOf<BankAccountActor>()
 
 bankAccount <! "10"
 
 bankAccount <! {amount = 10m}
 
-let balance = bankAccount <? {amount = 10m} |> Async.RunSynchronously
+let (balance:string) = bankAccount <? {amount = 10m} |> Async.RunSynchronously

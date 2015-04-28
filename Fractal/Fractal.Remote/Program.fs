@@ -5,9 +5,6 @@ open System
 
 [<EntryPoint>]
 let main argv =
-
-    Console.Title <- "Remote Worker Actor"
-    
     let config = 
         Configuration.parse """
         akka {  
@@ -21,16 +18,14 @@ let main argv =
                 helios.tcp {
                     transport-class = "Akka.Remote.Transport.Helios.HeliosTcpTransport, Akka.Remote"
 		            transport-protocol = tcp
-		            port = 8091
-		            hostname = "127.0.0.1"
+		            port = 8090
+		            hostname = localhost
                 }
             }
           } 
-        """ 
-   
+        """   
+
     use system = System.create "worker" config
-
-    Console.ForegroundColor <- ConsoleColor.Green
-
+    
     Console.ReadLine() |> ignore
     0

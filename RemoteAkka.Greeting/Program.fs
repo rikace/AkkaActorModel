@@ -18,12 +18,24 @@ type GreetingActor() as g =
 [<EntryPoint>]
 let main argv = 
 
-      let config = 
-        FluentConfig.Begin()                
-                .StartRemotingOn("127.0.0.1", 8088)
-                .Build()
+      let config = Configuration.parse """
+        akka {  
+            actor {
+                provider = "Akka.Remote.RemoteActorRefProvider, Akka.Remote"
+            }
+            remote {
+                helios.tcp {
+                    transport-class = "Akka.Remote.Transport.Helios.HeliosTcpTransport, Akka.Remote"
+		            applied-adapters = []
+		            transport-protocol = tcp
+		            port = 8088
+		            hostname = 127.0.0.1
+                }
+            }
+    }"""
 
-      let system = ActorSystem.Create("greeter", config)
+
+      let system = System.create "greeter" config
             
       Console.ReadLine() |> ignore
 
