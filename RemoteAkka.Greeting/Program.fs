@@ -17,19 +17,6 @@ type GreetingActor() as g =
 [<EntryPoint>]
 let main argv = 
 
-<<<<<<< HEAD
-      let config =
-        Configuration.parse
-            @"akka {
-                actor.provider = ""Akka.Remote.RemoteActorRefProvider, Akka.Remote""
-                remote.helios.tcp {
-                    hostname = localhost
-                    port = 8088
-                }
-            }"
-
-      let system = ActorSystem.Create("greeter", config)
-=======
       let config = Configuration.parse """
         akka {  
             actor {
@@ -48,7 +35,6 @@ let main argv =
 
 
       let system = System.create "greeter" config
->>>>>>> origin/master
             
       Console.ReadLine() |> ignore
 

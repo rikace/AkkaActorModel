@@ -10,7 +10,6 @@ open System
 let main argv = 
 
     Console.Title <- (sprintf "Chat Server : %d" (System.Diagnostics.Process.GetCurrentProcess().Id))
-<<<<<<< HEAD
 
     let config = 
             Configuration.parse """
@@ -32,34 +31,12 @@ let main argv =
                     }
                 }
                 """
-=======
- 
-    let fluentConfig =  Configuration.parse """
-            akka {  
-                actor {
-                    provider = "Akka.Remote.RemoteActorRefProvider, Akka.Remote"
-                }
-                remote {
-                    helios.tcp {
-                        transport-class = "Akka.Remote.Transport.Helios.HeliosTcpTransport, Akka.Remote"
-                        applied-adapters = []
-                        transport-protocol = tcp
-                        port = 8081
-                        hostname = localhost
-                    }
-                }
-            }"""
->>>>>>> origin/master
                 
     let system = System.create "MyServer" config
 
     let chatServerActor =
         spawn system "ChatServer" <| fun mailbox ->
-<<<<<<< HEAD
             let rec loop (clients:Akka.Actor.IActorRef list) = actor {
-=======
-            let rec loop (clients:IActorRef list) = actor {
->>>>>>> origin/master
               
                 let! (msg:obj) = mailbox.Receive()
               
@@ -112,45 +89,3 @@ let main argv =
     0 // return an integer exit code
 
 
-
-
-
-(*
-    let chatServerActor =
-    spawn system "ChatServer" <| fun mailbox ->
-        let rec loop (clients:ActorRef list) = actor {
-            let! (msg:ChatMessage) = mailbox.Receive()
-            match msg with
-            | SayRequest(username, text) ->
-                    let color = Console.ForegroundColor
-                    Console.ForegroundColor <- ConsoleColor.Green                        
-                    Console.WriteLine("{0} said {1}",username, text)
-
-                    let response = SayResponse(username, text)
-                    for client in clients do
-                        client <! (response, mailbox.Self)
-                        
-                    Console.ForegroundColor <- color
-
-            | ConnectRequest(username) ->
-                let response = ConnectResponse( "Hello and welcome to Akka .NET chat example")
-                let sender = mailbox.Sender()
-                sender.Tell(response, mailbox.Self)
-                return! loop (sender :: clients)             
-            | NickRequest(oldUsername, newUsername) -> 
-                    let response = NickResponse(oldUsername, newUsername)
-                    for client in clients do
-                        client <! (response, mailbox.Self)
-                        
-                    return! loop clients
-
-
-            | SayResponse(username, text) -> 
-                            Console.WriteLine("{0}: {1}", username, text)
-            | Disconnect -> ()
-            }
-        loop []
-
-
-    system.ActorOf<chatServerActor>("ChatServer")
-*)

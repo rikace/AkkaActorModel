@@ -88,10 +88,7 @@ module Scenario1 =
 
 Scenario0.run()
 
-<<<<<<< HEAD
-=======
 Console.ReadLine()              
 
 
 Scenario1.run()
->>>>>>> origin/master

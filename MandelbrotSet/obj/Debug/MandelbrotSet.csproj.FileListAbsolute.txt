@@ -1,0 +1,5 @@
+C:\Git\AkkaActorModel\MandelbrotSet\bin\Debug\MandelbrotSet.dll
+C:\Git\AkkaActorModel\MandelbrotSet\bin\Debug\MandelbrotSet.pdb
+C:\Git\AkkaActorModel\MandelbrotSet\obj\Debug\MandelbrotSet.dll
+C:\Git\AkkaActorModel\MandelbrotSet\obj\Debug\MandelbrotSet.pdb
+C:\Git\AkkaActorModel\MandelbrotSet\obj\Debug\MandelbrotSet.csprojResolveAssemblyReference.cache

@@ -1,0 +1,8 @@
+C:\Git\AkkaActorModel\src\Pipeline\ActorPatterns\bin\Debug\ActorPatterns.exe.config
+C:\Git\AkkaActorModel\src\Pipeline\ActorPatterns\bin\Debug\ActorPatterns.XML
+C:\Git\AkkaActorModel\src\Pipeline\ActorPatterns\bin\Debug\ActorPatterns.exe
+C:\Git\AkkaActorModel\src\Pipeline\ActorPatterns\bin\Debug\ActorPatterns.pdb
+C:\Git\AkkaActorModel\src\Pipeline\ActorPatterns\bin\Debug\FSharp.Core.dll
+C:\Git\AkkaActorModel\src\Pipeline\ActorPatterns\bin\Debug\FSharp.Core.xml
+C:\Git\AkkaActorModel\src\Pipeline\ActorPatterns\obj\Debug\ActorPatterns.exe
+C:\Git\AkkaActorModel\src\Pipeline\ActorPatterns\obj\Debug\ActorPatterns.pdb

@@ -62,6 +62,13 @@
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
   <ItemGroup>
     <Compile Include="PlayEvent.fs" />
     <Compile Include="User.fs" />
@@ -70,27 +77,18 @@
     <Compile Include="Player.fs" />
     <Compile Include="AkkaFlix.fs" />
     <None Include="App.config" />
+    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Akka">
-      <HintPath>..\..\..\packages\Akka.1.0.0\lib\net45\Akka.dll</HintPath>
+      <HintPath>..\..\..\packages\Akka.1.0.1\lib\net45\Akka.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Akka.FSharp">
-      <HintPath>..\..\..\packages\Akka.FSharp.1.0.0\lib\net45\Akka.FSharp.dll</HintPath>
+      <HintPath>..\..\..\packages\Akka.FSharp.1.0.1\lib\net45\Akka.FSharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Akka.Remote">
-      <HintPath>..\..\..\packages\Akka.Remote.1.0.0\lib\net45\Akka.Remote.dll</HintPath>
-      <Private>True</Private>
-      <HintPath>..\..\..\bin\Akka.dll</HintPath>
-    </Reference>
-    <Reference Include="Akka.FSharp">
-      <HintPath>..\..\..\bin\Akka.FSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Akka.Remote">
-      <HintPath>..\..\..\bin\Akka.Remote.dll</HintPath>
-    </Reference>
+    <Reference Include="Akka.Remote" />
     <Reference Include="FSharp.PowerPack">
       <HintPath>..\..\..\bin\FSharp.PowerPack.dll</HintPath>
     </Reference>
@@ -125,13 +123,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
   </ItemGroup>
-  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
-  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -1,0 +1,7 @@
+C:\Git\AkkaActorModel\ChatHelper\bin\Release\ChatHelper.XML
+C:\Git\AkkaActorModel\ChatHelper\bin\Release\ChatHelper.dll
+C:\Git\AkkaActorModel\ChatHelper\bin\Release\ChatHelper.pdb
+C:\Git\AkkaActorModel\ChatHelper\bin\Release\FSharp.Core.dll
+C:\Git\AkkaActorModel\ChatHelper\bin\Release\FSharp.Core.xml
+C:\Git\AkkaActorModel\ChatHelper\obj\Release\ChatHelper.dll
+C:\Git\AkkaActorModel\ChatHelper\obj\Release\ChatHelper.pdb

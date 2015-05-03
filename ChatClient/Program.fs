@@ -14,25 +14,6 @@ let main argv =
     Console.Write("Insert your user name: ")
     let username = Console.ReadLine()
 
-<<<<<<< HEAD
-    let config = 
-            Configuration.parse """
-            akka {  
-                actor {
-                    provider = "Akka.Remote.RemoteActorRefProvider, Akka.Remote"
-                }
-                remote {
-                    helios.tcp {
-                        transport-class = "Akka.Remote.Transport.Helios.HeliosTcpTransport, Akka.Remote"
-		                applied-adapters = []
-		                transport-protocol = tcp
-		                port = 0
-		                hostname = localhost
-                    }
-                }
-            }
-                """
-=======
     let config = Configuration.parse """
         akka {  
             actor {
@@ -49,7 +30,6 @@ let main argv =
             }
     }"""
 
->>>>>>> origin/master
     
     let system = System.create "MyClient" config
    
@@ -111,34 +91,3 @@ let main argv =
 
 
     0  
-
-
-
-
-
-//    let chatClientActor =
-//        spawn system "ChatClient" <| fun mailbox ->
-//            let server = mailbox.Context.ActorSelection("akka.tcp://MyServer@localhost:8081/user/ChatServer")            
-//            let rec loop nick = actor {
-////                let! msg = mailbox.Receive()
-////                match msg with                 
-//                let! (msg:ChatMessage) = mailbox.Receive()
-//                match msg with
-//                | ConnectRequest(username) -> 
-//                            Console.WriteLine("Connecting....")
-//                            server.Tell(ConnectRequest(username))
-//                            return! loop username
-//                | ConnectResponse(message) ->  
-//                        Console.WriteLine("Connected!")
-//                        Console.WriteLine(message)
-//                | NickRequest(oldUsername, newUsername) -> 
-//                        Console.WriteLine("Changing nick to {0}", newUsername)                    
-//                        server.Tell(NickRequest(nick, newUsername))
-//                        return! loop newUsername
-//                | NickResponse(oldUsername, newUsername) -> 
-//                        Console.WriteLine("{0} is now known as {1}", oldUsername, newUsername)                
-//                | SayResponse(username, text) -> 
-//                                Console.WriteLine("{0}: {1}", username, text)
-//                | Disconnect -> ()
-//                }
-//            loop ""

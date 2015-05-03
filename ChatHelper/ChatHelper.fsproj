@@ -10,7 +10,7 @@
     <RootNamespace>ChatHelper</RootNamespace>
     <AssemblyName>ChatHelper</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <ProjectGuid>f5f612c9-a804-4166-a022-19f3f0abcf4e</ProjectGuid>
+    <ProjectGuid>{40750206-ede5-4e72-9a24-bd6d11f4b405}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>ChatHelper</RootNamespace>
     <AssemblyName>ChatHelper</AssemblyName>

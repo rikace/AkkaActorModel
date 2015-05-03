@@ -58,6 +58,13 @@
   </Target>
   -->
   <Import Project="..\..\.paket\paket.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
   <ItemGroup>
     <Compile Include="PlayGround.fs" />
     <Compile Include="AkkaTests.fs" />
@@ -75,10 +82,17 @@
     <Compile Include="RemoteDeploy.fs" />
     <Compile Include="HelloActor.fs" />
     <Compile Include="RoundRobinRouting.fs" />
+    <None Include="protos\tutorial\addressbook.proto" />
+    <None Include="protos\google\protobuf\descriptor.proto" />
+    <None Include="protos\google\protobuf\csharp_options.proto" />
+    <Content Include="licenses\protoc-license.txt" />
+    <Content Include="licenses\license.txt" />
+    <Content Include="CHANGES.txt" />
+    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Akka">
-      <HintPath>..\..\packages\Akka.1.0.0\lib\net45\Akka.dll</HintPath>
+      <HintPath>..\..\packages\Akka.1.0.1\lib\net45\Akka.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Akka.FSharp">
@@ -86,15 +100,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Akka.Remote">
-      <HintPath>..\..\packages\Akka.Remote.1.0.0\lib\net45\Akka.Remote.dll</HintPath>
+      <HintPath>..\..\packages\Akka.Remote.1.0.1\lib\net45\Akka.Remote.dll</HintPath>
       <Private>True</Private>
-      <HintPath>..\..\bin\Akka.dll</HintPath>
-    </Reference>
-    <Reference Include="Akka.FSharp">
-      <HintPath>..\..\bin\Akka.FSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Akka.Remote">
-      <HintPath>..\..\bin\Akka.Remote.dll</HintPath>
     </Reference>
     <Reference Include="FSharp.PowerPack">
       <HintPath>..\..\bin\FSharp.PowerPack.dll</HintPath>
@@ -106,15 +113,16 @@
       <HintPath>..\..\bin\FsPickler.dll</HintPath>
     </Reference>
     <Reference Include="Google.ProtocolBuffers">
-      <HintPath>..\..\bin\Google.ProtocolBuffers.dll</HintPath>
+      <HintPath>..\..\packages\Google.ProtocolBuffers.2.4.1.521\lib\net40\Google.ProtocolBuffers.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Google.ProtocolBuffers.Serialization">
-      <HintPath>..\..\bin\Google.ProtocolBuffers.Serialization.dll</HintPath>
+      <HintPath>..\..\packages\Google.ProtocolBuffers.2.4.1.521\lib\net40\Google.ProtocolBuffers.Serialization.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Helios">
       <HintPath>..\..\packages\Helios.1.4.0\lib\net45\Helios.dll</HintPath>
       <Private>True</Private>
-      <HintPath>..\..\bin\Helios.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -123,17 +131,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
-      <HintPath>..\..\bin\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
   </ItemGroup>
-  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
-  </Target>
 </Project>

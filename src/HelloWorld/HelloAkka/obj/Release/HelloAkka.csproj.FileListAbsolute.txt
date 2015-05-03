@@ -1,0 +1,10 @@
+C:\Git\AkkaActorModel\src\HelloWorld\HelloAkka\bin\Release\HelloAkka.exe.config
+C:\Git\AkkaActorModel\src\HelloWorld\HelloAkka\bin\Release\HelloAkka.exe
+C:\Git\AkkaActorModel\src\HelloWorld\HelloAkka\bin\Release\HelloAkka.pdb
+C:\Git\AkkaActorModel\src\HelloWorld\HelloAkka\bin\Release\Akka.dll
+C:\Git\AkkaActorModel\src\HelloWorld\HelloAkka\bin\Release\Newtonsoft.Json.dll
+C:\Git\AkkaActorModel\src\HelloWorld\HelloAkka\bin\Release\Akka.xml
+C:\Git\AkkaActorModel\src\HelloWorld\HelloAkka\bin\Release\Newtonsoft.Json.xml
+C:\Git\AkkaActorModel\src\HelloWorld\HelloAkka\obj\Release\HelloAkka.csprojResolveAssemblyReference.cache
+C:\Git\AkkaActorModel\src\HelloWorld\HelloAkka\obj\Release\HelloAkka.exe
+C:\Git\AkkaActorModel\src\HelloWorld\HelloAkka\obj\Release\HelloAkka.pdb

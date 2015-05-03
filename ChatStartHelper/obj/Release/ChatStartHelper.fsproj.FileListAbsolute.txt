@@ -1,0 +1,7 @@
+C:\Git\AkkaActorModel\ChatStartHelper\bin\Release\ChatStartHelper.XML
+C:\Git\AkkaActorModel\ChatStartHelper\bin\Release\ChatStartHelper.dll
+C:\Git\AkkaActorModel\ChatStartHelper\bin\Release\ChatStartHelper.pdb
+C:\Git\AkkaActorModel\ChatStartHelper\bin\Release\FSharp.Core.dll
+C:\Git\AkkaActorModel\ChatStartHelper\bin\Release\FSharp.Core.xml
+C:\Git\AkkaActorModel\ChatStartHelper\obj\Release\ChatStartHelper.dll
+C:\Git\AkkaActorModel\ChatStartHelper\obj\Release\ChatStartHelper.pdb

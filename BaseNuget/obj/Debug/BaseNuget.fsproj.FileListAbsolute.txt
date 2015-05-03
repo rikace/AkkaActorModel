@@ -1,0 +1,6 @@
+C:\Git\AkkaActorModel\bin\BaseNuget.dll.config
+C:\Git\AkkaActorModel\bin\BaseNuget.dll
+C:\Git\AkkaActorModel\bin\BaseNuget.pdb
+C:\Git\AkkaActorModel\bin\BaseNuget.XML
+C:\Git\AkkaActorModel\BaseNuget\obj\Debug\BaseNuget.dll
+C:\Git\AkkaActorModel\BaseNuget\obj\Debug\BaseNuget.pdb

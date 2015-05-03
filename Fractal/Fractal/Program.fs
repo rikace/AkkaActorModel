@@ -106,12 +106,7 @@ type public AkkaFractalForm() as form =
                     }
                 loop()) [ SpawnOption.Dispatcher "akka.actor.synchronized-dispatcher" ]
         
-<<<<<<< HEAD
         let deployment = Deploy (RemoteScope (Address.Parse "akka.tcp://worker@127.0.0.1:8191/user/render"))
-=======
-
-        let deployment = Deploy (RemoteScope (Address.Parse "akka.tcp://worker@localhost:8090/user/render"))
->>>>>>> origin/master
         
         let router = RoundRobinPool 16
         

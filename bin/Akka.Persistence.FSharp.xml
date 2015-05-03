@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>Akka.Persistence.FSharp</name></assembly>
+<members>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:Akka.Persistence.FSharp.View`2.Self">
+ <summary>
+ Gets <see cref="IActorRef" /> for the current actor.
+ </summary>
+</member>
+<member name="P:Akka.Persistence.FSharp.View`2.Log">
+ <summary>
+ Lazy logging adapter. It won't be initialized until logging function will be called. 
+ </summary>
+</member>
+<member name="P:Akka.Persistence.FSharp.View`2.Context">
+ <summary>
+ Gets the current actor context.
+ </summary>
+</member>
+<member name="M:Akka.Persistence.FSharp.View`2.ViewId">
+ <summary>
+ View's identifier that doesn't change across different view incarnations.
+ </summary>
+</member>
+<member name="M:Akka.Persistence.FSharp.View`2.Unhandled(System.Object)">
+ <summary>
+ Explicit signalization of unhandled message.
+ </summary>
+</member>
+<member name="M:Akka.Persistence.FSharp.View`2.SnapshotStore">
+ <summary>
+ Returns currently attached snapshot store actor reference.
+ </summary>
+</member>
+<member name="M:Akka.Persistence.FSharp.View`2.Sender">
+ <summary>
+ Returns a sender of current message or <see cref="ActorRefs.NoSender" />, if none could be determined.
+ </summary>
+</member>
+<member name="M:Akka.Persistence.FSharp.View`2.PersistenceId">
+ <summary>
+ Persistent actor's identifier that doesn't change across different actor incarnations.
+ </summary>
+</member>
+<member name="M:Akka.Persistence.FSharp.View`2.LastSequenceNr">
+ <summary>
+ Returns last sequence number attached to latest persisted event.
+ </summary>
+</member>
+<member name="M:Akka.Persistence.FSharp.View`2.Journal">
+ <summary>
+ Returns currently attached journal actor reference.
+ </summary>
+</member>
+<member name="M:Akka.Persistence.FSharp.View`2.Defer(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit})">
+ <summary>
+ Defers a function execution to the moment, when actor is suposed to end it's lifecycle.
+ Provided function is guaranteed to be invoked no matter of actor stop reason.
+ </summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:Akka.Persistence.FSharp.Eventsourced`3.Self">
+ <summary>
+ Gets <see cref="IActorRef" /> for the current actor.
+ </summary>
+</member>
+<member name="P:Akka.Persistence.FSharp.Eventsourced`3.Log">
+ <summary>
+ Lazy logging adapter. It won't be initialized until logging function will be called. 
+ </summary>
+</member>
+<member name="P:Akka.Persistence.FSharp.Eventsourced`3.Context">
+ <summary>
+ Gets the current actor context.
+ </summary>
+</member>
+<member name="M:Akka.Persistence.FSharp.Eventsourced`3.Unhandled(System.Object)">
+ <summary>
+ Explicit signalization of unhandled message.
+ </summary>
+</member>
+<member name="M:Akka.Persistence.FSharp.Eventsourced`3.SnapshotStore">
+ <summary>
+ Returns currently attached snapshot store actor reference.
+ </summary>
+</member>
+<member name="M:Akka.Persistence.FSharp.Eventsourced`3.Sender">
+ <summary>
+ Returns a sender of current message or <see cref="ActorRefs.NoSender" />, if none could be determined.
+ </summary>
+</member>
+<member name="M:Akka.Persistence.FSharp.Eventsourced`3.PersistenceId">
+ <summary>
+ Persistent actor's identifier that doesn't change across different actor incarnations.
+ </summary>
+</member>
+<member name="M:Akka.Persistence.FSharp.Eventsourced`3.PersistEvent(Microsoft.FSharp.Core.FSharpFunc{`1,`2},System.Collections.Generic.IEnumerable{`1})">
+ <summary>
+ Persists sequence of events in the event journal. Use second argument to define 
+ function which will update state depending on events.
+ </summary>
+</member>
+<member name="M:Akka.Persistence.FSharp.Eventsourced`3.LastSequenceNr">
+ <summary>
+ Returns last sequence number attached to latest persisted event.
+ </summary>
+</member>
+<member name="M:Akka.Persistence.FSharp.Eventsourced`3.Journal">
+ <summary>
+ Returns currently attached journal actor reference.
+ </summary>
+</member>
+<member name="M:Akka.Persistence.FSharp.Eventsourced`3.IsRecovering">
+ <summary>
+ Returns value determining if current persistent actor is actually recovering.
+ </summary>
+</member>
+<member name="M:Akka.Persistence.FSharp.Eventsourced`3.DeferEvent(Microsoft.FSharp.Core.FSharpFunc{`1,`2},System.Collections.Generic.IEnumerable{`1})">
+ <summary>
+ Defers a second argument (update state callback) to be called after persisting target
+ event will be confirmed.
+ </summary>
+</member>
+<member name="M:Akka.Persistence.FSharp.Eventsourced`3.Defer(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit})">
+ <summary>
+ Defers a function execution to the moment, when actor is suposed to end it's lifecycle.
+ Provided function is guaranteed to be invoked no matter of actor stop reason.
+ </summary>
+</member>
+<member name="M:Akka.Persistence.FSharp.Eventsourced`3.AsyncPersistEvent(Microsoft.FSharp.Core.FSharpFunc{`1,`2},System.Collections.Generic.IEnumerable{`1})">
+ <summary>
+ Asynchronously persists sequence of events in the event journal. Use second argument 
+ to define function which will update state depending on events.
+ </summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:Akka.Persistence.FSharp.spawnDeliverer``3(Akka.Actor.IActorRefFactory,System.String,Akka.Persistence.FSharp.DeliveryAggregate{``0,``1,``2},Microsoft.FSharp.Collections.FSharpList{Akka.FSharp.Spawn.SpawnOption})">
+ <summary>
+ Spawns a guaranteed delivery actor. This actor can deliver messages using at-least-once delivery semantics.
+ </summary>
+ <param name="actorFactory">Object responsible for actor instantiation.</param>
+ <param name="name">Identifies uniquely current actor across different incarnations. It's necessary to identify it's event source.</param>
+ <param name="aggregate">Aggregate containing state of the actor, but also an event- and command-handling behavior.</param>
+ <param name="options">Additional spawning options.</param>
+</member>
+<member name="M:Akka.Persistence.FSharp.spawnView``2(Akka.Actor.IActorRefFactory,System.String,System.String,Akka.Persistence.FSharp.Perspective{``0,``1},Microsoft.FSharp.Collections.FSharpList{Akka.FSharp.Spawn.SpawnOption})">
+ <summary>
+ Spawns a persistent view instance. Unlike actor's views are readonly versions of statefull, recoverable actors.
+ </summary>
+ <param name="actorFactory">Object responsible for actor instantiation.</param>
+ <param name="name">Identifies uniquely current actor across different incarnations. It's necessary to identify it's event source.</param>
+ <param name="viewName">Identifies uniquely current view's state. It's different that event source, since many views with different internal states can relate to single event source.</param>
+ <param name="aggregate">Aggregate containing state of the actor, but also an command-handling behavior.</param>
+ <param name="options">Additional spawning options.</param>
+</member>
+<member name="M:Akka.Persistence.FSharp.spawnPersist``3(Akka.Actor.IActorRefFactory,System.String,Akka.Persistence.FSharp.Aggregate{``0,``1,``2},Microsoft.FSharp.Collections.FSharpList{Akka.FSharp.Spawn.SpawnOption})">
+ <summary>
+ Spawns a persistent actor instance.
+ </summary>
+ <param name="actorFactory">Object responsible for actor instantiation.</param>
+ <param name="name">Identifies uniquely current actor across different incarnations. It's necessary to identify it's event source.</param>
+ <param name="aggregate">Aggregate containing state of the actor, but also an event- and command-handling behavior.</param>
+ <param name="options">Additional spawning options.</param>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Akka.Persistence.FSharp.Linq">
+
+</member>
+<member name="T:Akka.Persistence.FSharp">
+
+</member>
+</members>
+</doc>

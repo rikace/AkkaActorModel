@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>FSharp.Formatting</id>
+    <version>2.7.4</version>
+    <authors>Tomas Petricek, Oleg Pestov, Anh-Dung Phan, Xiang Zhang</authors>
+    <owners>Tomas Petricek, Oleg Pestov, Anh-Dung Phan, Xiang Zhang</owners>
+    <licenseUrl>http://github.com/tpetricek/FSharp.Formatting/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>http://github.com/tpetricek/FSharp.Formatting</projectUrl>
+    <iconUrl>https://raw.github.com/tpetricek/FSharp.Formatting/master/docs/files/misc/logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The package is a collection of libraries that can be used for literate programming with F# (great for building documentation) and for generating library documentation  from inline code comments. The key componments are Markdown parser, tools for formatting  F# code snippets, including tool tip type information and a tool for generating  documentation from library metadata.</description>
+    <summary>A package of libraries for building great F# documentation, samples and blogs</summary>
+    <releaseNotes>Add simple load script for easy referencing from FSX files.</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>F# fsharp formatting markdown code fssnip literate programming</tags>
+    <dependencies>
+      <dependency id="FSharpVSPowerTools.Core" version="1.7.0" />
+      <dependency id="FSharp.Compiler.Service" version="0.0.82" />
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,8 @@
+C:\Git\AkkaActorModel\src\MailboxProcessor\Replies\bin\Release\Replies.exe.config
+C:\Git\AkkaActorModel\src\MailboxProcessor\Replies\bin\Release\Replies.XML
+C:\Git\AkkaActorModel\src\MailboxProcessor\Replies\bin\Release\Replies.exe
+C:\Git\AkkaActorModel\src\MailboxProcessor\Replies\bin\Release\Replies.pdb
+C:\Git\AkkaActorModel\src\MailboxProcessor\Replies\bin\Release\FSharp.Core.dll
+C:\Git\AkkaActorModel\src\MailboxProcessor\Replies\bin\Release\FSharp.Core.xml
+C:\Git\AkkaActorModel\src\MailboxProcessor\Replies\obj\Release\Replies.exe
+C:\Git\AkkaActorModel\src\MailboxProcessor\Replies\obj\Release\Replies.pdb

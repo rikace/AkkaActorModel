@@ -63,14 +63,8 @@ let main _ =
         System.Console.Write("Type the message to send :" )
         let message = System.Console.ReadLine()
         async { 
-<<<<<<< HEAD
-            let! (msg:obj) = remoter <? (REQ, message)
-            let msg' = msg :?> int * string
-            match msg' with
-=======
             let! (msg: int * string) = remoter <? (REQ, message)
             match msg with
->>>>>>> origin/master
             | (RES, m) -> printfn "Remote actor responded: %s" m
             | _ -> printfn "Unexpected response from remote actor"
         }

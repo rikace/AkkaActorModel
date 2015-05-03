@@ -67,26 +67,18 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Akka">
-      <HintPath>..\..\packages\Akka.1.0.0\lib\net45\Akka.dll</HintPath>
+      <HintPath>..\..\packages\Akka.1.0.1\lib\net45\Akka.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Akka.FSharp">
-      <HintPath>..\..\packages\Akka.FSharp.1.0.0\lib\net45\Akka.FSharp.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Akka.Remote">
-      <HintPath>..\..\packages\Akka.Remote.1.0.0\lib\net45\Akka.Remote.dll</HintPath>
-      <Private>True</Private>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Akka">
-      <HintPath>..\..\bin\Akka.dll</HintPath>
-    </Reference>
     <Reference Include="Akka.FSharp">
-      <HintPath>..\..\bin\Akka.FSharp.dll</HintPath>
+      <HintPath>..\..\packages\Akka.FSharp.1.0.1\lib\net45\Akka.FSharp.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Akka.Remote">
-      <HintPath>..\..\bin\Akka.Remote.dll</HintPath>
+      <HintPath>..\..\packages\Akka.Remote.1.0.1\lib\net45\Akka.Remote.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="FSharp.PowerPack">
       <HintPath>..\..\bin\FSharp.PowerPack.dll</HintPath>

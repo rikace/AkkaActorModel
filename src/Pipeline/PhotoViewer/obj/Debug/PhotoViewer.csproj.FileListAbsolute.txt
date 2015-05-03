@@ -1,0 +1,15 @@
+C:\Git\AkkaActorModel\src\Pipeline\PhotoViewer\bin\Debug\PhotoViewer.exe.config
+C:\Git\AkkaActorModel\src\Pipeline\PhotoViewer\bin\Debug\PhotoViewer.exe
+C:\Git\AkkaActorModel\src\Pipeline\PhotoViewer\bin\Debug\PhotoViewer.pdb
+C:\Git\AkkaActorModel\src\Pipeline\PhotoViewer\bin\Debug\FSharp.Core.dll
+C:\Git\AkkaActorModel\src\Pipeline\PhotoViewer\bin\Debug\FSharp.Core.xml
+C:\Git\AkkaActorModel\src\Pipeline\PhotoViewer\obj\Debug\PhotoViewer.csprojResolveAssemblyReference.cache
+C:\Git\AkkaActorModel\src\Pipeline\PhotoViewer\obj\Debug\MainWindow.baml
+C:\Git\AkkaActorModel\src\Pipeline\PhotoViewer\obj\Debug\MainWindow.g.cs
+C:\Git\AkkaActorModel\src\Pipeline\PhotoViewer\obj\Debug\App.g.cs
+C:\Git\AkkaActorModel\src\Pipeline\PhotoViewer\obj\Debug\PhotoViewer_MarkupCompile.cache
+C:\Git\AkkaActorModel\src\Pipeline\PhotoViewer\obj\Debug\PhotoViewer.g.resources
+C:\Git\AkkaActorModel\src\Pipeline\PhotoViewer\obj\Debug\PhotoViewer.Properties.Resources.resources
+C:\Git\AkkaActorModel\src\Pipeline\PhotoViewer\obj\Debug\PhotoViewer.csproj.GenerateResource.Cache
+C:\Git\AkkaActorModel\src\Pipeline\PhotoViewer\obj\Debug\PhotoViewer.exe
+C:\Git\AkkaActorModel\src\Pipeline\PhotoViewer\obj\Debug\PhotoViewer.pdb

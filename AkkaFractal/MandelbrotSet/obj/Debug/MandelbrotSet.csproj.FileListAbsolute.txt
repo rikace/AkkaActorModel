@@ -1,0 +1,5 @@
+C:\Temp\Fractal\MandelbrotSet\bin\Debug\MandelbrotSet.dll
+C:\Temp\Fractal\MandelbrotSet\bin\Debug\MandelbrotSet.pdb
+C:\Temp\Fractal\MandelbrotSet\obj\Debug\MandelbrotSet.csprojResolveAssemblyReference.cache
+C:\Temp\Fractal\MandelbrotSet\obj\Debug\MandelbrotSet.dll
+C:\Temp\Fractal\MandelbrotSet\obj\Debug\MandelbrotSet.pdb

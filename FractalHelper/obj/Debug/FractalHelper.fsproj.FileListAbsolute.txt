@@ -1,0 +1,7 @@
+C:\Git\AkkaActorModel\FractalHelper\bin\Debug\FractalHelper.XML
+C:\Git\AkkaActorModel\FractalHelper\bin\Debug\FractalHelper.dll
+C:\Git\AkkaActorModel\FractalHelper\bin\Debug\FractalHelper.pdb
+C:\Git\AkkaActorModel\FractalHelper\bin\Debug\FSharp.Core.dll
+C:\Git\AkkaActorModel\FractalHelper\bin\Debug\FSharp.Core.xml
+C:\Git\AkkaActorModel\FractalHelper\obj\Debug\FractalHelper.dll
+C:\Git\AkkaActorModel\FractalHelper\obj\Debug\FractalHelper.pdb

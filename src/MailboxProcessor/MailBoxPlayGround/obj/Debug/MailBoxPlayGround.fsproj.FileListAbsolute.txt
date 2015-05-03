@@ -1,0 +1,8 @@
+C:\Git\AkkaActorModel\src\MailboxProcessor\MailBoxPlayGround\bin\Debug\MailBoxPlayGround.exe.config
+C:\Git\AkkaActorModel\src\MailboxProcessor\MailBoxPlayGround\bin\Debug\MailBoxPlayGround.XML
+C:\Git\AkkaActorModel\src\MailboxProcessor\MailBoxPlayGround\bin\Debug\MailBoxPlayGround.exe
+C:\Git\AkkaActorModel\src\MailboxProcessor\MailBoxPlayGround\bin\Debug\MailBoxPlayGround.pdb
+C:\Git\AkkaActorModel\src\MailboxProcessor\MailBoxPlayGround\bin\Debug\FSharp.Core.dll
+C:\Git\AkkaActorModel\src\MailboxProcessor\MailBoxPlayGround\bin\Debug\FSharp.Core.xml
+C:\Git\AkkaActorModel\src\MailboxProcessor\MailBoxPlayGround\obj\Debug\MailBoxPlayGround.exe
+C:\Git\AkkaActorModel\src\MailboxProcessor\MailBoxPlayGround\obj\Debug\MailBoxPlayGround.pdb
