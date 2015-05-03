@@ -34,7 +34,6 @@ type BitmapConverter() =
         (image :?> Bitmap)
 
 
-
 let mandelbrot (xp:int, yp:int, w:int, h:int,width:int, height:int ,maxr:float, minr:float, maxi:float, mini:float) =
             let currentmaxr = maxr
             let currentmaxi = maxi
@@ -70,14 +69,10 @@ let mandelbrot (xp:int, yp:int, w:int, h:int,width:int, height:int ,maxr:float, 
                         img.SetPixel(x - xp, y - yp, Color.Black)
             img
 
-
 let tileRenderer (mailbox: Actor<_>) (render:RenderTile) =
-
     logInfof mailbox "%A rendering %d , %d" mailbox.Self render.X render.Y
 
     let res = mandelbrot(render.X, render.Y,render.Width,render.Height, 4000, 4000, 0.5, -2.5, 1.5, -1.5)
-   
+    //let res = MandelbrotSet.Mandelbrot.Set(render.X, render.Y,render.Width,render.Height, 4000, 4000, 0.5, -2.5, 1.5, -1.5)
     let bytes = BitmapConverter.toByteArray(res)
     mailbox.Sender() <! {Bytes = bytes; X = render.X; Y = render.Y}
-
-

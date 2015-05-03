@@ -73,34 +73,37 @@
     <Reference Include="Akka.FSharp">
       <HintPath>..\..\packages\Akka.FSharp.1.0.0\lib\net45\Akka.FSharp.dll</HintPath>
       <Private>True</Private>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Akka">
+      <HintPath>..\..\bin\Akka.dll</HintPath>
+    </Reference>
+    <Reference Include="Akka.FSharp">
+      <HintPath>..\..\bin\Akka.FSharp.dll</HintPath>
     </Reference>
     <Reference Include="Akka.Remote">
       <HintPath>..\..\packages\Akka.Remote.1.0.0\lib\net45\Akka.Remote.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FSharp.PowerPack">
-      <HintPath>..\..\packages\FSPowerPack.Core.Community.3.0.0.0\Lib\Net40\FSharp.PowerPack.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\bin\FSharp.PowerPack.dll</HintPath>
     </Reference>
     <Reference Include="FSharp.PowerPack.Linq">
-      <HintPath>..\..\packages\FSPowerPack.Linq.Community.3.0.0.0\Lib\Net40\FSharp.PowerPack.Linq.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\bin\FSharp.PowerPack.Linq.dll</HintPath>
     </Reference>
     <Reference Include="FsPickler">
-      <HintPath>..\..\packages\FsPickler.0.9.11\lib\net45\FsPickler.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\bin\FsPickler.dll</HintPath>
     </Reference>
     <Reference Include="Google.ProtocolBuffers">
-      <HintPath>..\..\packages\Google.ProtocolBuffers.2.4.1.521\lib\net40\Google.ProtocolBuffers.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\bin\Google.ProtocolBuffers.dll</HintPath>
     </Reference>
     <Reference Include="Google.ProtocolBuffers.Serialization">
-      <HintPath>..\..\packages\Google.ProtocolBuffers.2.4.1.521\lib\net40\Google.ProtocolBuffers.Serialization.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\bin\Google.ProtocolBuffers.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Helios">
       <HintPath>..\..\packages\Helios.1.4.0\lib\net45\Helios.dll</HintPath>
       <Private>True</Private>
+      <HintPath>..\..\bin\Helios.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -109,6 +112,7 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
+      <HintPath>..\..\bin\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

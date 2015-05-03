@@ -10,6 +10,7 @@ open System
 let main argv = 
 
     Console.Title <- (sprintf "Chat Server : %d" (System.Diagnostics.Process.GetCurrentProcess().Id))
+<<<<<<< HEAD
 
     let config = 
             Configuration.parse """
@@ -31,12 +32,34 @@ let main argv =
                     }
                 }
                 """
+=======
+ 
+    let fluentConfig =  Configuration.parse """
+            akka {  
+                actor {
+                    provider = "Akka.Remote.RemoteActorRefProvider, Akka.Remote"
+                }
+                remote {
+                    helios.tcp {
+                        transport-class = "Akka.Remote.Transport.Helios.HeliosTcpTransport, Akka.Remote"
+                        applied-adapters = []
+                        transport-protocol = tcp
+                        port = 8081
+                        hostname = localhost
+                    }
+                }
+            }"""
+>>>>>>> origin/master
                 
     let system = System.create "MyServer" config
 
     let chatServerActor =
         spawn system "ChatServer" <| fun mailbox ->
+<<<<<<< HEAD
             let rec loop (clients:Akka.Actor.IActorRef list) = actor {
+=======
+            let rec loop (clients:IActorRef list) = actor {
+>>>>>>> origin/master
               
                 let! (msg:obj) = mailbox.Receive()
               

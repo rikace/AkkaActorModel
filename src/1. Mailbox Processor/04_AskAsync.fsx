@@ -35,6 +35,24 @@ let pipeFromTo sender receipient computation =
     Async.StartAsTask(computation).PipeTo(receipient, sender)
 
 
+let inline awaitTask (task: Task) = 
+    // rethrow exception from preceding task if it fauled
+    let continuation (t : Task) : unit =
+        match t.IsFaulted with
+        | true -> raise t.Exception
+        | arg -> ()
+    task.ContinueWith continuation |> Async.AwaitTask
+
+let inline awaitTaskResult (task: Task<_>) = 
+    let continuation (t : Task<_>)  =
+        match t.IsFaulted with
+        | true -> raise t.Exception
+        | arg -> t.Result
+
+    task.ContinueWith continuation |> Async.AwaitTask
+ 
+let inline startAsPlainTask (work : Async<unit>) = Task.Factory.StartNew(fun () -> work |> Async.RunSynchronously)
+
 
 let fromUrl (url:string) = async {
     use client = new System.Net.WebClient()
@@ -49,7 +67,7 @@ let handler (mailbox:Actor<obj>) message =
                         async {
                             let! response = fromUrl url
                             printfn "actor: done!"
-                            sender <! response } 
+                            sender.Tell response } 
                             |!> mailbox.Self  // |!> is the infix operator for PipeTo
                             // Actors process messages one at a time...
                             // The goal behind PipeTo is to treat every async operation 
@@ -63,7 +81,7 @@ let echoServer = spawn system "EchoServer" (actorOf2 handler)
 
 for timeout in [10; 100; 250; 2500] do
     try
-        let task = (echoServer <? versionUrl)
+        let task = echoServer.Ask versionUrl |> awaitTaskResult
 
         let response = Async.RunSynchronously (task, timeout)
         let responseLength = string(response) |> String.length

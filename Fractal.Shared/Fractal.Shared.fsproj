@@ -81,9 +81,12 @@
       <HintPath>..\packages\Akka.Remote.1.0.0\lib\net45\Akka.Remote.dll</HintPath>
       <Private>True</Private>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Akka" />
+    <Reference Include="Akka.FSharp" />
     <Reference Include="FSharp.PowerPack">
-      <HintPath>..\packages\FSPowerPack.Core.Community.3.0.0.0\Lib\Net40\FSharp.PowerPack.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\bin\FSharp.PowerPack.dll</HintPath>
     </Reference>
     <Reference Include="FSharp.PowerPack.Linq">
       <HintPath>..\packages\FSPowerPack.Linq.Community.3.0.0.0\Lib\Net40\FSharp.PowerPack.Linq.dll</HintPath>
@@ -105,6 +108,8 @@
       <HintPath>..\packages\Helios.1.4.0\lib\net45\Helios.dll</HintPath>
       <Private>True</Private>
     </Reference>
+      <HintPath>..\bin\FSharp.PowerPack.Linq.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
@@ -125,6 +130,13 @@
       <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

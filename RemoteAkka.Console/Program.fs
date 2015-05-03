@@ -1,8 +1,8 @@
 ﻿#if INTERACTIVE
-#r @"..\..\bin\Akka.dll"
-#r @"..\..\bin\Akka.FSharp.dll"
-#r @"..\..\bin\Akka.Remote.dll"
-#r @"..\..\bin\FSharp.PowerPack.dll"
+#r @"..\bin\Akka.dll"
+#r @"..\bin\Akka.FSharp.dll"
+#r @"..\bin\Akka.Remote.dll"
+#r @"..\bin\FSharp.PowerPack.dll"
 #endif
 
 open Akka.FSharp

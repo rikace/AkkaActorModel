@@ -14,6 +14,7 @@ let main argv =
     Console.Write("Insert your user name: ")
     let username = Console.ReadLine()
 
+<<<<<<< HEAD
     let config = 
             Configuration.parse """
             akka {  
@@ -31,6 +32,24 @@ let main argv =
                 }
             }
                 """
+=======
+    let config = Configuration.parse """
+        akka {  
+            actor {
+                provider = "Akka.Remote.RemoteActorRefProvider, Akka.Remote"
+            }
+            remote {
+                helios.tcp {
+                    transport-class = "Akka.Remote.Transport.Helios.HeliosTcpTransport, Akka.Remote"
+		            applied-adapters = []
+		            transport-protocol = tcp
+		            port = 0
+		            hostname = localhost
+                }
+            }
+    }"""
+
+>>>>>>> origin/master
     
     let system = System.create "MyClient" config
    

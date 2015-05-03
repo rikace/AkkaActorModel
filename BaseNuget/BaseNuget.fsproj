@@ -5,39 +5,35 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>76cb5e9a-942f-4c91-b742-996b0a06b919</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>PingPong</RootNamespace>
-    <AssemblyName>PingPong</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <ProjectGuid>f8a4e929-1707-4bad-9e10-8507f52d9a1f</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BaseNuget</RootNamespace>
+    <AssemblyName>BaseNuget</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <TargetFSharpCoreVersion>4.3.1.0</TargetFSharpCoreVersion>
-    <Name>PingPong</Name>
+    <Name>BaseNuget</Name>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <Tailcalls>false</Tailcalls>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DocumentationFile>bin\Debug\PingPong.XML</DocumentationFile>
-    <Prefer32Bit>true</Prefer32Bit>
+    <DocumentationFile>..bin\BaseNuget.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <Tailcalls>true</Tailcalls>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DocumentationFile>bin\Release\PingPong.XML</DocumentationFile>
-    <Prefer32Bit>true</Prefer32Bit>
+    <DocumentationFile>..\bin\BaseNuget.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
@@ -55,45 +51,58 @@
     </Otherwise>
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
   <ItemGroup>
-    <Compile Include="Program.fs" />
-    <None Include="App.config" />
-    <None Include="packages.config" />
+    <Content Include="packages.config" />
     <None Include="protos\tutorial\addressbook.proto" />
     <None Include="protos\google\protobuf\descriptor.proto" />
     <None Include="protos\google\protobuf\csharp_options.proto" />
     <Content Include="licenses\protoc-license.txt" />
     <Content Include="licenses\license.txt" />
+    <Content Include="app.config" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Akka">
       <HintPath>..\packages\Akka.1.0.0\lib\net45\Akka.dll</HintPath>
       <Private>True</Private>
-      <HintPath>..\bin\Akka.dll</HintPath>
     </Reference>
     <Reference Include="Akka.FSharp">
-      <HintPath>..\bin\Akka.FSharp.dll</HintPath>
+      <HintPath>..\packages\Akka.FSharp.1.0.0\lib\net45\Akka.FSharp.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Akka.Remote">
-      <HintPath>..\bin\Akka.Remote.dll</HintPath>
+      <HintPath>..\packages\Akka.Remote.1.0.0\lib\net45\Akka.Remote.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="FSharp.PowerPack">
-      <HintPath>..\bin\FSharp.PowerPack.dll</HintPath>
+      <HintPath>..\packages\FSPowerPack.Core.Community.3.0.0.0\Lib\Net40\FSharp.PowerPack.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="FSharp.PowerPack.Linq">
-      <HintPath>..\bin\FSharp.PowerPack.Linq.dll</HintPath>
+      <HintPath>..\packages\FSPowerPack.Linq.Community.3.0.0.0\Lib\Net40\FSharp.PowerPack.Linq.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="FsPickler">
-      <HintPath>..\bin\FsPickler.dll</HintPath>
+      <HintPath>..\packages\FsPickler.0.9.11\lib\net45\FsPickler.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Google.ProtocolBuffers">
-      <HintPath>..\bin\Google.ProtocolBuffers.dll</HintPath>
+      <HintPath>..\packages\Google.ProtocolBuffers.2.4.1.521\lib\net40\Google.ProtocolBuffers.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Google.ProtocolBuffers.Serialization">
-      <HintPath>..\bin\Google.ProtocolBuffers.Serialization.dll</HintPath>
+      <HintPath>..\packages\Google.ProtocolBuffers.2.4.1.521\lib\net40\Google.ProtocolBuffers.Serialization.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Helios">
-      <HintPath>..\bin\Helios.dll</HintPath>
+      <HintPath>..\packages\Helios.1.4.0\lib\net45\Helios.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -102,19 +111,11 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
-      <HintPath>..\bin\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
   </ItemGroup>
-  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
-  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

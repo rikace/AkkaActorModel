@@ -20,7 +20,7 @@ module Scenario0 =
     let exec (mailbox: Eventsourced<_,_,_>) state cmd = 
         match cmd with
         | "print" -> printf "State is: %A\n" state          // print current actor state
-        | s       -> mailbox.Persist (update state) [s]     // persist event and call update state on complete
+        | s       -> mailbox.PersistEvent (update state) [s]     // persist event and call update state on complete
 
     let run() =
         printfn "--- SCENARIO 0 ---\n"
@@ -59,7 +59,7 @@ module Scenario1 =
 
     let exec (mailbox: Eventsourced<Command,obj,string list>) state cmd =
         match cmd with
-        | Update s -> mailbox.Persist (update state) [s]
+        | Update s -> mailbox.PersistEvent (update state) [s]
         | TakeSnapshot -> mailbox.SaveSnapshot state
         | Print -> printf "State is: %A\n" state
         | Crash -> failwith "planned crash"
@@ -85,5 +85,13 @@ module Scenario1 =
         s1 <! Update "c"
         s1 <! Print
     
+
 Scenario0.run()
 
+<<<<<<< HEAD
+=======
+Console.ReadLine()              
+
+
+Scenario1.run()
+>>>>>>> origin/master
