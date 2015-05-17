@@ -16,17 +16,16 @@ open System.IO
 // In the actor we use 'sender <!' to return the value.
 
 
-let filePath = __SOURCE_DIRECTORY__ + @"\..\..\src\Data\words.txt"
-
+let versionUrl = @"https://github.com/rikace/AkkaActorModel/blob/master/LICENSE.txt"
 
 let system = ActorSystem.Create("Ask-System")
 
-let readFile (filePath:string) = async {
-    use fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.None, 0x100, true)
-    use stream = new AsyncStreamReader(fileStream)
-    let! response = stream.ReadToEnd()
-    return response }
 
+let fromUrlAsync (url:string) = async {
+    use client = new System.Net.WebClient()
+    let! response = client.AsyncDownloadString(Uri(url))
+    return response }
+    
 let echoServer = 
     spawn system "ReadFileServer"
     <| fun mailbox ->
@@ -39,11 +38,12 @@ let echoServer =
               
               
                 match box message with
-                | :? string as filePath -> 
+                | :? string as url -> 
                         // DO NOT RUN THIS CODE AT HOME!
                         async {
-                            let! response = readFile filePath
+                            let! response = fromUrlAsync url
                             printfn "actor: done!"
+                            
                             sender <! response } |> Async.Start 
 
 
@@ -53,12 +53,12 @@ let echoServer =
         loop()
 
 
-let task = (echoServer <? filePath)
+let (task:Async<string>) = (echoServer <? versionUrl)
 
 let response = Async.RunSynchronously (task)
-let fileSize = string(response) |> String.length
+let siteSize = string(response) |> String.length
 
-printfn "File size %d" fileSize
+printfn "String size %d" siteSize
 
 system.Shutdown()
 

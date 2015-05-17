@@ -7,11 +7,11 @@ open Akka.FSharp
 open Akka.Actor
 open System
 
-type Message =
+type IncrementMessage =
     | Increment
     | Print
 
-type OtherMessage =
+type Decrementessage =
     | Decrement
     | Display
 
@@ -22,12 +22,12 @@ type SimpleActor() as this =
 
     do
         // Specialize receive
-        this.Receive<Message>(fun m -> 
+        this.Receive<IncrementMessage>(fun m -> 
                                 match m with
                                 | Print -> printfn "%i" !state
                                 | Increment -> state := !state + 1)
 
-        this.Receive<OtherMessage>(fun m -> 
+        this.Receive<Decrementessage>(fun m -> 
                                 match m with
                                 | Display -> printfn "%i" !state
                                 | Decrement -> state := !state - 1)

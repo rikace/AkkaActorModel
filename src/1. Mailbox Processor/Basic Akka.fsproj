@@ -75,9 +75,9 @@
     <None Include="09_SupervisioningOpts.fsx" />
     <None Include="10_RoutingRobinGroup.fsx" />
     <None Include="10_RoutingRobinLoop.fsx" />
-    <None Include="11_StateMachine.fsx" />
+    <None Include="11.StateMachine.fsx" />
     <None Include="12.Remoting.fsx" />
-    <None Include="12_RemoteDeploy.fsx" />
+    <None Include="12.RemoteDeploy.fsx" />
     <None Include="MapReduce.fsx" />
     <None Include="App.config" />
     <None Include="protos\tutorial\addressbook.proto" />

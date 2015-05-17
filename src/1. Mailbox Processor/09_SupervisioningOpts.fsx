@@ -46,7 +46,7 @@ let strategy =
         match e with
         | :? ArithmeticException -> 
                     // log 
-                    Directive.Resume
+                    Directive.Restart // Resume
         | :? ArgumentException -> Directive.Stop
         | _ -> Directive.Escalate)
     
@@ -73,8 +73,8 @@ async {
     // this one should be handled gently
     supervisor <! Value 5
     do! Async.Sleep 500
-    let! r = supervisor <? Respond
-    printfn "value received %d" (r :?> int)
+    let! (r:int) = supervisor <? Respond
+    printfn "value received %d" r
 }
 |> Async.RunSynchronously
 
@@ -84,7 +84,7 @@ async {
     supervisor <! Value -11
     do! Async.Sleep 500
     // since -11 thrown an exception and didn't saved a state, a previous value (5) should be returned
-    let! r = supervisor <? Respond
-    printfn "value received %d" (r :?> int)
+    let! (r:int) = supervisor <? Respond
+    printfn "value received %d" r
 }
 |> Async.RunSynchronously

@@ -369,6 +369,7 @@
             Create a new TakeOver command
             </summary>
             <param name="protocolHandle">The handle of the new association</param>
+            <param name="replyTo"></param>
         </member>
         <member name="T:Akka.Remote.EndpointReader">
             <summary>
@@ -877,7 +878,7 @@
              For a new node to be watched this actor periodically sends <see cref="T:Akka.Remote.RemoteWatcher.Heartbeat"/>
              to the peer actor on the other node, which replies with <see cref="T:Akka.Remote.RemoteWatcher.HeartbeatRsp"/>
              message back. The failure detector on the watching side monitors these heartbeat messages.
-             If arrival of hearbeat messages stops it will be detected and this actor will publish
+             If arrival of heartbeat messages stops it will be detected and this actor will publish
              <see cref="T:Akka.Actor.AddressTerminated"/> to the <see cref="T:Akka.Event.AddressTerminatedTopic"/>.
             
              When all actors on a node have been unwatched it will stop sending heartbeat messages.
@@ -1457,7 +1458,7 @@
             control to the timing of completion of the associated Task.
             
             The utility is implemented as a stack of behaviors, where the behavior on the top of the stack represents the
-            currently active behavior. The bottom of the stack alway contains the <see cref="P:Akka.Remote.Transport.SwitchableLoggedBehavior`2.DefaultBehavior"/> which
+            currently active behavior. The bottom of the stack always contains the <see cref="P:Akka.Remote.Transport.SwitchableLoggedBehavior`2.DefaultBehavior"/> which
             can not be popped out.
             </summary>
         </member>

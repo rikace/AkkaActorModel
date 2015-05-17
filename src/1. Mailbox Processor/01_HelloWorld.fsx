@@ -30,11 +30,12 @@ let greeter =
                                  // which uses an actor { ... } computation expression 
             let! msg = mailbox.Receive()
             match msg with
-            | Greet(w) ->printfn "Hello %s" w                
+            | Greet(w) ->printfn "Hello %s" w    
+                       
             return! loop() }
         loop()
 
-greeter <! GreetMsg.Greet("AKKA.Net!!")
+greeter <! GreetMsg.Greet("Hello AKKA.Net!!")
 
 let actor = select "akka://MySystem/user/Greeter-Functional" system
 actor <! GreetMsg.Greet("AKKA.Net!!")

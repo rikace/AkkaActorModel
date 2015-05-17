@@ -15,9 +15,7 @@ open Akka.Configuration
 open System
 open System.IO
 
-
 //System.Diagnostics.Process.Start(@"C:\Git\AkkaActorModel\RemoteAkka.Console\bin\Debug\RemoteAkka.Console.exe") |> ignore
-
 
 let config =
     Configuration.parse
@@ -41,13 +39,15 @@ let spawnRemote systemOrContext remoteSystemAddress actorName expr =
 let localSystem = System.create "local-system" config
 
 let aref =
-    spawnRemote localSystem "akka.tcp://remote-system@10.211.55.2:9234/" "hello"
+    spawnRemote localSystem "akka.tcp://remote-system@192.168.1.9:9234/" "hello"
       // actorOf wraps custom handling function with message receiver logic
       <@ actorOf (fun msg -> System.Console.ForegroundColor <- System.ConsoleColor.Green
-                             printfn "received 25xxx  '%s'" msg) @>
+                             printfn "received 25  '%s'" msg) @>
+
+
 
 // send example message to remotely deployed actor
-aref <! "Hello world from F#unctional Kats UG and AKKA"
+aref <! "Hello LambdaConf 2015 from F# and AKKA.Remote"
 
 // thanks to location transparency, we can select 
 // remote actors as if they where existing on local node

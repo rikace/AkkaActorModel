@@ -30,10 +30,10 @@ type EchoServer =
         | _ ->  printfn "What shoudl I do with this thing %A" (message.GetType())
                 //failwith "unknown message"
 
-let echoServer = system.ActorOf(Props(typedefof<EchoServer>), "Fsharp")
+let echoServer = system.ActorOf(Props(typedefof<EchoServer>)) // Name ??
 
 echoServer.Tell 42
-echoServer.Tell "CoStar!"
+echoServer.Tell "LambdaConf 2015 is awesome!"
 
 system.Shutdown()
 

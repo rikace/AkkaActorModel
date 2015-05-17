@@ -4,6 +4,149 @@
         <name>Akka</name>
     </assembly>
     <members>
+        <member name="T:Akka.Actor.IActorState">
+            <summary>
+            This interface represents the parts of the internal actor state; the behavior stack, watched by, watching and termination queue
+            </summary>
+        </member>
+        <member name="M:Akka.Actor.IActorState.RemoveWatching(Akka.Actor.IActorRef)">
+            <summary>
+            Removes the provided <see cref="T:Akka.Actor.IActorRef"/> from the `Watching` set
+            </summary>
+            <param name="actor">The <see cref="T:Akka.Actor.IActorRef"/> to be removed</param>
+            <returns></returns>
+        </member>
+        <member name="M:Akka.Actor.IActorState.RemoveWatchedBy(Akka.Actor.IActorRef)">
+            <summary>
+            Removes the provided <see cref="T:Akka.Actor.IActorRef"/> from the `WatchedBy` set
+            </summary>
+            <param name="actor">The <see cref="T:Akka.Actor.IActorRef"/> to be removed</param>
+            <returns></returns>
+        </member>
+        <member name="M:Akka.Actor.IActorState.RemoveTerminated(Akka.Actor.IActorRef)">
+            <summary>
+            Removes the provided <see cref="T:Akka.Actor.IActorRef"/> from the `Termination queue` set
+            </summary>
+            <param name="actor">The <see cref="T:Akka.Actor.IActorRef"/> to be removed</param>
+            <returns></returns>
+        </member>
+        <member name="M:Akka.Actor.IActorState.AddWatching(Akka.Actor.IActorRef)">
+            <summary>
+            Adds the provided <see cref="T:Akka.Actor.IActorRef"/> to the `Watching` set
+            </summary>
+            <param name="actor">The <see cref="T:Akka.Actor.IActorRef"/> to be added</param>
+            <returns></returns>
+        </member>
+        <member name="M:Akka.Actor.IActorState.AddWatchedBy(Akka.Actor.IActorRef)">
+            <summary>
+            Adds the provided <see cref="T:Akka.Actor.IActorRef"/> to the `WatchedBy` set
+            </summary>
+            <param name="actor">The <see cref="T:Akka.Actor.IActorRef"/> to be added</param>
+            <returns></returns>
+        </member>
+        <member name="M:Akka.Actor.IActorState.AddTerminated(Akka.Actor.IActorRef)">
+            <summary>
+            Adds the provided <see cref="T:Akka.Actor.IActorRef"/> to the `Termination queue` set
+            </summary>
+            <param name="actor">The <see cref="T:Akka.Actor.IActorRef"/> to be added</param>
+            <returns></returns>
+        </member>
+        <member name="M:Akka.Actor.IActorState.ClearWatching">
+            <summary>
+            Clears the `Watching` set
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Akka.Actor.IActorState.ClearTerminated">
+            <summary>
+            Clears the `Termination queue` set
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Akka.Actor.IActorState.ClearBehaviorStack">
+            <summary>
+            Clears the `Behavior` stack
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Akka.Actor.IActorState.Become(Akka.Actor.Receive)">
+            <summary>
+            Replaces the current receive behavior with a new behavior
+            </summary>
+            <param name="receive">The new behavior</param>
+            <returns></returns>
+        </member>
+        <member name="M:Akka.Actor.IActorState.BecomeStacked(Akka.Actor.Receive)">
+            <summary>
+            Pushes a new receive behavior onto the `Behavior` stack
+            </summary>
+            <param name="receive">The new top level behavior</param>
+            <returns></returns>
+        </member>
+        <member name="M:Akka.Actor.IActorState.UnbecomeStacked">
+            <summary>
+            Removes the top level receive behavior from the `Behavior` stack
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Akka.Actor.IActorState.ContainsWatching(Akka.Actor.IActorRef)">
+            <summary>
+            Determines whether the provided <see cref="T:Akka.Actor.IActorRef"/> is present in the `Watching` set
+            </summary>
+            <param name="actor">The <see cref="T:Akka.Actor.IActorRef"/> to locate in the `Watching` set</param>
+            <returns></returns>
+        </member>
+        <member name="M:Akka.Actor.IActorState.ContainsWatchedBy(Akka.Actor.IActorRef)">
+            <summary>
+            Determines whether the provided <see cref="T:Akka.Actor.IActorRef"/> is present in the `WatchedBy` set
+            </summary>
+            <param name="actor">The <see cref="T:Akka.Actor.IActorRef"/> to locate in the `WatchedBy` set</param>
+            <returns></returns>
+        </member>
+        <member name="M:Akka.Actor.IActorState.ContainsTerminated(Akka.Actor.IActorRef)">
+            <summary>
+            Determines whether the provided <see cref="T:Akka.Actor.IActorRef"/> is present in the `Termination queue` set
+            </summary>
+            <param name="actor">The <see cref="T:Akka.Actor.IActorRef"/> to locate in the `Termination queue` set</param>
+            <returns></returns>
+        </member>
+        <member name="M:Akka.Actor.IActorState.GetWatching">
+            <summary>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> over the `Watching` set
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Akka.Actor.IActorState.GetWatchedBy">
+            <summary>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> over the `WatchedBy` set
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Akka.Actor.IActorState.Getterminated">
+            <summary>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> over the `Termination queue` set
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Akka.Actor.IActorState.GetCurrentBehavior">
+            <summary>
+            Returns the top level receive behavior from the behavior stack
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Akka.Actor.DefaultActorState">
+            <summary>
+            Represents the default start up state for any actor.
+            This state provides capacity for one `WatchedBy` and one `Receive` behavior
+            As soon as this container is no longer enough to contain the current state
+            The state container will escalate into a `FullActorState` instance
+            </summary>
+        </member>
+        <member name="T:Akka.Actor.FullActorState">
+            <summary>
+            Represents the full state of an actor, this is used whenever an actor need more state than the `DefaultActorState` container can contain
+            </summary>
+        </member>
         <member name="T:Akka.Actor.ActorCell">
             <summary>
                 Class ActorCell.
@@ -658,7 +801,7 @@
         </member>
         <member name="T:Akka.Actor.ICancelable">
             <summary>
-            Siginifies something that can be canceled
+            Signifies something that can be canceled
             </summary>
         </member>
         <member name="M:Akka.Actor.ICancelable.Cancel">
@@ -993,7 +1136,7 @@
             <summary>
             Gets or sets a <see cref="M:Akka.Actor.ActorBase.SupervisorStrategy"/>.
             When getting, if a previously <see cref="M:Akka.Actor.ActorBase.SupervisorStrategy"/> has been set it's returned; otherwise calls
-            <see cref="M:Akka.Actor.ActorBase.SupervisorStrategy">SupervisorStratregy()</see>, stores and returns it.
+            <see cref="M:Akka.Actor.ActorBase.SupervisorStrategy">SupervisorStrategy()</see>, stores and returns it.
             </summary>
         </member>
         <member name="M:Akka.Actor.UntypedActor.OnReceive(System.Object)">
@@ -1517,7 +1660,8 @@
             <summary>
             Forwards the message using the current Sender
             </summary>
-            <param name="message"></param>
+            <param name="receiver">The actor that receives the forward</param>
+            <param name="message">The message to forward</param>
         </member>
         <member name="T:Akka.Actor.Nobody">
             <summary> This is an internal look-up failure token, not useful for anything else.</summary>
@@ -1776,6 +1920,7 @@
             </summary>
             <param name="message">The message.</param>
             <param name="elements">The elements.</param>
+            <param name="wildCardFanOut"></param>
         </member>
         <member name="P:Akka.Actor.ActorSelectionMessage.Message">
             <summary>
@@ -2872,7 +3017,7 @@
             <remarks><c>IMPORTANT:</c> the actor being terminated and its supervisor being informed of the availability of the deceased actor's name
             are two distinct operations, which do not obey any reliable ordering.</remarks>
             
-            If the target actor isn't terminated within the timeout the <see cref="T:System.Threading.Tasks.Task"/> is complted with failure.
+            If the target actor isn't terminated within the timeout the <see cref="T:System.Threading.Tasks.Task"/> is completed with failure.
             
             If you want to invoke specialized stopping logic on your target actor instead of <see cref="T:Akka.Actor.PoisonPill"/>, you can pass your stop command as a parameter:
             <code>
@@ -2907,7 +3052,7 @@
             <param name="receiver">The receiver.</param>
             <param name="message">The message.</param>
             <param name="sender">The sender.</param>
-            <param name="cancelable">OPTIONAL. An <see cref="T:Akka.Actor.ICancelable"/> that can be used to cancel sending of the message. Notye that once the message has been sent, it cannot be canceled.</param>
+            <param name="cancelable">OPTIONAL. An <see cref="T:Akka.Actor.ICancelable"/> that can be used to cancel sending of the message. Note that once the message has been sent, it cannot be canceled.</param>
         </member>
         <member name="M:Akka.Actor.SchedulerExtensions.ScheduleTellRepeatedly(Akka.Actor.ITellScheduler,System.Int32,System.Int32,Akka.Actor.ICanTell,System.Object,Akka.Actor.IActorRef,Akka.Actor.ICancelable)">
             <summary>Schedules to send a message repeatedly. The first message will be sent after the specified initial delay and there after at the rate specified.</summary>
@@ -2917,7 +3062,7 @@
             <param name="receiver">The receiver.</param>
             <param name="message">The message.</param>
             <param name="sender">The sender.</param>
-            <param name="cancelable">OPTIONAL. An <see cref="T:Akka.Actor.ICancelable"/> that can be used to cancel sending of the message. Notye that once the message has been sent, it cannot be canceled.</param>
+            <param name="cancelable">OPTIONAL. An <see cref="T:Akka.Actor.ICancelable"/> that can be used to cancel sending of the message. Note that once the message has been sent, it cannot be canceled.</param>
         </member>
         <member name="M:Akka.Actor.SchedulerExtensions.ScheduleOnce(Akka.Actor.IActionScheduler,System.Int32,System.Action,Akka.Actor.ICancelable)">
             <summary>
@@ -4288,14 +4433,6 @@
             </remarks>
             </summary>
         </member>
-        <member name="T:Akka.Dispatch.PinnedDispatcherConfigurator">
-            <summary>
-            Used to create instances of the <see cref="T:Akka.Dispatch.SingleThreadDispatcher"/>. 
-            <remarks>
-            Always returns the same instance.
-            </remarks>
-            </summary>
-        </member>
         <member name="T:Akka.Dispatch.CurrentSynchronizationContextDispatcherConfigurator">
             <summary>
             Used to create instances of the <see cref="T:Akka.Dispatch.CurrentSynchronizationContextDispatcher"/>.
@@ -4305,14 +4442,10 @@
             </remarks>
             </summary>
         </member>
-        <member name="T:Akka.Dispatch.DispatcherType">
-            <summary>
-            Lookup list for different types of out-of-the-box <see cref="F:Akka.Dispatch.DispatcherType.Dispatcher"/>s.
-            </summary>
-        </member>
         <member name="T:Akka.Dispatch.MessageDispatcher">
             <summary>
-                Class MessageDispatcher.
+            Class responsible for pushing messages from an actor's mailbox into its
+            receive methods. Comes in many different flavors.
             </summary>
         </member>
         <member name="F:Akka.Dispatch.MessageDispatcher.DefaultThroughput">
@@ -4340,6 +4473,27 @@
             <summary>
             Dispatches a <see cref="T:Akka.Dispatch.SysMsg.ISystemMessage"/> from a mailbox to an <see cref="T:Akka.Actor.ActorCell"/>        
             </summary>
+        </member>
+        <member name="M:Akka.Dispatch.MessageDispatcher.Attach(Akka.Actor.ActorCell)">
+            <summary>
+            Attaches the dispatcher to the <see cref="T:Akka.Actor.ActorCell"/>
+            
+            <remarks>
+            Practically, doesn't do very much right now - dispatchers aren't responsible for creating
+            mailboxes in Akka.NET
+            </remarks>
+            </summary>
+            <param name="cell">The ActorCell belonging to the actor who's attaching to this dispatcher.</param>
+        </member>
+        <member name="M:Akka.Dispatch.MessageDispatcher.Detach(Akka.Actor.ActorCell)">
+            <summary>
+            Detaches the dispatcher to the <see cref="T:Akka.Actor.ActorCell"/>
+            
+            <remarks>
+            Only really used in dispatchers with 1:1 relationship with dispatcher.
+            </remarks>
+            </summary>
+            <param name="cell">The ActorCell belonging to the actor who's deatching from this dispatcher.</param>
         </member>
         <member name="P:Akka.Dispatch.MessageDispatcher.Configurator">
             <summary>
@@ -4518,32 +4672,6 @@
             </summary>
         </member>
         <member name="M:Akka.Dispatch.CurrentSynchronizationContextDispatcher.Schedule(System.Action)">
-            <summary>
-                Schedules the specified run.
-            </summary>
-            <param name="run">The run.</param>
-        </member>
-        <member name="T:Akka.Dispatch.SingleThreadDispatcher">
-            <summary>
-                Class SingleThreadDispatcher.
-            </summary>
-        </member>
-        <member name="F:Akka.Dispatch.SingleThreadDispatcher.queue">
-            <summary>
-                The queue
-            </summary>
-        </member>
-        <member name="F:Akka.Dispatch.SingleThreadDispatcher.running">
-            <summary>
-                The running
-            </summary>
-        </member>
-        <member name="M:Akka.Dispatch.SingleThreadDispatcher.#ctor(Akka.Dispatch.MessageDispatcherConfigurator)">
-            <summary>
-                Initializes a new instance of the <see cref="T:Akka.Dispatch.SingleThreadDispatcher"/> class.
-            </summary>
-        </member>
-        <member name="M:Akka.Dispatch.SingleThreadDispatcher.Schedule(System.Action)">
             <summary>
                 Schedules the specified run.
             </summary>
@@ -4895,7 +5023,7 @@
         </member>
         <member name="T:Akka.Actor.Props">
             <summary>
-                Props is a configuration object using in creating an [[Actor]]; it is
+                Props is a configuration object used in creating an [[Actor]]; it is
                 immutable, so it is thread-safe and fully shareable.
                 Examples on C# API:
             <code>
@@ -5006,7 +5134,7 @@
             <summary>
                 Creates the specified factory.
             </summary>
-            <typeparam name="TActor">The type of the t actor.</typeparam>
+            <typeparam name="TActor">The type of the actor.</typeparam>
             <param name="factory">The factory.</param>
             <param name="supervisorStrategy">Optional: Supervisor strategy</param>
             <returns>Props.</returns>
@@ -5016,7 +5144,7 @@
             <summary>
                 Creates this instance.
             </summary>
-            <typeparam name="TActor">The type of the t actor.</typeparam>
+            <typeparam name="TActor">The type of the actor.</typeparam>
             <returns>Props.</returns>
         </member>
         <member name="M:Akka.Actor.Props.CreateBy``1(System.Object[])">
@@ -5031,7 +5159,7 @@
             <summary>
                 Creates this instance.
             </summary>
-            <typeparam name="TActor">The type of the t actor.</typeparam>
+            <typeparam name="TActor">The type of the actor.</typeparam>
             <returns>Props.</returns>
         </member>
         <member name="M:Akka.Actor.Props.Create(System.Type,System.Object[])">
@@ -5039,6 +5167,7 @@
                 Creates the specified type.
             </summary>
             <param name="type">The type.</param>
+            <param name="args"></param>
             <returns>Props.</returns>
         </member>
         <member name="M:Akka.Actor.Props.WithMailbox(System.String)">
@@ -5172,7 +5301,7 @@
                 rather than a traditional Activator.
                 Intended to be used in conjunction with Dependency Injection.
             </summary>
-            <typeparam name="TActor">The type of the t actor.</typeparam>
+            <typeparam name="TActor">The type of the actor.</typeparam>
         </member>
         <member name="F:Akka.Actor.DynamicProps`1.invoker">
             <summary>
@@ -5569,6 +5698,54 @@
             <param name="path">The path.</param>
             <returns>Mailbox.</returns>
         </member>
+        <member name="T:Akka.Dispatch.PinnedDispatcherConfigurator">
+            <summary>
+            Used to create instances of the <see cref="T:Akka.Dispatch.SingleThreadDispatcher"/>. 
+            
+            Each actor created using the pinned dispatcher gets its own unique thread.
+            <remarks>
+            Always returns a new instance.
+            </remarks>
+            </summary>
+        </member>
+        <member name="T:Akka.Dispatch.SingleThreadDispatcher">
+            <summary>
+            Used to power the <see cref="T:Akka.Dispatch.PinnedDispatcherConfigurator"/>.
+            
+            Guaranteed to provide one new thread instance per actor.
+            
+            Uses <see cref="T:Helios.Concurrency.DedicatedThreadPool"/> with 1 thread in order 
+            to take advantage of standard cleanup / teardown / queueing mechanics.
+            
+            /// Relevant configuration options:
+            <code>
+                my-forkjoin-dispatcher{
+                        type = PinnedDispatcher
+                        throughput = 100
+                        dedicated-thread-pool{ #settings for Helios.DedicatedThreadPool
+            	            #deadlock-timeout = 3s #optional timeout for deadlock detection
+            	            threadtype = background #values can be "background" or "foreground"
+                        }
+                }
+            
+                my-other-forkjoin-dispatcher{
+                        type = PinnedDispatcher
+                        # dedicated-thread-pool section is optional
+                }
+            </code>
+            <remarks>
+            Worth noting that unlike the <see cref="T:Akka.Dispatch.ForkJoinDispatcher"/>, the <see cref="T:Akka.Dispatch.SingleThreadDispatcher"/>
+            does not respect the <c>dedicated-thread-pool.thread-count</c> property in configuration. That value is
+            always equal to 1 in the <see cref="T:Akka.Dispatch.SingleThreadDispatcher"/>.
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:Akka.Dispatch.SingleThreadDispatcher.Schedule(System.Action)">
+            <summary>
+                Schedules the specified run.
+            </summary>
+            <param name="run">The run.</param>
+        </member>
         <member name="T:Akka.Dispatch.SysMsg.ISystemMessage">
             <summary>
                 Class ISystemMessage.
@@ -5849,6 +6026,17 @@
         <member name="M:Akka.Dispatch.TaskDispatcher.#ctor(Akka.Dispatch.MessageDispatcherConfigurator)">
             <summary>
             Takes a <see cref="T:Akka.Dispatch.MessageDispatcherConfigurator"/>
+            </summary>
+        </member>
+        <member name="T:Akka.Dispatch.DedicatedThreadPoolConfigHelpers">
+            <summary>
+            <see cref="T:Akka.Configuration.Config"/> helper class for configuring <see cref="T:Akka.Dispatch.MessageDispatcherConfigurator"/>
+            instances who depend on the Helios <see cref="T:Helios.Concurrency.DedicatedThreadPool"/>.
+            </summary>
+        </member>
+        <member name="F:Akka.Dispatch.DedicatedThreadPoolConfigHelpers.DefaultSingleThreadPoolSettings">
+            <summary>
+            Default settings for <see cref="T:Akka.Dispatch.SingleThreadDispatcher"/> instances.
             </summary>
         </member>
         <member name="T:Akka.Dispatch.ThreadPoolConfig">
@@ -8509,9 +8697,8 @@
             <summary>
             If <see cref="P:Akka.Util.AtomicReference`1.Value"/> equals <see cref="!:expected"/>, then set the Value to
             <see cref="!:newValue"/>.
-            
-            Returns true if <see cref="!:newValue"/> was set, false otherise.
             </summary>
+            <returns><c>true</c> if <see cref="!:newValue"/> was set</returns>
         </member>
         <member name="M:Akka.Util.AtomicReference`1.op_Implicit(Akka.Util.AtomicReference{`0})~`0">
             <summary>
@@ -8548,9 +8735,8 @@
             <summary>
             If <see cref="P:Akka.Util.AtomicBoolean.Value"/> equals <see cref="!:expected"/>, then set the Value to
             <see cref="!:newValue"/>.
-            
-            Returns true if <see cref="!:newValue"/> was set, false otherise.
             </summary>
+            <returns><c>true</c> if <see cref="!:newValue"/> was set</returns>
         </member>
         <member name="M:Akka.Util.AtomicBoolean.op_Implicit(Akka.Util.AtomicBoolean)~System.Boolean">
             <summary>

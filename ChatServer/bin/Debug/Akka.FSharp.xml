@@ -609,17 +609,15 @@
 <member name="T:Akka.FSharp.Actors">
 
 </member>
-<member name="M:Schedulers.ITellScheduler.ScheduleTellOnce``1(Akka.Actor.ITellScheduler,System.TimeSpan,Akka.Actor.IActorRef,``0,Microsoft.FSharp.Core.FSharpOption{Akka.Actor.IActorRef},Microsoft.FSharp.Core.FSharpOption{Akka.Actor.ICancelable})">
+<member name="M:Schedulers.ITellScheduler.ScheduleTellOnce``1(Akka.Actor.ITellScheduler,System.TimeSpan,Akka.Actor.IActorRef,``0)">
  <summary>
  Schedules a single <paramref name="message"/> send to the provided <paramref name="receiver"/>.
  </summary>
  <param name="after">Delay before sending a message.</param>
  <param name="message">Message to be sent to the receiver by the scheduler.</param>
  <param name="receiver">Message receiver.</param>
- <param name="sender">Optional actor reference set up as message sender</param>
- <param name="cancelable">Optional cancelation token</param>
 </member>
-<member name="M:Schedulers.ITellScheduler.ScheduleTellRepeatedly``1(Akka.Actor.ITellScheduler,System.TimeSpan,System.TimeSpan,Akka.Actor.IActorRef,``0,Microsoft.FSharp.Core.FSharpOption{Akka.Actor.IActorRef},Microsoft.FSharp.Core.FSharpOption{Akka.Actor.ICancelable})">
+<member name="M:Schedulers.ITellScheduler.ScheduleTellRepeatedly``1(Akka.Actor.ITellScheduler,System.TimeSpan,System.TimeSpan,Akka.Actor.IActorRef,``0)">
  <summary>
  Schedules a <paramref name="message"/> to be sent to the provided <paramref name="receiver"/> in specified time intervals.
  </summary>
@@ -627,8 +625,6 @@
  <param name="every">Interval.</param>
  <param name="message">Message to be sent to the receiver by the scheduler.</param>
  <param name="receiver">Message receiver.</param>
- <param name="sender">Optional actor reference set up as message sender</param>
- <param name="cancelable">Optional cancelation token</param>
 </member>
 <member name="M:Schedulers.IActionScheduler.ScheduleOnce(Akka.Actor.IActionScheduler,System.TimeSpan,Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit},Microsoft.FSharp.Core.FSharpOption{Akka.Actor.ICancelable})">
  <summary>

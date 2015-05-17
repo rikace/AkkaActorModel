@@ -49,9 +49,9 @@ let mandelbrot (xp:int, yp:int, w:int, h:int,width:int, height:int ,maxr:float, 
             let mutable tempzx = 0.
             let loopmax = 1000
             let mutable loopgo = 0
-            for x = xp to xp - 1 do //(int x = xp; x < xp + w; x++)
+            for x = xp to (xp + w - 1) do //(int x = xp; x < xp + w; x++)
                 cx <- (xjump * (float x)) - Math.Abs(minr)
-                for y = yp to yp - 1 do //(int y = yp; y < yp + h; y++)
+                for y = yp to (yp + h - 1) do //(int y = yp; y < yp + h; y++)
                     zx <- 0.
                     zy <- 0.
                     cy <- (yjump * (float y)) - Math.Abs(mini)
