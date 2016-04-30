@@ -2,41 +2,5 @@
 <doc>
 <assembly><name>EventPlayGround</name></assembly>
 <members>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="T:EventNet.Event">
-
-</member>
-<member name="">
-
-</member>
-<member name="T:Program">
-
-</member>
 </members>
 </doc>

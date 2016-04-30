@@ -90,7 +90,7 @@ type public AkkaFractalForm() as form =
             let image = Image.FromStream(mem)
             (image :?> Bitmap)
 
-        let renderer bytes x y = 
+        let renderer (bytes:byte array) x y = 
             let image = toBitmap bytes
             g.DrawImageUnscaled(image, x, y)
             picBox.Invalidate()

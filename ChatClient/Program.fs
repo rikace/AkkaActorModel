@@ -37,6 +37,7 @@ let main argv =
         spawn system "ChatClient" <| fun mailbox ->
            
             let server = mailbox.Context.ActorSelection("akka.tcp://MyServer@localhost:8081/user/ChatServer")            
+
             let rec loop nick = actor {
                 let! (msg:obj) = mailbox.Receive()
                 match msg with

@@ -2,90 +2,6 @@
 <doc>
 <assembly><name>MailBoxPlayGround</name></assembly>
 <members>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
 <member name="M:ActorWithControl.isRoom(ActorWithControl.Identifier)">
 <summary>
 Some helper functions for domain &quot;game&quot;
@@ -126,61 +42,10 @@ Some helper functions for domain &quot;game&quot;
  Create a new actor (like room or user)
 </summary>
 </member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="T:ActorWithControl">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="T:PingPong">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="T:Program">
-
-</member>
-<member name="">
-
-</member>
 <member name="F:ReportingFromAgent.BatchProcessor`1.batchEvent">
 <summary>
  Event used to report aggregated batches to the user
 </summary>
-</member>
-<member name="">
-
 </member>
 <member name="P:ReportingFromAgent.BatchProcessor`1.BatchProduced">
 <summary>
@@ -191,9 +56,6 @@ Some helper functions for domain &quot;game&quot;
 <summary>
  The method adds one object to the agent
 </summary>
-</member>
-<member name="">
-
 </member>
 <member name="T:ReportingFromAgent.BatchProcessor`1">
 <summary>
@@ -206,18 +68,6 @@ Some helper functions for domain &quot;game&quot;
  Type alias that gives convenient name to F# agent type
 </summary>
 </member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
 <member name="P:ReportingFromAgent.ThreadPool.BatchProcessor`1.BatchProduced">
 <summary>
  Event that is triggered when a batch is collected
@@ -228,22 +78,10 @@ Some helper functions for domain &quot;game&quot;
  The method adds one object to the agent
 </summary>
 </member>
-<member name="">
-
-</member>
 <member name="T:ReportingFromAgent.ThreadPool.BatchProcessor`1">
 <summary>
  Agent that implements batch processing
 </summary>
-</member>
-<member name="T:ReportingFromAgent.ThreadPool">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
 </member>
 <member name="P:ReportingFromAgent.Template.BatchProcessor`1.BatchProduced">
 <summary>
@@ -255,9 +93,6 @@ Some helper functions for domain &quot;game&quot;
  The method adds one object to the agent
 </summary>
 </member>
-<member name="">
-
-</member>
 <member name="T:ReportingFromAgent.Template.BatchProcessor`1">
 <summary>
  Agent that implements batch processing
@@ -267,96 +102,6 @@ Some helper functions for domain &quot;game&quot;
 <summary>
  Type alias that gives convenient name to F# agent type
 </summary>
-</member>
-<member name="T:ReportingFromAgent.Template">
-
-</member>
-<member name="T:ReportingFromAgent">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="T:StateMachine">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="T:Supervisor.AsyncCatch">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="T:Supervisor.Supervisors">
-
-</member>
-<member name="T:Supervisor">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="T:UpgradeAgent">
-
 </member>
 </members>
 </doc>

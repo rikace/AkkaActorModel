@@ -5,3 +5,10 @@ C:\Git\AkkaActorModel\FractalHelper\bin\Debug\FSharp.Core.dll
 C:\Git\AkkaActorModel\FractalHelper\bin\Debug\FSharp.Core.xml
 C:\Git\AkkaActorModel\FractalHelper\obj\Debug\FractalHelper.dll
 C:\Git\AkkaActorModel\FractalHelper\obj\Debug\FractalHelper.pdb
+C:\Demo\AkkaActorModel\FractalHelper\bin\Debug\FractalHelper.XML
+C:\Demo\AkkaActorModel\FractalHelper\bin\Debug\FractalHelper.dll
+C:\Demo\AkkaActorModel\FractalHelper\bin\Debug\FractalHelper.pdb
+C:\Demo\AkkaActorModel\FractalHelper\bin\Debug\FSharp.Core.dll
+C:\Demo\AkkaActorModel\FractalHelper\bin\Debug\FSharp.Core.xml
+C:\Demo\AkkaActorModel\FractalHelper\obj\Debug\FractalHelper.dll
+C:\Demo\AkkaActorModel\FractalHelper\obj\Debug\FractalHelper.pdb

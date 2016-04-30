@@ -71,7 +71,7 @@
     <None Include="07_TypedMessages.fsx" />
     <None Include="07_DiscriminatedUnion.fsx" />
     <None Include="08_Spawing.fsx" />
-    <None Include="09_Sipervisioning.fsx" />
+    <None Include="09_Supervisioning.fsx" />
     <None Include="09_SupervisioningOpts.fsx" />
     <None Include="10_RoutingRobinGroup.fsx" />
     <None Include="10_RoutingRobinLoop.fsx" />

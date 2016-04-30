@@ -8,3 +8,8 @@ C:\Git\AkkaActorModel\Fractal\MandelbrotSet\bin\Debug\MandelbrotSet.pdb
 C:\Git\AkkaActorModel\Fractal\MandelbrotSet\obj\Debug\MandelbrotSet.dll
 C:\Git\AkkaActorModel\Fractal\MandelbrotSet\obj\Debug\MandelbrotSet.pdb
 C:\Git\AkkaActorModel\Fractal\MandelbrotSet\obj\Debug\MandelbrotSet.csprojResolveAssemblyReference.cache
+C:\Demo\AkkaActorModel\Fractal\MandelbrotSet\bin\Debug\MandelbrotSet.dll
+C:\Demo\AkkaActorModel\Fractal\MandelbrotSet\bin\Debug\MandelbrotSet.pdb
+C:\Demo\AkkaActorModel\Fractal\MandelbrotSet\obj\Debug\MandelbrotSet.csprojResolveAssemblyReference.cache
+C:\Demo\AkkaActorModel\Fractal\MandelbrotSet\obj\Debug\MandelbrotSet.dll
+C:\Demo\AkkaActorModel\Fractal\MandelbrotSet\obj\Debug\MandelbrotSet.pdb

@@ -56,49 +56,49 @@
   <ItemGroup>
     <Compile Include="Program.fs" />
     <None Include="App.config" />
+    <Content Include="packages.config" />
     <None Include="protos\tutorial\addressbook.proto" />
     <None Include="protos\google\protobuf\descriptor.proto" />
     <None Include="protos\google\protobuf\csharp_options.proto" />
     <Content Include="licenses\protoc-license.txt" />
     <Content Include="licenses\license.txt" />
     <Content Include="CHANGES.txt" />
-    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Akka">
-      <HintPath>..\packages\Akka.1.0.1\lib\net45\Akka.dll</HintPath>
+      <HintPath>..\..\packages\Akka.0.8.0\lib\net45\Akka.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Akka.FSharp">
-      <HintPath>..\packages\Akka.FSharp.1.0.1\lib\net45\Akka.FSharp.dll</HintPath>
+      <HintPath>..\..\packages\Akka.FSharp.0.8.0\lib\net45\Akka.FSharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Akka.Remote">
-      <HintPath>..\packages\Akka.Remote.1.0.1\lib\net45\Akka.Remote.dll</HintPath>
+      <HintPath>..\..\packages\Akka.Remote.0.8.0\lib\net45\Akka.Remote.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FSharp.PowerPack">
-      <HintPath>..\packages\FSPowerPack.Core.Community.3.0.0.0\Lib\Net40\FSharp.PowerPack.dll</HintPath>
+      <HintPath>..\..\packages\FSPowerPack.Core.Community.3.0.0.0\lib\Net40\FSharp.PowerPack.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FSharp.PowerPack.Linq">
-      <HintPath>..\packages\FSPowerPack.Linq.Community.3.0.0.0\Lib\Net40\FSharp.PowerPack.Linq.dll</HintPath>
+      <HintPath>..\..\packages\FSPowerPack.Linq.Community.3.0.0.0\lib\Net40\FSharp.PowerPack.Linq.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FsPickler">
-      <HintPath>..\packages\FsPickler.0.9.11\lib\net45\FsPickler.dll</HintPath>
+      <HintPath>..\..\packages\FsPickler.0.9.11\lib\net45\FsPickler.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Google.ProtocolBuffers">
-      <HintPath>..\packages\Google.ProtocolBuffers.2.4.1.521\lib\net40\Google.ProtocolBuffers.dll</HintPath>
+      <HintPath>..\..\packages\Google.ProtocolBuffers.2.4.1.521\lib\net40\Google.ProtocolBuffers.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Google.ProtocolBuffers.Serialization">
-      <HintPath>..\packages\Google.ProtocolBuffers.2.4.1.521\lib\net40\Google.ProtocolBuffers.Serialization.dll</HintPath>
+      <HintPath>..\..\packages\Google.ProtocolBuffers.2.4.1.521\lib\net40\Google.ProtocolBuffers.Serialization.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Helios">
-      <HintPath>..\packages\Helios.1.4.0\lib\net45\Helios.dll</HintPath>
+      <HintPath>..\..\packages\Helios.1.3.6.0\lib\net45\Helios.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
@@ -114,9 +114,11 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\MandelbrotSet\MandelbrotSet.csproj">
-      <Name>MandelbrotSet</Name>
-      <Project>{0b93fbc3-81e2-437d-8d70-61de99e78c00}</Project>
+      <Name>MandelbrotSet (FractalV2\MandelbrotSet)</Name>
+      <Project>{6c12cdc2-ef20-4abf-aabb-5bd470e45941}</Project>
       <Private>True</Private>
     </ProjectReference>
   </ItemGroup>

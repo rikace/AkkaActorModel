@@ -8,11 +8,11 @@ open Akka.Actor
 open System
 
 type IncrementMessage =
-    | Increment
+    | Increment 
     | Print
 
 type Decrementessage =
-    | Decrement
+    | Decrement 
     | Display
 
 type SimpleActor() as this =

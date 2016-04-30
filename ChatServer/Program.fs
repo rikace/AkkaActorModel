@@ -41,6 +41,7 @@ let main argv =
                 let! (msg:obj) = mailbox.Receive()
               
                 printfn "Received %A" msg
+
                 match msg with
                 | :? SayRequest as sr ->
                       
@@ -49,6 +50,7 @@ let main argv =
                         Console.WriteLine("{0} said {1}", sr.Username, sr.Text)
 
                         let response = SayResponse(sr.Username, sr.Text)
+                        
                         for client in clients do
                             client.Tell(response, mailbox.Self)
                         
@@ -57,6 +59,7 @@ let main argv =
 
                 | :? ConnectRequest as cr ->
                     let response = ConnectResponse(cr.UserName + " Hello and welcome to Akka .NET chat example")
+
                     let sender = mailbox.Sender()
                     sender.Tell(response, mailbox.Self)
 
