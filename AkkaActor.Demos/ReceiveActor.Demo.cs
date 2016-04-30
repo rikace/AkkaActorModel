@@ -16,7 +16,7 @@ namespace AkkaActor.Demos
 
             for (var i = 1; i <= 10000; i++)
             {
-                actor.Tell(new FizzBuzzMessage(i));
+                actor.Tell(new FizzBuzzMessage(i), actor);
             }
 
             Console.ReadKey();
@@ -26,35 +26,48 @@ namespace AkkaActor.Demos
         {
             public FizzBuzzActor()
             {
-                Receive<FizzBuzzMessage>(msg =>
+                Receive<ConsoleMessage>(msg =>
                 {
-                    var i = msg.Number;
-
-                    var isFizz = false;
-                    var isBuzz = false;
-
-                    if (i % 3 == 0) { isFizz = true; }
-                    if (i % 5 == 0) { isBuzz = true; }
-
-                    Console.Write(i);
-
-                    if (isFizz && isBuzz)
-                    {
-                        Console.WriteLine(" - FizzBuzz");
-                    }
-                    else if (isFizz)
-                    {
-                        Console.WriteLine(" - Fizz");
-                    }
-                    else if (isBuzz)
-                    {
-                        Console.WriteLine(" - Buzz");
-                    }
-                    else
-                    {
-                        Console.WriteLine();
-                    }
+                    ConsoleColor color = Console.ForegroundColor;
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine(msg.Message);
+                    Console.ForegroundColor = color;
                 });
+
+                Receive<FizzBuzzMessage>(msg =>
+                 {
+
+                     var i = msg.Number;
+
+                     var isFizz = false;
+                     var isBuzz = false;
+
+                     if (i % 3 == 0) { isFizz = true; }
+                     if (i % 5 == 0) { isBuzz = true; }
+
+                     Console.Write(i);
+
+                     var sender = Context.Sender;
+                     if (isFizz && isBuzz)
+                     {
+                         sender.Tell(new ConsoleMessage(" - FizzBuzz"));
+                        //Console.WriteLine(" - FizzBuzz");
+                    }
+                     else if (isFizz)
+                     {
+                         sender.Tell(new ConsoleMessage(" - Fizz"));
+                        //Console.WriteLine(" - Fizz");
+                    }
+                     else if (isBuzz)
+                     {
+                         sender.Tell(new ConsoleMessage(" - Buzz"));
+                        //Console.WriteLine(" - Buzz");
+                    }
+                     else
+                     {
+                         Console.WriteLine();
+                     }
+                 });
             }
         }
 
@@ -66,6 +79,16 @@ namespace AkkaActor.Demos
             }
 
             public readonly int Number;
+        }
+
+        public class ConsoleMessage
+        {
+            public ConsoleMessage(string msg)
+            {
+                Message = msg;
+            }
+
+            public readonly string Message;
         }
     }
 }

@@ -10,7 +10,7 @@ namespace AkkaActor.Demos
 
     using Akka.Actor;
 
-    public class HanldeActor
+    public class HandleActor
     {
         public static void Start()
         {

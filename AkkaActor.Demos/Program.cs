@@ -10,7 +10,11 @@ namespace AkkaActor.Demos
     {
         static void Main(string[] args)
         {
-            Communication.Start();
+            // UntypedDemo.Start();
+             ReceiveActorDemo.Start();
+            //HandleActor.Start();
+
+            //Communication.Start();
 
             Console.ReadLine();
         }

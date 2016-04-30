@@ -10,15 +10,17 @@ open Akka.FSharp
 open Akka.Actor
 open System
 
-type GreetMsg =
+type ActorMsg =
     | Greet of who:string
+    | Push of int
+    | Calculate
 
 
 let system = System.create "MySystem" <| Configuration.load()
 
     
 // functional 
-let greeter = 
+let myActor = 
     // the function spawn instantiate an ActorRef
     // spawn attaches the behavior to our system and returns an ActorRef
     // We can use ActorRef to pass messages
@@ -26,19 +28,27 @@ let greeter =
     // ActorFactory -> Name -> f(Actor<Message> -> Cont<'Message, 'return>) -> ActorRef
     spawn system "Greeter-Functional"
     <| fun mailbox ->
-        let rec loop() = actor { // tail recursive function,
+        let rec loop state = actor { // tail recursive function,
                                  // which uses an actor { ... } computation expression 
             let! msg = mailbox.Receive()
             match msg with
-            | Greet(w) ->printfn "Hello %s" w    
-                       
-            return! loop() }
-        loop()
+            | Greet(w) -> printfn "Hello %s" w    
+            | Push(value) -> return! loop (value::state)
+            | Calculate -> state |> List.reduce(+) |> printfn "%d"
+                           return! loop []
+            }
+        loop []
 
-greeter <! GreetMsg.Greet("Hello AKKA.Net!!")
+myActor.Tell (Push 10)
+myActor <! (Push 5)
+for i = 0 to 10 do myActor.Tell (Push i)
+myActor <! Calculate
+myActor <! Greet("Hello AKKA.Net!!")
+
+
 
 let actor = select "akka://MySystem/user/Greeter-Functional" system
-actor <! GreetMsg.Greet("AKKA.Net!!")
+actor <! Greet("AKKA.Net!!")
 
 
 system.Shutdown()
