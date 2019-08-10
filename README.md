@@ -8,20 +8,9 @@
 
 .NET Core on Windows
 ---
-[[![Build status](https://ci.appveyor.com/api/projects/status/github/rikace/AkkaActorModel?svg=true)](https://ci.appveyor.com/project/rikace/AkkaActorModel)
+[![Build status](https://ci.appveyor.com/api/projects/status/github/rikace/AkkaActorModel?svg=true)](https://ci.appveyor.com/project/rikace/AkkaActorModel)
 
 [[![Build History](https://buildstats.info/appveyor/chart/rikace/AkkaActorModel)](https://ci.appveyor.com/project/rikace/AkkaActorModel)
-
-
-
-## Builds
-
-MacOS/Linux | Windows
---- | ---
-[![Travis Badge](https://travis-ci.org/rikace/Spectrux.svg?branch=master)](https://travis-ci.org/rikace/Spectrux) | [![Build status](https://ci.appveyor.com/api/projects/status/github/rikace/Spectrux?svg=true)](https://ci.appveyor.com/project/rikace/Spectrux)
-
-[![Build History](https://buildstats.info/travisci/chart/rikace/Spectrux)](https://travis-ci.org/rikace/Spectrux/builds) | [![Build History](https://buildstats.info/appveyor/chart/rikace/Spectrux)](https://ci.appveyor.com/project/rikace/Spectrux) 
-
 
 
 ### Building
