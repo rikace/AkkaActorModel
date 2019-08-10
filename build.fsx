@@ -1,8 +1,25 @@
-#load ".fake/build.fsx/intellisense.fsx"
+#r "paket: groupref Build //"
 #if !FAKE
 #r "Facades/netstandard"
 #r "netstandard"
 #endif
+
+#nowarn "52"
+
+#load ".fake/build.fsx/intellisense.fsx"
+//#load "./lib/buildtools/ProcessHelper.fsx"
+#r "System.Xml.Linq"
+#r "System.Net.Http"
+#r "System.Collections"
+#r "System.Threading.Tasks"
+
+//#load ".fake/build.fsx/intellisense.fsx"
+//
+//#if !FAKE
+//#r "Facades/netstandard"
+//#r "netstandard"
+//#endif
+
 open System
 open Fake.SystemHelper
 open Fake.Core

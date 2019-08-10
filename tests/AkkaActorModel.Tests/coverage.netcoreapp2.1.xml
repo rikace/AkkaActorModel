@@ -1,0 +1,1232 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Summary numSequencePoints="155" visitedSequencePoints="0" numBranchPoints="87" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="6" minCyclomaticComplexity="1" visitedClasses="0" numClasses="46" visitedMethods="0" numMethods="53" minCrapScore="0" maxCrapScore="0" />
+  <Modules>
+    <Module skippedDueTo="Filter" hash="9C-AC-56-88-4B-4D-52-CD-91-8F-F2-53-04-63-81-5A-9E-AE-46-24">
+      <ModulePath>/Users/riccardo/Github/AkkaActorModel/tests/AkkaActorModel.Tests/bin/Debug/netcoreapp2.1/__Saved/AkkaActorModel.Tests.dll</ModulePath>
+      <ModuleTime>2019-08-10T18:57:46.0127673Z</ModuleTime>
+      <ModuleName>AkkaActorModel.Tests</ModuleName>
+      <Classes />
+    </Module>
+    <Module hash="B0-E8-5C-6E-08-EE-06-5E-FC-1C-67-5A-A2-AC-CD-66-47-C1-E7-8F">
+      <Summary numSequencePoints="155" visitedSequencePoints="0" numBranchPoints="87" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="6" minCyclomaticComplexity="1" visitedClasses="0" numClasses="46" visitedMethods="0" numMethods="53" minCrapScore="0" maxCrapScore="0" />
+      <ModulePath>/Users/riccardo/Github/AkkaActorModel/tests/AkkaActorModel.Tests/bin/Debug/netcoreapp2.1/__Saved/AkkaActorModel.dll</ModulePath>
+      <ModuleTime>2019-08-10T18:57:41.7292286Z</ModuleTime>
+      <ModuleName>AkkaActorModel</ModuleName>
+      <Files>
+        <File uid="1" fullPath="/Users/riccardo/Github/AkkaActorModel/src/AkkaActorModel/Persistence.fs" />
+        <File uid="2" fullPath="/Users/riccardo/Github/AkkaActorModel/src/AkkaActorModel/GameOfLife.fs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>&lt;Module&gt;</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaPersistence</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="true" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663297</MetadataToken>
+              <Name>Akka.Actor.ActorSystem AkkaPersistence::get_system()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="100663297" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="24" visitedSequencePoints="0" numBranchPoints="10" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="4" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="4" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaPersistence/Scenario1</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663298</MetadataToken>
+              <Name>Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt; AkkaPersistence/Scenario1::update(Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt;,a)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="0" ordinal="0" offset="0" sl="51" sc="26" el="51" ec="47" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="0" ordinal="0" offset="0" sl="51" sc="26" el="51" ec="47" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="3" nPathComplexity="2" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="7" visitedSequencePoints="0" numBranchPoints="3" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="3" minCyclomaticComplexity="3" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663299</MetadataToken>
+              <Name>Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt; AkkaPersistence/Scenario1::apply(Akka.Persistence.FSharp/Eventsourced`3&lt;AkkaPersistence/Scenario1/Command,System.Object,Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt;&gt;,Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt;,System.Object)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="7" ordinal="0" offset="0" sl="55" sc="9" el="55" ec="25" bec="2" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="6" ordinal="1" offset="30" sl="56" sc="29" el="56" ec="43" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="5" ordinal="2" offset="38" sl="55" sc="9" el="55" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="4" ordinal="3" offset="41" sl="57" sc="36" el="57" ec="62" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="3" ordinal="4" offset="54" sl="55" sc="9" el="55" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="2" ordinal="5" offset="57" sl="59" sc="13" el="59" ec="32" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="1" ordinal="6" offset="66" sl="60" sc="13" el="60" ec="18" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="0" uspid="0" ordinal="0" offset="22" sl="55" path="0" offsetchain="24" offsetend="38" fileid="1" />
+                <BranchPoint vc="0" uspid="1" ordinal="1" offset="22" sl="55" path="1" offsetchain="26" offsetend="54" fileid="1" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="7" ordinal="0" offset="0" sl="55" sc="9" el="55" ec="25" bec="2" bev="0" fileid="1" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="4" nPathComplexity="4" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="5" visitedSequencePoints="0" numBranchPoints="5" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="4" minCyclomaticComplexity="4" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663300</MetadataToken>
+              <Name>System.Void AkkaPersistence/Scenario1::exec(Akka.Persistence.FSharp/Eventsourced`3&lt;AkkaPersistence/Scenario1/Command,System.Object,Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt;&gt;,Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt;,AkkaPersistence/Scenario1/Command)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="12" ordinal="0" offset="0" sl="63" sc="9" el="63" ec="23" bec="4" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="11" ordinal="1" offset="51" sl="64" sc="23" el="64" ec="58" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="10" ordinal="2" offset="89" sl="65" sc="27" el="65" ec="53" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="9" ordinal="3" offset="97" sl="66" sc="20" el="66" ec="43" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="8" ordinal="4" offset="128" sl="67" sc="20" el="67" ec="44" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="0" uspid="2" ordinal="0" offset="8" sl="63" path="0" offsetchain="29" offsetend="37" fileid="1" />
+                <BranchPoint vc="0" uspid="3" ordinal="1" offset="8" sl="63" path="1" offsetchain="31" offsetend="89" fileid="1" />
+                <BranchPoint vc="0" uspid="4" ordinal="2" offset="8" sl="63" path="2" offsetchain="33" offsetend="97" fileid="1" />
+                <BranchPoint vc="0" uspid="5" ordinal="3" offset="8" sl="63" path="3" offsetchain="35" offsetend="128" fileid="1" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="12" ordinal="0" offset="0" sl="63" sc="9" el="63" ec="23" bec="4" bev="0" fileid="1" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="11" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663301</MetadataToken>
+              <Name>System.Void AkkaPersistence/Scenario1::run()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="23" ordinal="0" offset="0" sl="71" sc="9" el="71" ec="39" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="22" ordinal="1" offset="16" sl="72" sc="9" el="77" ec="17" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="21" ordinal="2" offset="57" sl="79" sc="9" el="79" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="20" ordinal="3" offset="91" sl="80" sc="9" el="80" ec="20" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="19" ordinal="4" offset="125" sl="82" sc="9" el="82" ec="20" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="18" ordinal="5" offset="159" sl="83" sc="9" el="83" ec="20" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="17" ordinal="6" offset="193" sl="84" sc="9" el="84" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="16" ordinal="7" offset="232" sl="85" sc="9" el="85" ec="20" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="15" ordinal="8" offset="266" sl="86" sc="9" el="86" ec="27" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="14" ordinal="9" offset="300" sl="87" sc="9" el="87" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="13" ordinal="10" offset="339" sl="88" sc="9" el="88" ec="20" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="23" ordinal="0" offset="0" sl="71" sc="9" el="71" ec="39" bec="0" bev="0" fileid="1" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaPersistence/Scenario1/Command</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaPersistence/Scenario1/Command/Tags</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaPersistence/Scenario1/Command/Update</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaPersistence/Scenario1/Command/Update@DebugTypeProxy</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaPersistence/Scenario1/exec@64-1</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663328</MetadataToken>
+              <Name>Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt; AkkaPersistence/Scenario1/exec@64-1::Invoke(System.Object)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="24" ordinal="0" offset="0" sl="64" sc="45" el="64" ec="57" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="24" ordinal="0" offset="0" sl="64" sc="45" el="64" ec="57" bec="0" bev="0" fileid="1" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaPersistence/Scenario1/s1@75</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663330</MetadataToken>
+              <Name>Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt; AkkaPersistence/Scenario1/s1@75::Invoke(Akka.Persistence.FSharp/Eventsourced`3&lt;AkkaPersistence/Scenario1/Command,System.Object,Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt;&gt;,Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt;,System.Object)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="25" ordinal="0" offset="0" sl="75" sc="25" el="75" ec="30" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="25" ordinal="0" offset="0" sl="75" sc="25" el="75" ec="30" bec="0" bev="0" fileid="1" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaPersistence/Scenario1/s1@76-1</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663332</MetadataToken>
+              <Name>Microsoft.FSharp.Core.Unit AkkaPersistence/Scenario1/s1@76-1::Invoke(Akka.Persistence.FSharp/Eventsourced`3&lt;AkkaPersistence/Scenario1/Command,System.Object,Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt;&gt;,Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt;,AkkaPersistence/Scenario1/Command)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="26" ordinal="0" offset="0" sl="76" sc="24" el="76" ec="28" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="26" ordinal="0" offset="0" sl="76" sc="24" el="76" ec="28" bec="0" bev="0" fileid="1" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="12" visitedSequencePoints="0" numBranchPoints="6" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="4" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaPersistence/Scenario0</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663333</MetadataToken>
+              <Name>Microsoft.FSharp.Collections.FSharpList`1&lt;a&gt; AkkaPersistence/Scenario0::update(Microsoft.FSharp.Collections.FSharpList`1&lt;a&gt;,a)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="27" ordinal="0" offset="0" sl="16" sc="26" el="16" ec="34" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="27" ordinal="0" offset="0" sl="16" sc="26" el="16" ec="34" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663334</MetadataToken>
+              <Name>Microsoft.FSharp.Core.FSharpFunc`2&lt;Microsoft.FSharp.Collections.FSharpList`1&lt;b&gt;,Microsoft.FSharp.Core.FSharpFunc`2&lt;b,Microsoft.FSharp.Collections.FSharpList`1&lt;b&gt;&gt;&gt; AkkaPersistence/Scenario0::apply(a)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="28" ordinal="0" offset="2" sl="19" sc="19" el="19" ec="25" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="28" ordinal="0" offset="2" sl="19" sc="19" el="19" ec="25" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="4" visitedSequencePoints="0" numBranchPoints="3" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663335</MetadataToken>
+              <Name>System.Void AkkaPersistence/Scenario0::exec(Akka.Persistence.FSharp/Eventsourced`3&lt;a,System.String,Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt;&gt;,Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt;,System.String)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="32" ordinal="0" offset="0" sl="23" sc="9" el="23" ec="23" bec="2" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="31" ordinal="1" offset="19" sl="24" sc="22" el="24" ec="45" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="30" ordinal="2" offset="46" sl="23" sc="9" el="23" ec="23" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="29" ordinal="3" offset="48" sl="25" sc="22" el="25" ec="57" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="0" uspid="6" ordinal="0" offset="13" sl="23" path="0" offsetchain="15" offsetend="19" fileid="1" />
+                <BranchPoint vc="0" uspid="7" ordinal="1" offset="13" sl="23" path="1" offsetchain="17" offsetend="46" fileid="1" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="32" ordinal="0" offset="0" sl="23" sc="9" el="23" ec="23" bec="2" bev="0" fileid="1" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="6" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663336</MetadataToken>
+              <Name>System.Void AkkaPersistence/Scenario0::run()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="38" ordinal="0" offset="0" sl="28" sc="9" el="28" ec="39" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="37" ordinal="1" offset="16" sl="29" sc="9" el="34" ec="17" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="36" ordinal="2" offset="57" sl="36" sc="9" el="36" ec="20" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="35" ordinal="3" offset="86" sl="37" sc="9" el="37" ec="20" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="34" ordinal="4" offset="120" sl="38" sc="9" el="38" ec="20" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="33" ordinal="5" offset="154" sl="40" sc="9" el="40" ec="22" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="38" ordinal="0" offset="0" sl="28" sc="9" el="28" ec="39" bec="0" bev="0" fileid="1" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaPersistence/Scenario0/apply@19</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663338</MetadataToken>
+              <Name>Microsoft.FSharp.Collections.FSharpList`1&lt;b&gt; AkkaPersistence/Scenario0/apply@19::Invoke(Microsoft.FSharp.Collections.FSharpList`1&lt;b&gt;,b)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="39" ordinal="0" offset="0" sl="19" sc="19" el="19" ec="25" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="39" ordinal="0" offset="0" sl="19" sc="19" el="19" ec="25" bec="0" bev="0" fileid="1" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaPersistence/Scenario0/exec@25</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663340</MetadataToken>
+              <Name>Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt; AkkaPersistence/Scenario0/exec@25::Invoke(System.String)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="40" ordinal="0" offset="0" sl="25" sc="44" el="25" ec="56" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="40" ordinal="0" offset="0" sl="25" sc="44" el="25" ec="56" bec="0" bev="0" fileid="1" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaPersistence/Scenario0/s0@32</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663342</MetadataToken>
+              <Name>Microsoft.FSharp.Core.FSharpFunc`2&lt;Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt;,Microsoft.FSharp.Core.FSharpFunc`2&lt;System.String,Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt;&gt;&gt; AkkaPersistence/Scenario0/s0@32::Invoke(Akka.Persistence.FSharp/Eventsourced`3&lt;System.String,System.String,Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt;&gt;)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="41" ordinal="0" offset="0" sl="32" sc="25" el="32" ec="30" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="41" ordinal="0" offset="0" sl="32" sc="25" el="32" ec="30" bec="0" bev="0" fileid="1" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaPersistence/Scenario0/s0@33-1</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663344</MetadataToken>
+              <Name>Microsoft.FSharp.Core.Unit AkkaPersistence/Scenario0/s0@33-1::Invoke(Akka.Persistence.FSharp/Eventsourced`3&lt;System.String,System.String,Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt;&gt;,Microsoft.FSharp.Collections.FSharpList`1&lt;System.String&gt;,System.String)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="42" ordinal="0" offset="0" sl="33" sc="24" el="33" ec="28" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="42" ordinal="0" offset="0" sl="33" sc="24" el="33" ec="28" bec="0" bev="0" fileid="1" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="4" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>&lt;StartupCode$AkkaActorModel&gt;.$AkkaPersistence</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="true" isStatic="true" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="4" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663345</MetadataToken>
+              <Name>System.Void &lt;StartupCode$AkkaActorModel&gt;.$AkkaPersistence::.cctor()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="46" ordinal="0" offset="0" sl="10" sc="1" el="10" ec="56" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="45" ordinal="1" offset="22" sl="91" sc="1" el="91" ec="16" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="44" ordinal="2" offset="28" sl="93" sc="1" el="93" ec="19" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="43" ordinal="3" offset="34" sl="96" sc="1" el="96" ec="16" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="46" ordinal="0" offset="0" sl="10" sc="1" el="10" ec="56" bec="0" bev="0" fileid="1" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="3" visitedSequencePoints="0" numBranchPoints="2" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="2" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="true" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663346</MetadataToken>
+              <Name>Akka.Actor.PoisonPill AkkaActorModel.GameOfLife.Domain::get_poisonPill()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="100663346" ordinal="0" offset="0" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="true" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663347</MetadataToken>
+              <Name>Microsoft.FSharp.Core.FSharpFunc`2&lt;Akka.FSharp.Actors/Actor`1&lt;AkkaActorModel.GameOfLife.Domain/Command&gt;,Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Command,Microsoft.FSharp.Core.Unit&gt;&gt; AkkaActorModel.GameOfLife.Domain::get_cellActorCont()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="100663347" ordinal="0" offset="0" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="true" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663348</MetadataToken>
+              <Name>Microsoft.FSharp.Core.FSharpFunc`2&lt;Akka.FSharp.Actors/Actor`1&lt;AkkaActorModel.GameOfLife.Domain/Message&gt;,Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt;&gt; AkkaActorModel.GameOfLife.Domain::get_aggregateActorCont()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="100663348" ordinal="0" offset="0" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="2" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663349</MetadataToken>
+              <Name>System.String AkkaActorModel.GameOfLife.Domain::name(a,System.Int32,System.Int32)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="48" ordinal="0" offset="8" sl="100" sc="9" el="100" ec="22" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="47" ordinal="1" offset="24" sl="101" sc="21" el="101" ec="41" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="48" ordinal="0" offset="8" sl="100" sc="9" el="100" ec="22" bec="0" bev="0" fileid="2" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663350</MetadataToken>
+              <Name>Microsoft.FSharp.Core.FSharpFunc`2&lt;Akka.FSharp.Actors/Actor`1&lt;AkkaActorModel.GameOfLife.Domain/Command&gt;,Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Command,a&gt;&gt; AkkaActorModel.GameOfLife.Domain::coordinatorActorCont()</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="49" ordinal="0" offset="6" sl="136" sc="9" el="136" ec="13" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="49" ordinal="0" offset="6" sl="136" sc="9" el="136" ec="13" bec="0" bev="0" fileid="2" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="true" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663351</MetadataToken>
+              <Name>Microsoft.FSharp.Core.FSharpFunc`2&lt;Akka.FSharp.Actors/Actor`1&lt;AkkaActorModel.GameOfLife.Domain/Message&gt;,Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt;&gt; AkkaActorModel.GameOfLife.Domain::get_collectorActorCont()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="100663351" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/CellStatus</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/CellStatus/Tags</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/Command</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/Command/Tags</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/Command/Spawn</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/Command/_SpawnCompleted</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/Command/Spawn@DebugTypeProxy</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/Command/_SpawnCompleted@DebugTypeProxy</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/Message</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/Message/Tags</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/Message/AggregationStarted</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/Message/Neighborhood</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/Message/_AggregationCompleted</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/Message/AggregationStarted@DebugTypeProxy</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/Message/Neighborhood@DebugTypeProxy</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/Message/_AggregationCompleted@DebugTypeProxy</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="18" visitedSequencePoints="0" numBranchPoints="3" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="3" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/loop@32-2</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="3" nPathComplexity="2" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="18" visitedSequencePoints="0" numBranchPoints="3" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="3" minCyclomaticComplexity="3" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663424</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Command,Microsoft.FSharp.Core.Unit&gt; AkkaActorModel.GameOfLife.Domain/loop@32-2::Invoke(AkkaActorModel.GameOfLife.Domain/Command)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="67" ordinal="0" offset="0" sl="31" sc="21" el="31" ec="53" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="66" ordinal="1" offset="2" sl="32" sc="21" el="32" ec="50" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="65" ordinal="2" offset="14" sl="33" sc="21" el="33" ec="44" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="64" ordinal="3" offset="26" sl="34" sc="21" el="34" ec="56" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="63" ordinal="4" offset="43" sl="36" sc="21" el="36" ec="39" bec="2" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="62" ordinal="5" offset="80" sl="38" sc="25" el="38" ec="40" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="61" ordinal="6" offset="102" sl="39" sc="25" el="39" ec="76" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="60" ordinal="7" offset="128" sl="40" sc="25" el="40" ec="83" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="59" ordinal="8" offset="158" sl="41" sc="25" el="41" ec="83" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="58" ordinal="9" offset="188" sl="42" sc="25" el="42" ec="83" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="57" ordinal="10" offset="218" sl="43" sc="25" el="43" ec="83" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="56" ordinal="11" offset="248" sl="44" sc="25" el="44" ec="83" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="55" ordinal="12" offset="278" sl="45" sc="25" el="45" ec="83" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="54" ordinal="13" offset="308" sl="46" sc="25" el="46" ec="83" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="53" ordinal="14" offset="338" sl="47" sc="25" el="47" ec="83" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="52" ordinal="15" offset="368" sl="49" sc="25" el="49" ec="43" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="51" ordinal="16" offset="414" sl="36" sc="21" el="36" ec="39" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="50" ordinal="17" offset="415" sl="51" sc="28" el="51" ec="58" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="0" uspid="8" ordinal="0" offset="53" sl="36" path="0" offsetchain="55" offsetend="62" fileid="2" />
+                <BranchPoint vc="0" uspid="9" ordinal="1" offset="53" sl="36" path="1" offsetchain="57" offsetend="414" fileid="2" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="67" ordinal="0" offset="0" sl="31" sc="21" el="31" ec="53" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/loop@31-1</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663426</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Command,Microsoft.FSharp.Core.Unit&gt; AkkaActorModel.GameOfLife.Domain/loop@31-1::Invoke(Microsoft.FSharp.Core.Unit)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="68" ordinal="0" offset="0" sl="31" sc="21" el="31" ec="53" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="68" ordinal="0" offset="0" sl="31" sc="21" el="31" ec="53" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/loop@30</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663428</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Command,Microsoft.FSharp.Core.Unit&gt; AkkaActorModel.GameOfLife.Domain/loop@30::Invoke(Microsoft.FSharp.Core.Unit)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="69" ordinal="0" offset="0" sl="30" sc="17" el="30" ec="22" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="69" ordinal="0" offset="0" sl="30" sc="17" el="30" ec="22" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/cont@29</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663430</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Command,Microsoft.FSharp.Core.Unit&gt; AkkaActorModel.GameOfLife.Domain/cont@29::Invoke(Akka.FSharp.Actors/Actor`1&lt;AkkaActorModel.GameOfLife.Domain/Command&gt;)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="70" ordinal="0" offset="7" sl="54" sc="13" el="54" ec="19" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="70" ordinal="0" offset="7" sl="54" sc="13" el="54" ec="19" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="5" visitedSequencePoints="0" numBranchPoints="5" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="3" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/aggregate@61</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="3" nPathComplexity="4" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="5" visitedSequencePoints="0" numBranchPoints="5" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="3" minCyclomaticComplexity="3" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663432</MetadataToken>
+              <Name>AkkaActorModel.GameOfLife.Domain/CellStatus AkkaActorModel.GameOfLife.Domain/aggregate@61::Invoke(AkkaActorModel.GameOfLife.Domain/CellStatus,AkkaActorModel.GameOfLife.Domain/CellStatus)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="75" ordinal="0" offset="0" sl="61" sc="17" el="61" ec="42" bec="2" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="74" ordinal="1" offset="26" sl="61" sc="43" el="61" ec="51" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="73" ordinal="2" offset="32" sl="62" sc="17" el="62" ec="54" bec="2" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="72" ordinal="3" offset="58" sl="62" sc="55" el="62" ec="63" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="71" ordinal="4" offset="64" sl="63" sc="22" el="63" ec="29" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="0" uspid="10" ordinal="0" offset="20" sl="61" path="0" offsetchain="22" offsetend="26" fileid="2" />
+                <BranchPoint vc="0" uspid="11" ordinal="1" offset="20" sl="61" path="1" offsetchain="24" offsetend="32" fileid="2" />
+                <BranchPoint vc="0" uspid="12" ordinal="2" offset="52" sl="62" path="0" offsetchain="54" offsetend="58" fileid="2" />
+                <BranchPoint vc="0" uspid="13" ordinal="3" offset="52" sl="62" path="1" offsetchain="56" offsetend="64" fileid="2" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="75" ordinal="0" offset="0" sl="61" sc="17" el="61" ec="42" bec="2" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/conditionForNewCell@66</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="3" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="3" minCyclomaticComplexity="3" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663434</MetadataToken>
+              <Name>System.Boolean AkkaActorModel.GameOfLife.Domain/conditionForNewCell@66::Invoke(System.Int32,AkkaActorModel.GameOfLife.Domain/CellStatus)</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="100663434" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/loop@88-6</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663436</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt; AkkaActorModel.GameOfLife.Domain/loop@88-6::Invoke(Microsoft.FSharp.Core.Unit)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="76" ordinal="0" offset="0" sl="88" sc="25" el="88" ec="43" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="76" ordinal="0" offset="0" sl="88" sc="25" el="88" ec="43" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="14" visitedSequencePoints="0" numBranchPoints="9" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="6" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/loop@71-5</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="6" nPathComplexity="16" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="14" visitedSequencePoints="0" numBranchPoints="9" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="6" minCyclomaticComplexity="6" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663438</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt; AkkaActorModel.GameOfLife.Domain/loop@71-5::Invoke(AkkaActorModel.GameOfLife.Domain/Message)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="90" ordinal="0" offset="0" sl="70" sc="21" el="70" ec="53" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="89" ordinal="1" offset="2" sl="71" sc="21" el="71" ec="50" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="88" ordinal="2" offset="14" sl="72" sc="21" el="72" ec="44" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="87" ordinal="3" offset="26" sl="74" sc="21" el="74" ec="39" bec="4" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="86" ordinal="4" offset="66" sl="75" sc="48" el="75" ec="78" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="85" ordinal="5" offset="105" sl="74" sc="21" el="74" ec="39" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="84" ordinal="6" offset="131" sl="77" sc="25" el="77" ec="38" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="83" ordinal="7" offset="141" sl="78" sc="25" el="78" ec="68" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="82" ordinal="8" offset="162" sl="79" sc="25" el="79" ec="48" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="81" ordinal="9" offset="171" sl="81" sc="25" el="81" ec="55" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="80" ordinal="10" offset="200" sl="83" sc="25" el="83" ec="44" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="79" ordinal="11" offset="206" sl="83" sc="25" el="83" ec="44" bec="4" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="78" ordinal="12" offset="269" sl="85" sc="29" el="85" ec="49" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="77" ordinal="13" offset="319" sl="86" sc="32" el="86" ec="34" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="0" uspid="14" ordinal="0" offset="38" sl="74" path="0" offsetend="40" fileid="2" />
+                <BranchPoint vc="0" uspid="15" ordinal="1" offset="38" sl="74" path="1" offsetchain="51" offsetend="105" fileid="2" />
+                <BranchPoint vc="0" uspid="16" ordinal="2" offset="47" sl="74" path="0" offsetchain="49" offsetend="58" fileid="2" />
+                <BranchPoint vc="0" uspid="17" ordinal="3" offset="47" sl="74" path="1" offsetchain="53" offsetend="200" fileid="2" />
+                <BranchPoint vc="0" uspid="18" ordinal="4" offset="216" sl="83" path="0" offsetend="218" fileid="2" />
+                <BranchPoint vc="0" uspid="19" ordinal="5" offset="216" sl="83" path="1" offsetend="319" fileid="2" />
+                <BranchPoint vc="0" uspid="20" ordinal="6" offset="254" sl="83" path="0" offsetchain="256" offsetend="260" fileid="2" />
+                <BranchPoint vc="0" uspid="21" ordinal="7" offset="254" sl="83" path="1" offsetchain="258" offsetend="319" fileid="2" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="90" ordinal="0" offset="0" sl="70" sc="21" el="70" ec="53" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/loop@70-4</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663440</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt; AkkaActorModel.GameOfLife.Domain/loop@70-4::Invoke(Microsoft.FSharp.Core.Unit)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="91" ordinal="0" offset="0" sl="70" sc="21" el="70" ec="53" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="91" ordinal="0" offset="0" sl="70" sc="21" el="70" ec="53" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/loop@69-3</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663442</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt; AkkaActorModel.GameOfLife.Domain/loop@69-3::Invoke(System.Int32,Microsoft.FSharp.Core.FSharpOption`1&lt;System.Tuple`2&lt;System.Int32,System.Int32&gt;&gt;,AkkaActorModel.GameOfLife.Domain/CellStatus)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="92" ordinal="0" offset="0" sl="69" sc="17" el="69" ec="22" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="92" ordinal="0" offset="0" sl="69" sc="17" el="69" ec="22" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/cont@60-1</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663444</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt; AkkaActorModel.GameOfLife.Domain/cont@60-1::Invoke(Akka.FSharp.Actors/Actor`1&lt;AkkaActorModel.GameOfLife.Domain/Message&gt;)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="93" ordinal="0" offset="21" sl="91" sc="13" el="91" ec="32" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="93" ordinal="0" offset="21" sl="91" sc="13" el="91" ec="32" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/ActorType</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/ActorType/Tags</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/name@101-2</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663463</MetadataToken>
+              <Name>System.String AkkaActorModel.GameOfLife.Domain/name@101-2::Invoke(System.Int32)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="94" ordinal="0" offset="0" sl="101" sc="21" el="101" ec="41" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="94" ordinal="0" offset="0" sl="101" sc="21" el="101" ec="41" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/name@101-1</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663465</MetadataToken>
+              <Name>Microsoft.FSharp.Core.FSharpFunc`2&lt;System.Int32,System.String&gt; AkkaActorModel.GameOfLife.Domain/name@101-1::Invoke(System.Int32)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="95" ordinal="0" offset="0" sl="101" sc="21" el="101" ec="41" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="95" ordinal="0" offset="0" sl="101" sc="21" el="101" ec="41" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/name@101</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663467</MetadataToken>
+              <Name>Microsoft.FSharp.Core.FSharpFunc`2&lt;System.Int32,Microsoft.FSharp.Core.FSharpFunc`2&lt;System.Int32,System.String&gt;&gt; AkkaActorModel.GameOfLife.Domain/name@101::Invoke(a)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="96" ordinal="0" offset="0" sl="101" sc="21" el="101" ec="41" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="96" ordinal="0" offset="0" sl="101" sc="21" el="101" ec="41" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="3" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/cellsLoop@127-3</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="3" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663469</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Command,Microsoft.FSharp.Core.Unit&gt; AkkaActorModel.GameOfLife.Domain/cellsLoop@127-3::Invoke(System.Tuple`2&lt;System.Int32,System.Int32&gt;)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="99" ordinal="0" offset="0" sl="127" sc="25" el="127" ec="48" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="98" ordinal="1" offset="2" sl="128" sc="29" el="128" ec="54" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="97" ordinal="2" offset="15" sl="129" sc="29" el="129" ec="61" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="99" ordinal="0" offset="0" sl="127" sc="25" el="127" ec="48" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/cellsLoop@131-4</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663471</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Command,c&gt; AkkaActorModel.GameOfLife.Domain/cellsLoop@131-4::Invoke(Microsoft.FSharp.Core.Unit)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="100" ordinal="0" offset="0" sl="131" sc="25" el="131" ec="52" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="100" ordinal="0" offset="0" sl="131" sc="25" el="131" ec="52" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="12" visitedSequencePoints="0" numBranchPoints="5" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="3" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/cellsLoop@110-2</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="3" nPathComplexity="4" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="12" visitedSequencePoints="0" numBranchPoints="5" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="3" minCyclomaticComplexity="3" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663473</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Command,c&gt; AkkaActorModel.GameOfLife.Domain/cellsLoop@110-2::Invoke(AkkaActorModel.GameOfLife.Domain/Command)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="112" ordinal="0" offset="0" sl="109" sc="21" el="109" ec="53" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="111" ordinal="1" offset="2" sl="110" sc="21" el="110" ec="50" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="110" ordinal="2" offset="14" sl="111" sc="21" el="111" ec="44" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="109" ordinal="3" offset="26" sl="113" sc="21" el="113" ec="39" bec="2" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="108" ordinal="4" offset="58" sl="116" sc="29" el="116" ec="57" bec="2" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="107" ordinal="5" offset="77" sl="117" sc="33" el="117" ec="38" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="106" ordinal="6" offset="86" sl="119" sc="33" el="119" ec="60" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="105" ordinal="7" offset="112" sl="120" sc="33" el="120" ec="86" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="104" ordinal="8" offset="144" sl="122" sc="33" el="122" ec="55" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="103" ordinal="9" offset="162" sl="124" sc="25" el="124" ec="48" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="102" ordinal="10" offset="201" sl="126" sc="25" el="126" ec="70" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="101" ordinal="11" offset="249" sl="127" sc="25" el="127" ec="48" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="0" uspid="22" ordinal="0" offset="34" sl="113" path="0" offsetchain="36" offsetend="201" fileid="2" />
+                <BranchPoint vc="0" uspid="23" ordinal="1" offset="34" sl="113" path="1" offsetend="41" fileid="2" />
+                <BranchPoint vc="0" uspid="24" ordinal="2" offset="71" sl="116" path="0" offsetchain="73" offsetend="77" fileid="2" />
+                <BranchPoint vc="0" uspid="25" ordinal="3" offset="71" sl="116" path="1" offsetchain="75" offsetend="86" fileid="2" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="112" ordinal="0" offset="0" sl="109" sc="21" el="109" ec="53" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/cellsLoop@109-1</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663475</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Command,c&gt; AkkaActorModel.GameOfLife.Domain/cellsLoop@109-1::Invoke(Microsoft.FSharp.Core.Unit)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="113" ordinal="0" offset="0" sl="109" sc="21" el="109" ec="53" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="113" ordinal="0" offset="0" sl="109" sc="21" el="109" ec="53" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/cellsLoop@107</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/cellsLoop@107T</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663479</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Command,c&gt; AkkaActorModel.GameOfLife.Domain/cellsLoop@107T::Invoke(System.Collections.Immutable.IImmutableDictionary`2&lt;System.Tuple`2&lt;System.Int32,System.Int32&gt;,Akka.Actor.IActorRef&gt;)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="114" ordinal="0" offset="0" sl="108" sc="17" el="108" ec="22" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="114" ordinal="0" offset="0" sl="108" sc="17" el="108" ec="22" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/cont@104-2</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="2" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/cont@104-2T</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="2" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663483</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Command,b&gt; AkkaActorModel.GameOfLife.Domain/cont@104-2T::Invoke(Akka.FSharp.Actors/Actor`1&lt;AkkaActorModel.GameOfLife.Domain/Command&gt;)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="116" ordinal="0" offset="0" sl="105" sc="13" el="105" ec="54" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="115" ordinal="1" offset="22" sl="134" sc="13" el="134" ec="22" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="116" ordinal="0" offset="0" sl="105" sc="13" el="105" ec="54" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/collectLoop@150-5</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663485</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt; AkkaActorModel.GameOfLife.Domain/collectLoop@150-5::Invoke(Akka.Actor.IActorRef)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="117" ordinal="0" offset="0" sl="150" sc="33" el="150" ec="44" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="117" ordinal="0" offset="0" sl="150" sc="33" el="150" ec="44" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/collectLoop@150-4</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663487</MetadataToken>
+              <Name>Microsoft.FSharp.Core.FSharpFunc`2&lt;Akka.Actor.IActorRef,Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt;&gt; AkkaActorModel.GameOfLife.Domain/collectLoop@150-4::Invoke(System.Collections.Immutable.ImmutableDictionary`2&lt;System.Tuple`2&lt;System.Int32,System.Int32&gt;,Akka.Actor.IActorRef&gt;)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="118" ordinal="0" offset="0" sl="150" sc="33" el="150" ec="44" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="118" ordinal="0" offset="0" sl="150" sc="33" el="150" ec="44" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/collectLoop@150-3</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663489</MetadataToken>
+              <Name>Microsoft.FSharp.Core.FSharpFunc`2&lt;System.Collections.Immutable.ImmutableDictionary`2&lt;System.Tuple`2&lt;System.Int32,System.Int32&gt;,Akka.Actor.IActorRef&gt;,Microsoft.FSharp.Core.FSharpFunc`2&lt;Akka.Actor.IActorRef,Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt;&gt;&gt; AkkaActorModel.GameOfLife.Domain/collectLoop@150-3::Invoke(System.Int32)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="119" ordinal="0" offset="0" sl="150" sc="33" el="150" ec="44" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="119" ordinal="0" offset="0" sl="150" sc="33" el="150" ec="44" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="2" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/collectLoop@166-6</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="2" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663491</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt; AkkaActorModel.GameOfLife.Domain/collectLoop@166-6::Invoke(Akka.Actor.IActorRef)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="121" ordinal="0" offset="0" sl="166" sc="29" el="166" ec="68" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="120" ordinal="1" offset="2" sl="167" sc="33" el="167" ec="77" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="121" ordinal="0" offset="0" sl="166" sc="29" el="166" ec="68" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/collectLoop@169-10</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663493</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt; AkkaActorModel.GameOfLife.Domain/collectLoop@169-10::Invoke(Akka.Actor.IActorRef)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="122" ordinal="0" offset="0" sl="169" sc="37" el="169" ec="48" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="122" ordinal="0" offset="0" sl="169" sc="37" el="169" ec="48" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/collectLoop@169-9</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663495</MetadataToken>
+              <Name>Microsoft.FSharp.Core.FSharpFunc`2&lt;Akka.Actor.IActorRef,Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt;&gt; AkkaActorModel.GameOfLife.Domain/collectLoop@169-9::Invoke(System.Collections.Immutable.ImmutableDictionary`2&lt;System.Tuple`2&lt;System.Int32,System.Int32&gt;,Akka.Actor.IActorRef&gt;)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="123" ordinal="0" offset="0" sl="169" sc="37" el="169" ec="48" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="123" ordinal="0" offset="0" sl="169" sc="37" el="169" ec="48" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/collectLoop@169-8</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663497</MetadataToken>
+              <Name>Microsoft.FSharp.Core.FSharpFunc`2&lt;System.Collections.Immutable.ImmutableDictionary`2&lt;System.Tuple`2&lt;System.Int32,System.Int32&gt;,Akka.Actor.IActorRef&gt;,Microsoft.FSharp.Core.FSharpFunc`2&lt;Akka.Actor.IActorRef,Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt;&gt;&gt; AkkaActorModel.GameOfLife.Domain/collectLoop@169-8::Invoke(System.Int32)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="124" ordinal="0" offset="0" sl="169" sc="37" el="169" ec="48" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="124" ordinal="0" offset="0" sl="169" sc="37" el="169" ec="48" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/collectLoop@169-7</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663499</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt; AkkaActorModel.GameOfLife.Domain/collectLoop@169-7::Invoke(Microsoft.FSharp.Core.Unit)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="125" ordinal="0" offset="0" sl="169" sc="29" el="169" ec="65" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="125" ordinal="0" offset="0" sl="169" sc="29" el="169" ec="65" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="18" visitedSequencePoints="0" numBranchPoints="9" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="6" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/collectLoop@145-2</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="6" nPathComplexity="16" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="18" visitedSequencePoints="0" numBranchPoints="9" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="6" minCyclomaticComplexity="6" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663501</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt; AkkaActorModel.GameOfLife.Domain/collectLoop@145-2::Invoke(AkkaActorModel.GameOfLife.Domain/Message)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="143" ordinal="0" offset="0" sl="144" sc="21" el="144" ec="53" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="142" ordinal="1" offset="2" sl="145" sc="21" el="145" ec="50" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="141" ordinal="2" offset="14" sl="146" sc="21" el="146" ec="44" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="140" ordinal="3" offset="26" sl="148" sc="21" el="148" ec="39" bec="4" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="139" ordinal="4" offset="75" sl="150" sc="25" el="150" ec="63" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="138" ordinal="5" offset="116" sl="148" sc="21" el="148" ec="39" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="137" ordinal="6" offset="142" sl="153" sc="29" el="153" ec="83" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="136" ordinal="7" offset="184" sl="155" sc="29" el="155" ec="44" bec="2" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="135" ordinal="8" offset="192" sl="156" sc="34" el="156" ec="57" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="134" ordinal="9" offset="208" sl="158" sc="33" el="158" ec="72" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="133" ordinal="10" offset="234" sl="159" sc="33" el="159" ec="107" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="132" ordinal="11" offset="266" sl="161" sc="34" el="161" ec="89" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="131" ordinal="12" offset="309" sl="163" sc="25" el="163" ec="44" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="130" ordinal="13" offset="340" sl="165" sc="25" el="165" ec="38" bec="2" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="129" ordinal="14" offset="353" sl="166" sc="29" el="166" ec="68" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="128" ordinal="15" offset="435" sl="171" sc="29" el="171" ec="78" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="127" ordinal="16" offset="474" sl="148" sc="21" el="148" ec="39" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="126" ordinal="17" offset="475" sl="172" sc="47" el="172" ec="77" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="0" uspid="26" ordinal="0" offset="38" sl="148" path="0" offsetend="40" fileid="2" />
+                <BranchPoint vc="0" uspid="27" ordinal="1" offset="38" sl="148" path="1" offsetchain="51" offsetend="116" fileid="2" />
+                <BranchPoint vc="0" uspid="28" ordinal="2" offset="47" sl="148" path="0" offsetchain="49" offsetend="58" fileid="2" />
+                <BranchPoint vc="0" uspid="29" ordinal="3" offset="47" sl="148" path="1" offsetchain="53" offsetend="474" fileid="2" />
+                <BranchPoint vc="0" uspid="30" ordinal="4" offset="186" sl="155" path="0" offsetchain="188" offsetend="192" fileid="2" />
+                <BranchPoint vc="0" uspid="31" ordinal="5" offset="186" sl="155" path="1" offsetchain="190" offsetend="208" fileid="2" />
+                <BranchPoint vc="0" uspid="32" ordinal="6" offset="347" sl="165" path="0" offsetchain="349" offsetend="353" fileid="2" />
+                <BranchPoint vc="0" uspid="33" ordinal="7" offset="347" sl="165" path="1" offsetchain="351" offsetend="435" fileid="2" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="143" ordinal="0" offset="0" sl="144" sc="21" el="144" ec="53" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/collectLoop@144-1</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663503</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt; AkkaActorModel.GameOfLife.Domain/collectLoop@144-1::Invoke(Microsoft.FSharp.Core.Unit)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="144" ordinal="0" offset="0" sl="144" sc="21" el="144" ec="53" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="144" ordinal="0" offset="0" sl="144" sc="21" el="144" ec="53" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/collectLoop@143</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663505</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt; AkkaActorModel.GameOfLife.Domain/collectLoop@143::Invoke(System.Int32,System.Collections.Immutable.IImmutableDictionary`2&lt;System.Tuple`2&lt;System.Int32,System.Int32&gt;,Akka.Actor.IActorRef&gt;,Akka.Actor.IActorRef)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="145" ordinal="0" offset="0" sl="143" sc="17" el="143" ec="22" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="145" ordinal="0" offset="0" sl="143" sc="17" el="143" ec="22" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/cont@175-6</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663507</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt; AkkaActorModel.GameOfLife.Domain/cont@175-6::Invoke(Akka.Actor.IActorRef)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="146" ordinal="0" offset="0" sl="175" sc="13" el="175" ec="24" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="146" ordinal="0" offset="0" sl="175" sc="13" el="175" ec="24" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/cont@175-5</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663509</MetadataToken>
+              <Name>Microsoft.FSharp.Core.FSharpFunc`2&lt;Akka.Actor.IActorRef,Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt;&gt; AkkaActorModel.GameOfLife.Domain/cont@175-5::Invoke(System.Collections.Immutable.ImmutableDictionary`2&lt;System.Tuple`2&lt;System.Int32,System.Int32&gt;,Akka.Actor.IActorRef&gt;)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="147" ordinal="0" offset="0" sl="175" sc="13" el="175" ec="24" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="147" ordinal="0" offset="0" sl="175" sc="13" el="175" ec="24" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/cont@175-4</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663511</MetadataToken>
+              <Name>Microsoft.FSharp.Core.FSharpFunc`2&lt;System.Collections.Immutable.ImmutableDictionary`2&lt;System.Tuple`2&lt;System.Int32,System.Int32&gt;,Akka.Actor.IActorRef&gt;,Microsoft.FSharp.Core.FSharpFunc`2&lt;Akka.Actor.IActorRef,Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt;&gt;&gt; AkkaActorModel.GameOfLife.Domain/cont@175-4::Invoke(System.Int32)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="148" ordinal="0" offset="0" sl="175" sc="13" el="175" ec="24" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="148" ordinal="0" offset="0" sl="175" sc="13" el="175" ec="24" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="2" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>AkkaActorModel.GameOfLife.Domain/cont@140-3</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="2" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663513</MetadataToken>
+              <Name>Akka.FSharp.Actors/Cont`2&lt;AkkaActorModel.GameOfLife.Domain/Message,Microsoft.FSharp.Core.Unit&gt; AkkaActorModel.GameOfLife.Domain/cont@140-3::Invoke(Akka.FSharp.Actors/Actor`1&lt;AkkaActorModel.GameOfLife.Domain/Message&gt;)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="150" ordinal="0" offset="0" sl="140" sc="13" el="140" ec="54" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="149" ordinal="1" offset="14" sl="175" sc="13" el="175" ec="24" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="150" ordinal="0" offset="0" sl="140" sc="13" el="140" ec="54" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="4" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+          <FullName>&lt;StartupCode$AkkaActorModel&gt;.$GameOfLife</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="true" isStatic="true" isGetter="false" isSetter="false" crapScore="0">
+              <Summary numSequencePoints="4" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" minCrapScore="0" maxCrapScore="0" />
+              <MetadataToken>100663514</MetadataToken>
+              <Name>System.Void &lt;StartupCode$AkkaActorModel&gt;.$GameOfLife::.cctor()</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="154" ordinal="0" offset="0" sl="25" sc="5" el="25" ec="41" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="153" ordinal="1" offset="19" sl="56" sc="9" el="56" ec="13" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="152" ordinal="2" offset="35" sl="93" sc="9" el="93" ec="13" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="151" ordinal="3" offset="51" sl="177" sc="9" el="177" ec="13" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="154" ordinal="0" offset="0" sl="25" sc="5" el="25" ec="41" bec="0" bev="0" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>System.AssemblyVersionInformation</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>&lt;StartupCode$AkkaActorModel&gt;.$AssemblyInfo</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>&lt;StartupCode$AkkaActorModel&gt;.$AkkaActorModel.AssemblyInfo</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" minCrapScore="0" maxCrapScore="0" />
+          <FullName>&lt;StartupCode$AkkaActorModel&gt;.$.NETStandard,Version=v2.0.AssemblyAttributes</FullName>
+          <Methods />
+        </Class>
+      </Classes>
+    </Module>
+  </Modules>
+</CoverageSession>
