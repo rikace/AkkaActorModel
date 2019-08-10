@@ -1,8 +1,5 @@
-#load ".fake/build.fsx/intellisense.fsx"
-#if !FAKE
-#r "Facades/netstandard"
-#r "netstandard"
-#endif
+#r "./packages/FAKE/tools/FakeLib.dll"
+
 open System
 open Fake.SystemHelper
 open Fake.Core
@@ -315,31 +312,6 @@ let publishToNuget _ =
             }
         )
 
-let gitRelease _ =
-    isReleaseBranchCheck ()
-
-    let releaseNotesGitCommitFormat = releaseNotes.Notes |> Seq.map(sprintf "* %s\n") |> String.concat ""
-
-    Git.Staging.stageAll ""
-    Git.Commit.exec "" (sprintf "Bump version to %s \n%s" releaseNotes.NugetVersion releaseNotesGitCommitFormat)
-    Git.Branches.push ""
-
-    Git.Branches.tag "" releaseNotes.NugetVersion
-    Git.Branches.pushTag "" "origin" releaseNotes.NugetVersion
-
-let githubRelease _ =
-    let token =
-        match Environment.environVarOrDefault "GITHUB_TOKEN" "" with
-        | s when not (String.IsNullOrWhiteSpace s) -> s
-        | _ -> failwith "please set the github_token environment variable to a github personal access token with repro access."
-
-    let files = !! distGlob
-
-    GitHub.createClientWithToken token
-    |> GitHub.draftNewRelease gitOwner gitRepoName releaseNotes.NugetVersion (releaseNotes.SemVer.PreRelease <> None) releaseNotes.Notes
-    |> GitHub.uploadFiles files
-    |> GitHub.publishDraft
-    |> Async.RunSynchronously
 
 let formatCode _ =
     srcAndTest
@@ -362,8 +334,6 @@ Target.create "GenerateAssemblyInfo" generateAssemblyInfo
 Target.create "DotnetPack" dotnetPack
 Target.create "SourcelinkTest" sourceLinkTest
 Target.create "PublishToNuget" publishToNuget
-Target.create "GitRelease" gitRelease
-Target.create "GitHubRelease" githubRelease
 Target.create "FormatCode" formatCode
 Target.create "Release" ignore
 
@@ -390,8 +360,6 @@ Target.create "Release" ignore
     ==> "DotnetPack"
     ==> "SourcelinkTest"
     ==> "PublishToNuget"
-    ==> "GitRelease"
-    ==> "GitHubRelease"
     ==> "Release"
 
 "DotnetRestore"

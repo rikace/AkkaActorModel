@@ -13,6 +13,8 @@ nuget Expecto 8.10.1
 nuget YoloDev.Expecto.TestSdk 0.8.0
 nuget Microsoft.NET.Test.Sdk 15.7.2
 nuget altcover ~> 5
+nuget Fake
+
 
 nuget Akka
 nuget Akka.Remote

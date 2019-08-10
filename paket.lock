@@ -110,6 +110,7 @@ NUGET
     Expecto (8.10.1)
       FSharp.Core (>= 4.3.4) - restriction: || (>= net461) (>= netstandard2.0)
       Mono.Cecil (>= 0.10.3) - restriction: || (>= net461) (>= netstandard2.0)
+    FAKE (5.8.4)
     Fantomas (2.8) - restriction: || (>= net45) (>= netcoreapp2.0)
       FSharp.Compiler.Service (>= 23.0.3) - restriction: || (>= net45) (>= netstandard2.0)
     FSharp.Compiler.Service (23.0.3) - restriction: || (>= net45) (>= netcoreapp2.0)
