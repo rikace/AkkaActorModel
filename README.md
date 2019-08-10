@@ -9,7 +9,7 @@
 .NET Core on Windows
 ---
 (https://ci.appveyor.com/project/rikace/AkkaActorModel)
-[![Build History](https://buildstats.info/travisci/chart/rikace/AkkaActorModel)](https://travis-ci.org/rikace/AkkaActorModel/builds) | [![Build History](https://buildstats.info/appveyor/chart/rikace/AkkaActorModel)](https://ci.appveyor.com/project/rikace/AkkaActorModel)  
+| [![Build History](https://buildstats.info/appveyor/chart/rikace/AkkaActorModel)](https://ci.appveyor.com/project/rikace/AkkaActorModel)  
 
 
 ### Building
