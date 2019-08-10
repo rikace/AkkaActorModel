@@ -1,4 +1,0 @@
-C:\Git\AkkaActorModel\Fractal\MandelbrotSet\bin\Release\MandelbrotSet.dll
-C:\Git\AkkaActorModel\Fractal\MandelbrotSet\bin\Release\MandelbrotSet.pdb
-C:\Git\AkkaActorModel\Fractal\MandelbrotSet\obj\Release\MandelbrotSet.dll
-C:\Git\AkkaActorModel\Fractal\MandelbrotSet\obj\Release\MandelbrotSet.pdb

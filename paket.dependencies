@@ -1,10 +1,48 @@
-source https://nuget.org/api/v2
+source https://www.nuget.org/api/v2
+source https://api.nuget.org/v3/index.json
 
-nuget FSharp.Formatting
-nuget NUnit 
-nuget NUnit.Runners
-nuget Nuget.CommandLine
-nuget FAKE
-nuget SourceLink.Fake
+storage: packages
 
-github fsharp/FAKE modules/Octokit/Octokit.fsx
+clitool dotnet-mono 0.5.2
+clitool dotnet-sourcelink 2.8.1
+clitool dotnet-fantomas 2.8.0
+clitool dotnet-reportgenerator-cli ~> 4
+nuget FSharp.Core 4.3.4
+nuget Microsoft.SourceLink.GitHub prerelease copy_local: true
+nuget Expecto 8.10.1
+nuget YoloDev.Expecto.TestSdk 0.8.0
+nuget Microsoft.NET.Test.Sdk 15.7.2
+nuget altcover ~> 5
+
+nuget Akka
+nuget Akka.Remote
+nuget Akka.Cluster
+nuget Akka.Persistence
+nuget Akka.Persistence.FSharp
+nuget Akka.Cluster.Tools
+nuget Akka.Cluster
+nuget Akka.FSharp
+nuget Hocon
+nuget Newtonsoft.Json
+nuget System.Collections.Immutable
+nuget SixLabors.ImageSharp 1.0.0-beta0006
+nuget SixLabors.Core 1.0.0-beta0007
+
+group Build
+
+    storage: none
+    source https://www.nuget.org/api/v2
+    source https://api.nuget.org/v3/index.json
+    nuget Fake.IO.FileSystem
+    nuget Fake.Core.Target
+    nuget Fake.Core.ReleaseNotes
+    nuget FAKE.Core.Environment
+    nuget Fake.DotNet.Cli
+    nuget FAKE.Core.Process
+    nuget Fake.DotNet.AssemblyInfoFile
+    nuget Fake.Tools.Git
+    nuget Fake.DotNet.Paket
+    nuget Fake.Api.GitHub
+    nuget Fake.BuildServer.AppVeyor
+    nuget Fake.BuildServer.Travis
+

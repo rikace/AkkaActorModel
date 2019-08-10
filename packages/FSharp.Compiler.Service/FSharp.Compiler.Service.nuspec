@@ -1,19 +1,39 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>FSharp.Compiler.Service</id>
-    <version>0.0.85</version>
-    <authors>Microsoft Corporation, Dave Thomas, Anh-Dung Phan, Tomas Petricek</authors>
-    <owners>Microsoft Corporation, Dave Thomas, Anh-Dung Phan, Tomas Petricek</owners>
+    <version>23.0.3</version>
+    <authors>F# community contributors</authors>
+    <owners>F# community contributors</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://github.com/fsharp/FSharp.Compiler.Service/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/fsharp/FSharp.Compiler.Service</projectUrl>
     <iconUrl>https://raw.github.com/fsharp/FSharp.Compiler.Service/master/misc/logo.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>The F# compiler services package contains a custom build of the F# compiler that exposes additional functionality for implementing F# language bindings, additional tools based on the compiler or refactoring tools. The package also includes F#  interactive service that can be used for embedding F# scripting into your applications.</description>
-    <summary>F# compiler services for creating IDE tools, language extensions and for F# embedding</summary>
-    <releaseNotes>Fix for FSharpSymbolUse for single case union type #301
-Added supprt for ReturnParameter in nested functions</releaseNotes>
-    <copyright>Copyright 2013</copyright>
-    <tags>F# fsharp interactive compiler editor</tags>
+    <description>The F# compiler services package contains a custom build of the F# compiler that exposes additional functionality for implementing F# language bindings, additional tools based on the compiler or refactoring tools. The package also includes F# interactive service that can be used for embedding F# scripting into your applications.</description>
+    <tags>F#, fsharp, interactive, compiler, editor</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="FSharp.Core" version="4.1.18" exclude="Build,Analyzers" />
+        <dependency id="System.Collections.Immutable" version="1.3.1" exclude="Build,Analyzers" />
+        <dependency id="System.Reflection.Metadata" version="1.4.2" exclude="Build,Analyzers" />
+        <dependency id="System.ValueTuple" version="4.3.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="FSharp.Core" version="4.1.18" exclude="Build,Analyzers" />
+        <dependency id="System.Collections.Immutable" version="1.3.1" exclude="Build,Analyzers" />
+        <dependency id="System.Diagnostics.Process" version="4.1.0" exclude="Build,Analyzers" />
+        <dependency id="System.Diagnostics.TraceSource" version="4.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Reflection.Emit" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Reflection.Metadata" version="1.4.2" exclude="Build,Analyzers" />
+        <dependency id="System.Reflection.TypeExtensions" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime.Loader" version="4.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Security.Cryptography.Algorithms" version="4.3.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="ISymWrapper, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" targetFramework=".NETFramework4.5" />
+      <frameworkAssembly assemblyName="System.IO" targetFramework=".NETFramework4.5" />
+      <frameworkAssembly assemblyName="System.Runtime" targetFramework=".NETFramework4.5" />
+    </frameworkAssemblies>
   </metadata>
 </package>

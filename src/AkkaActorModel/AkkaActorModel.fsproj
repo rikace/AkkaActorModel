@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Title>AkkaActorModel</Title>
+    <Description>AkkaActorModel does the thing!</Description>
+
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <Optimize>true</Optimize>
+    <Tailcalls>true</Tailcalls>
+    
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="GameOfLife.fs" />
+    <Compile Include="Persistence.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MapReduce.fsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\05_StateMachine.fsx" />
+  </ItemGroup>
+  <!-- <Import Project="..\..\fsc.props" /> -->
+  <Import Project="..\..\netfx.props" />
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>

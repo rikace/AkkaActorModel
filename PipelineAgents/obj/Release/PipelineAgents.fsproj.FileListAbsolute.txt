@@ -1,8 +1,0 @@
-C:\Git\AkkaActorModel\PipelineAgents\bin\Release\PipelineAgents.dll.config
-C:\Git\AkkaActorModel\PipelineAgents\bin\Release\PipelineAgents.XML
-C:\Git\AkkaActorModel\PipelineAgents\bin\Release\PipelineAgents.dll
-C:\Git\AkkaActorModel\PipelineAgents\bin\Release\PipelineAgents.pdb
-C:\Git\AkkaActorModel\PipelineAgents\bin\Release\FSharp.Core.dll
-C:\Git\AkkaActorModel\PipelineAgents\bin\Release\FSharp.Core.xml
-C:\Git\AkkaActorModel\PipelineAgents\obj\Release\PipelineAgents.dll
-C:\Git\AkkaActorModel\PipelineAgents\obj\Release\PipelineAgents.pdb
