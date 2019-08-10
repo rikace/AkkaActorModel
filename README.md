@@ -18,7 +18,7 @@
 Make sure the following **requirements** are installed in your system:
 
 - [dotnet SDK](https://www.microsoft.com/net/download/core) 2.1 or higher
-- [Mono](http://www.mono-project.com/) if you're on Linux or macOS.
+
 
 ```sh
 > build.cmd // on windows
