@@ -1,0 +1,35 @@
+version: '2'
+
+services:
+
+    host:
+        ports:
+            - 8081:8081
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+                PROJECT_DIR: Host
+                PROJECT_NAME: Host
+                WAIT_FOR_HOST: 0
+        restart: on-failure
+
+    client:
+        depends_on:
+            - host
+        ports:
+            - 8082:8082
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+                PROJECT_DIR: Client
+                PROJECT_NAME: Client
+                WAIT_FOR_HOST: 1
+        restart: on-failure
+
+    tcpdump:
+        image: kaazing/tcpdump
+        network_mode: "host"
+        volumes:
+            - ./tcpdump:/tcpdump

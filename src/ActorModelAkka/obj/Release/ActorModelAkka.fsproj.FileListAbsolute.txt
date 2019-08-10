@@ -1,5 +1,0 @@
-C:\Git\AkkaActorModel\bin\ActorModelAkka.xml
-C:\Git\AkkaActorModel\bin\ActorModelAkka.dll
-C:\Git\AkkaActorModel\bin\ActorModelAkka.pdb
-C:\Git\AkkaActorModel\src\ActorModelAkka\obj\Release\ActorModelAkka.dll
-C:\Git\AkkaActorModel\src\ActorModelAkka\obj\Release\ActorModelAkka.pdb

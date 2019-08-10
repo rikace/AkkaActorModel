@@ -1,0 +1,8 @@
+FSharp.Core
+Microsoft.SourceLink.GitHub
+
+
+Akka
+Akka.Remote
+SixLabors.ImageSharp
+SixLabors.Core
