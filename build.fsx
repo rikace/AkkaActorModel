@@ -1,4 +1,26 @@
-#r "./packages/FAKE/tools/FakeLib.dll"
+#I "./packages/FAKE/tools"
+#r "FakeLib.dll"
+#r "System.Xml.Linq"
+#r "System.Net.Http"
+
+
+open Fake.Core
+open Fake.DotNet
+open Fake.JavaScript
+open Fake.IO
+open Fake.IO.FileSystemOperators
+open Fake.IO.Globbing.Operators
+open Fake.Tools
+
+open System.Net
+open System.IO
+open System.Xml
+
+open System
+open System.IO
+open System.Text
+
+open Fake
 
 open System
 open Fake.SystemHelper
@@ -237,63 +259,6 @@ let watchTests _ =
     let cancelEvent = Console.CancelKeyPress |> Async.AwaitEvent |> Async.RunSynchronously
     cancelEvent.Cancel <- true
 
-let generateAssemblyInfo _ =
-
-    let (|Fsproj|Csproj|Vbproj|) (projFileName:string) =
-        match projFileName with
-        | f when f.EndsWith("fsproj") -> Fsproj
-        | f when f.EndsWith("csproj") -> Csproj
-        | f when f.EndsWith("vbproj") -> Vbproj
-        | _                           -> failwith (sprintf "Project file %s not supported. Unknown project type." projFileName)
-
-    let releaseChannel =
-        match releaseNotes.SemVer.PreRelease with
-        | Some pr -> pr.Name
-        | _ -> "release"
-    let getAssemblyInfoAttributes projectName =
-        [
-            AssemblyInfo.Title (projectName)
-            AssemblyInfo.Product productName
-            AssemblyInfo.Version releaseNotes.AssemblyVersion
-            AssemblyInfo.Metadata("ReleaseDate", releaseNotes.Date.Value.ToString("o"))
-            AssemblyInfo.FileVersion releaseNotes.AssemblyVersion
-            AssemblyInfo.InformationalVersion releaseNotes.AssemblyVersion
-            AssemblyInfo.Metadata("ReleaseChannel", releaseChannel)
-            AssemblyInfo.Metadata("GitHash", Git.Information.getCurrentSHA1(null))
-        ]
-
-    let getProjectDetails projectPath =
-        let projectName = IO.Path.GetFileNameWithoutExtension(projectPath)
-        (
-            projectPath,
-            projectName,
-            IO.Path.GetDirectoryName(projectPath),
-            (getAssemblyInfoAttributes projectName)
-        )
-
-    srcAndTest
-    |> Seq.map getProjectDetails
-    |> Seq.iter (fun (projFileName, _, folderName, attributes) ->
-        match projFileName with
-        | Fsproj -> AssemblyInfoFile.createFSharp (folderName @@ "AssemblyInfo.fs") attributes
-        | Csproj -> AssemblyInfoFile.createCSharp ((folderName @@ "Properties") @@ "AssemblyInfo.cs") attributes
-        | Vbproj -> AssemblyInfoFile.createVisualBasic ((folderName @@ "My Project") @@ "AssemblyInfo.vb") attributes
-        )
-
-let dotnetPack ctx =
-    let args =
-        [
-            sprintf "/p:PackageVersion=%s" releaseNotes.NugetVersion
-            sprintf "/p:PackageReleaseNotes=\"%s\"" (releaseNotes.Notes |> String.concat "\n")
-        ]
-    DotNet.pack (fun c ->
-        { c with
-            Configuration = configuration (ctx.Context.AllExecutingTargets)
-            OutputPath = Some distDir
-            Common =
-                c.Common
-                |> DotNet.Options.withAdditionalArgs args
-        }) sln
 
 let sourceLinkTest _ =
     !! distGlob
@@ -324,40 +289,31 @@ let formatCode _ =
 // Target Declaration
 //-----------------------------------------------------------------------------
 
-Target.create "Clean" clean
-Target.create "DotnetRestore" dotnetRestore
-Target.create "DotnetBuild" dotnetBuild
-Target.create "DotnetTest" dotnetTest
-Target.create "GenerateCoverageReport" generateCoverageReport
-Target.create "WatchTests" watchTests
-Target.create "GenerateAssemblyInfo" generateAssemblyInfo
-Target.create "DotnetPack" dotnetPack
-Target.create "SourcelinkTest" sourceLinkTest
-Target.create "PublishToNuget" publishToNuget
-Target.create "FormatCode" formatCode
-Target.create "Release" ignore
+
+
+Fake.Core.Target.create "Clean" clean
+Fake.Core.Target.create "DotnetRestore" dotnetRestore
+Fake.Core.Target.create "DotnetBuild" dotnetBuild
+Fake.Core.Target.create "DotnetTest" dotnetTest
+Fake.Core.Target.create "GenerateCoverageReport" generateCoverageReport
+Fake.Core.Target.create "WatchTests" watchTests
+Fake.Core.Target.create "SourcelinkTest" sourceLinkTest
+Fake.Core.Target.create "PublishToNuget" publishToNuget
+Fake.Core.Target.create "FormatCode" formatCode
+Fake.Core.Target.create "Release" ignore
 
 
 //-----------------------------------------------------------------------------
 // Target Dependencies
 //-----------------------------------------------------------------------------
 
-// Only call Clean if DotnetPack was in the call chain
-// Ensure Clean is called before DotnetRestore
 "Clean" ?=> "DotnetRestore"
-"Clean" ==> "DotnetPack"
 
-// Only call AssemblyInfo if Publish was in the call chain
-// Ensure AssemblyInfo is called after DotnetRestore and before DotnetBuild
-"DotnetRestore" ?=> "GenerateAssemblyInfo"
-"GenerateAssemblyInfo" ?=> "DotnetBuild"
-"GenerateAssemblyInfo" ==> "PublishToNuget"
 
 "DotnetRestore"
     ==> "DotnetBuild"
     ==> "DotnetTest"
     =?> ("GenerateCoverageReport", not disableCodeCoverage)
-    ==> "DotnetPack"
     ==> "SourcelinkTest"
     ==> "PublishToNuget"
     ==> "Release"
@@ -369,4 +325,4 @@ Target.create "Release" ignore
 // Target Start
 //-----------------------------------------------------------------------------
 
-Target.runOrDefaultWithArguments "DotnetPack"
+Fake.Core.Target.runOrDefaultWithArguments "DotnetBuild"
