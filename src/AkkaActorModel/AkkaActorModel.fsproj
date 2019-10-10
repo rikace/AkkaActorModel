@@ -24,6 +24,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\05_StateMachine.fsx" />
+    <None Include="Scripts\13.Clustering.fsx" />
   </ItemGroup>
   <!-- <Import Project="..\..\fsc.props" /> -->
   <Import Project="..\..\netfx.props" />

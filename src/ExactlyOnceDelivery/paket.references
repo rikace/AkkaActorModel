@@ -1,0 +1,6 @@
+FSharp.Core
+Microsoft.SourceLink.GitHub
+
+Akka
+Akka.Remote
+Akka.Persistence

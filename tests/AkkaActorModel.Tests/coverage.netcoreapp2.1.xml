@@ -2,16 +2,16 @@
 <CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Summary numSequencePoints="155" visitedSequencePoints="0" numBranchPoints="87" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="6" minCyclomaticComplexity="1" visitedClasses="0" numClasses="46" visitedMethods="0" numMethods="53" minCrapScore="0" maxCrapScore="0" />
   <Modules>
-    <Module skippedDueTo="Filter" hash="9C-AC-56-88-4B-4D-52-CD-91-8F-F2-53-04-63-81-5A-9E-AE-46-24">
+    <Module skippedDueTo="Filter" hash="5A-8A-BE-AC-9F-DC-B3-89-32-C7-30-F9-DE-E5-09-0D-3D-2C-76-94">
       <ModulePath>/Users/riccardo/Github/AkkaActorModel/tests/AkkaActorModel.Tests/bin/Debug/netcoreapp2.1/__Saved/AkkaActorModel.Tests.dll</ModulePath>
-      <ModuleTime>2019-08-10T18:57:46.0127673Z</ModuleTime>
+      <ModuleTime>2019-08-28T00:33:11.9071478Z</ModuleTime>
       <ModuleName>AkkaActorModel.Tests</ModuleName>
       <Classes />
     </Module>
-    <Module hash="B0-E8-5C-6E-08-EE-06-5E-FC-1C-67-5A-A2-AC-CD-66-47-C1-E7-8F">
+    <Module hash="9C-F3-58-DE-DD-09-20-D7-ED-BB-DE-91-53-26-5D-DA-53-34-0C-22">
       <Summary numSequencePoints="155" visitedSequencePoints="0" numBranchPoints="87" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="6" minCyclomaticComplexity="1" visitedClasses="0" numClasses="46" visitedMethods="0" numMethods="53" minCrapScore="0" maxCrapScore="0" />
       <ModulePath>/Users/riccardo/Github/AkkaActorModel/tests/AkkaActorModel.Tests/bin/Debug/netcoreapp2.1/__Saved/AkkaActorModel.dll</ModulePath>
-      <ModuleTime>2019-08-10T18:57:41.7292286Z</ModuleTime>
+      <ModuleTime>2019-08-28T00:33:08.3393018Z</ModuleTime>
       <ModuleName>AkkaActorModel</ModuleName>
       <Files>
         <File uid="1" fullPath="/Users/riccardo/Github/AkkaActorModel/src/AkkaActorModel/Persistence.fs" />

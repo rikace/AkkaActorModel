@@ -5,12 +5,65 @@ module AkkaConsoleApplication
 #r "../../../packages/Akka/lib/netstandard1.6/Akka.dll"
 #r "../../../packages/Akka.FSharp/lib/netstandard2.0/Akka.FSharp.dll"
 #r "../../../packages/Akka.Remote/lib/netstandard1.6/Akka.Remote.dll"
+//#r "../../../packages/"
 #endif
 
 
 open Akka.FSharp
+open Akka
 open Akka.Actor
 open System
+
+module EchoActor =
+    
+    let system = System.create "actor-system" <| Configuration.defaultConfig()
+
+    type EchoActor() =
+        inherit UntypedActor()
+            override this.OnReceive (msg:obj) =
+                printfn "Received Message %A" msg
+                
+    
+    // use Props to create an Actor
+    let echoActor = system.ActorOf(Props(typedefof<EchoActor>), "echo")
+    echoActor <! "Hello!"
+
+    
+    let echo (msg:obj) = printfn "Received Message %A" msg
+    let echoActor' = spawn system "echo" (actorOf echo)
+    echoActor' <! "Hello!"
+
+    let echo' (mailbox:Actor<'a>) =
+        let rec loop () = actor {
+            let! msg = mailbox.Receive()
+            printfn "Received Message %A" msg
+            return! loop ()
+        }
+        loop ()
+
+    let echoActor'' = spawn system "echo" echo'
+    echoActor'' <! "Hello!"
+    
+    
+    let parent (mailbox:Actor<'a>) =
+        let child = spawn mailbox "child" echo'
+        
+        let rec loop () = actor {
+            let! msg = mailbox.Receive()
+            printfn "Received Message %A" msg
+            child.Forward msg
+            return! loop ()
+        }
+        loop ()
+        
+        
+    let supervisor =
+        spawmnOpt system "parent" parent <|
+            [ SpawnOption.SupervisorStrategy (
+                    Strategy.OneForOne(fun e ->
+                        match w with
+                        | :? DivideByZeroException -> Directive.Restart
+                        | _ -> SupervisorStrategy.DefaultDecider(e))) ]
 
 module GreetingImperative =
 

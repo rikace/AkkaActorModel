@@ -1,0 +1,5 @@
+FSharp.Core
+Taskbuilder.fs
+Akka
+Akka.Remote
+Akka.FSharp
