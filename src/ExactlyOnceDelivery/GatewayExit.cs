@@ -6,7 +6,7 @@ namespace ExactlyOnceDelivery.Common
 {
     public abstract class GatewayExit<T> : PersistentActor
     {
-        //protected ILoggingAdapter Log { get; }
+        protected ILoggingAdapter Log { get; }
         public override string PersistenceId { get; }
         public readonly IDeduplicator Dedupe;
         
