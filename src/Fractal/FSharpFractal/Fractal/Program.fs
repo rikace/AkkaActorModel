@@ -1,4 +1,4 @@
-﻿open System
+open System
 open System.IO
 open System.Threading
 open System.Threading.Tasks
@@ -97,6 +97,7 @@ module Fractal =
                 let xx = xs * x
                 actor.Tell({ X = yy; Y = xx; Height = xs; Width = ys; }, displayTile)
 
+        
 [<EntryPoint>]
 let main args =
     let config =
@@ -106,7 +107,7 @@ let main args =
                 stdout-loglevel = DEBUG
                 loglevel = ERROR
                 actor {
-                    provider = ""Akka.Remote.RemoteActorRefProvider, Akka.Remote""
+                    provider = "Akka.Remote.RemoteActorRefProvider, Akka.Remote"
                     debug {
                       receive = on
                       autoreceive = on
@@ -135,6 +136,9 @@ let main args =
             """
 
     let system = System.create "fractal" (config)
-
-
+    
+    Fractal.run system
+    
+    Console.ReadLine() |> ignore
+    
     0
