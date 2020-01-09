@@ -32,4 +32,5 @@ let main argv =
     Console.ForegroundColor <- ConsoleColor.Green
 
     Console.ReadLine() |> ignore
+    system.WhenTerminated.Wait()
     0

@@ -25,6 +25,8 @@ build/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
+dist/*
+*.nupkg
 *_i.c
 *_p.c
 *.ilk
@@ -48,7 +50,7 @@ build/
 *.pidb
 *.log
 *.scc
-
+dist
 # Visual C++ cache files
 ipch/
 *.aps
@@ -183,3 +185,9 @@ paket-files
 .paket/paket.exe
 docs/content/license.md
 docs/content/release-notes.md
+
+.fake
+.idea
+.ionide
+.paket
+.vs
